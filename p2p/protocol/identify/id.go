@@ -23,7 +23,7 @@ import (
 
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
-	msmux "github.com/multiformats/go-multistream"
+	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
 
 	"github.com/gogo/protobuf/proto"
 	logging "github.com/ipfs/go-log/v2"

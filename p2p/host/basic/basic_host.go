@@ -36,7 +36,7 @@ import (
 	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/multiformats/go-multiaddr-dns"
 	manet "github.com/multiformats/go-multiaddr/net"
-	msmux "github.com/multiformats/go-multistream"
+	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
 )
 
 // The maximum number of address resolution steps we'll perform for a single
