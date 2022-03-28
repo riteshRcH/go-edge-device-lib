@@ -9,7 +9,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/routing"
 
 	"github.com/ipfs/go-cid"
-	mh "github.com/multiformats/go-multihash"
+	mh "github.com/riteshRcH/go-edge-device-lib/multihash"
 )
 
 // RoutingDiscovery is an implementation of discovery using ContentRouting.
