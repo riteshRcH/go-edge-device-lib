@@ -27,9 +27,9 @@ import (
 	relayv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch"
 
-	blankhost "github.com/riteshRcH/go-edge-device-lib-blankhost"
-	swarm "github.com/riteshRcH/go-edge-device-lib-swarm"
-	tptu "github.com/riteshRcH/go-edge-device-lib-transport-upgrader"
+	blankhost "github.com/libp2p/go-libp2p-blankhost"
+	swarm "github.com/libp2p/go-libp2p-swarm"
+	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
 
 	logging "github.com/ipfs/go-log/v2"
 	ma "github.com/multiformats/go-multiaddr"

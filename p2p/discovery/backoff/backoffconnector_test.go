@@ -10,8 +10,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/peer"
 
-	bhost "github.com/riteshRcH/go-edge-device-lib-blankhost"
-	swarmt "github.com/riteshRcH/go-edge-device-lib-swarm/testing"
+	bhost "github.com/libp2p/go-libp2p-blankhost"
+	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 
 	"github.com/stretchr/testify/require"
 )

@@ -21,12 +21,12 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 
+	bhost "github.com/libp2p/go-libp2p-blankhost"
 	"github.com/libp2p/go-libp2p-core/metrics"
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
+	swarm "github.com/libp2p/go-libp2p-swarm"
+	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	ma "github.com/multiformats/go-multiaddr"
-	bhost "github.com/riteshRcH/go-edge-device-lib-blankhost"
-	swarm "github.com/riteshRcH/go-edge-device-lib-swarm"
-	swarmt "github.com/riteshRcH/go-edge-device-lib-swarm/testing"
 )
 
 func getNetHosts(t *testing.T, ctx context.Context, n int) (hosts []host.Host, upgraders []transport.Upgrader) {

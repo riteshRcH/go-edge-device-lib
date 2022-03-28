@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	rcmgr "github.com/riteshRcH/go-edge-device-lib-resource-manager"
+	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
 
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/riteshRcH/go-edge-device-lib"
+	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
 	"github.com/stretchr/testify/require"
 )

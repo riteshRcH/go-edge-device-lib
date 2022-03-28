@@ -20,7 +20,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/protocol"
 	"github.com/libp2p/go-libp2p-core/record"
 	"github.com/libp2p/go-libp2p-core/test"
-	swarmt "github.com/riteshRcH/go-edge-device-lib-swarm/testing"
+	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 

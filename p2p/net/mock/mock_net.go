@@ -7,17 +7,17 @@ import (
 	"sort"
 	"sync"
 
+	ic "github.com/libp2p/go-libp2p-core/crypto"
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/peerstore"
-	ic "github.com/riteshRcH/go-edge-device-lib-core/crypto"
 
 	bhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
 
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
+	p2putil "github.com/libp2p/go-libp2p-testing/netutil"
 	ma "github.com/multiformats/go-multiaddr"
-	p2putil "github.com/riteshRcH/go-edge-device-lib-testing/netutil"
 )
 
 // IP6 range that gets blackholed (in case our traffic ever makes it out onto

@@ -6,16 +6,16 @@ import (
 	"crypto/rand"
 
 	"github.com/libp2p/go-libp2p-core/crypto"
+	mplex "github.com/libp2p/go-libp2p-mplex"
+	noise "github.com/libp2p/go-libp2p-noise"
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
+	quic "github.com/libp2p/go-libp2p-quic-transport"
+	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
+	tls "github.com/libp2p/go-libp2p-tls"
+	yamux "github.com/libp2p/go-libp2p-yamux"
 	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
 	"github.com/multiformats/go-multiaddr"
-	mplex "github.com/riteshRcH/go-edge-device-lib-mplex"
-	noise "github.com/riteshRcH/go-edge-device-lib-noise"
-	quic "github.com/riteshRcH/go-edge-device-lib-quic-transport"
-	rcmgr "github.com/riteshRcH/go-edge-device-lib-resource-manager"
-	tls "github.com/riteshRcH/go-edge-device-lib-tls"
-	yamux "github.com/riteshRcH/go-edge-device-lib-yamux"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/net/connmgr"
 )
 

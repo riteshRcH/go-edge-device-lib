@@ -9,11 +9,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/go-edge-device-lib"
+	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	mocknet "github.com/riteshRcH/go-edge-device-lib/p2p/net/mock"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify/pb"
 
+	ic "github.com/libp2p/go-libp2p-core/crypto"
 	"github.com/libp2p/go-libp2p-core/event"
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/network"
@@ -21,14 +22,13 @@ import (
 	"github.com/libp2p/go-libp2p-core/peerstore"
 	"github.com/libp2p/go-libp2p-core/protocol"
 	"github.com/libp2p/go-libp2p-core/record"
-	ic "github.com/riteshRcH/go-edge-device-lib-core/crypto"
-	coretest "github.com/riteshRcH/go-edge-device-lib-core/test"
+	coretest "github.com/libp2p/go-libp2p-core/test"
 
 	"github.com/libp2p/go-eventbus"
+	blhost "github.com/libp2p/go-libp2p-blankhost"
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
+	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/libp2p/go-libp2p-testing/race"
-	blhost "github.com/riteshRcH/go-edge-device-lib-blankhost"
-	swarmt "github.com/riteshRcH/go-edge-device-lib-swarm/testing"
 
 	"github.com/libp2p/go-msgio/protoio"
 	ma "github.com/multiformats/go-multiaddr"

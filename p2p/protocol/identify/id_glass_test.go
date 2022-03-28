@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
+	blhost "github.com/libp2p/go-libp2p-blankhost"
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
-	blhost "github.com/riteshRcH/go-edge-device-lib-blankhost"
-	swarmt "github.com/riteshRcH/go-edge-device-lib-swarm/testing"
+	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

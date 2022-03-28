@@ -28,8 +28,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/record"
 
 	"github.com/libp2p/go-eventbus"
+	inat "github.com/libp2p/go-libp2p-nat"
 	"github.com/libp2p/go-netroute"
-	inat "github.com/riteshRcH/go-edge-device-lib-nat"
 
 	logging "github.com/ipfs/go-log/v2"
 

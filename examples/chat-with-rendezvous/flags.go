@@ -4,8 +4,8 @@ import (
 	"flag"
 	"strings"
 
+	dht "github.com/libp2p/go-libp2p-kad-dht"
 	maddr "github.com/multiformats/go-multiaddr"
-	dht "github.com/riteshRcH/go-edge-device-lib-kad-dht"
 )
 
 // A new type we need for writing a custom flag parser

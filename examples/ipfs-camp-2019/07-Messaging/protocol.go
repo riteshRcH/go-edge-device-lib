@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	pubsub "github.com/riteshRcH/go-edge-device-lib-pubsub"
+	pubsub "github.com/libp2p/go-libp2p-pubsub"
 )
 
 func chatInputLoop(ctx context.Context, topic *pubsub.Topic, donec chan struct{}) {

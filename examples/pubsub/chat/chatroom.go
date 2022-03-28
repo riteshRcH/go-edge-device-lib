@@ -6,7 +6,7 @@ import (
 
 	"github.com/libp2p/go-libp2p-core/peer"
 
-	pubsub "github.com/riteshRcH/go-edge-device-lib-pubsub"
+	pubsub "github.com/libp2p/go-libp2p-pubsub"
 )
 
 // ChatRoomBufSize is the number of incoming messages to buffer for each topic.

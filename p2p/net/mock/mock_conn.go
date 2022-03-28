@@ -7,11 +7,11 @@ import (
 	"sync"
 	"sync/atomic"
 
+	ic "github.com/libp2p/go-libp2p-core/crypto"
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
-	ic "github.com/riteshRcH/go-edge-device-lib-core/crypto"
 )
 
 var connCounter int64

@@ -6,7 +6,7 @@ import (
 
 	"github.com/libp2p/go-libp2p-core/connmgr"
 	"github.com/libp2p/go-libp2p-core/peer"
-	tu "github.com/riteshRcH/go-edge-device-lib-core/test"
+	tu "github.com/libp2p/go-libp2p-core/test"
 	"github.com/stretchr/testify/require"
 
 	"github.com/benbjohnson/clock"

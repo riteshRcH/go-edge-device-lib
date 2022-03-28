@@ -8,7 +8,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/event"
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
-	swarmt "github.com/riteshRcH/go-edge-device-lib-swarm/testing"
+	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 
 	"github.com/stretchr/testify/require"
 )

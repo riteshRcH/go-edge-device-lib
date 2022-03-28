@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/gogo/protobuf/proto"
-	peer "github.com/riteshRcH/go-edge-device-lib-core/peer"
-	pubsub "github.com/riteshRcH/go-edge-device-lib-pubsub"
+	peer "github.com/libp2p/go-libp2p-core/peer"
+	pubsub "github.com/libp2p/go-libp2p-pubsub"
 )
 
 var handles = map[string]string{}

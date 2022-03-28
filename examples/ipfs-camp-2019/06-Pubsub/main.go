@@ -11,16 +11,16 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/routing"
+	disc "github.com/libp2p/go-libp2p-discovery"
+	kaddht "github.com/libp2p/go-libp2p-kad-dht"
+	mplex "github.com/libp2p/go-libp2p-mplex"
+	tls "github.com/libp2p/go-libp2p-tls"
+	yamux "github.com/libp2p/go-libp2p-yamux"
 	"github.com/libp2p/go-libp2p/p2p/discovery/mdns"
 	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
 	"github.com/multiformats/go-multiaddr"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
-	disc "github.com/riteshRcH/go-edge-device-lib-discovery"
-	kaddht "github.com/riteshRcH/go-edge-device-lib-kad-dht"
-	mplex "github.com/riteshRcH/go-edge-device-lib-mplex"
-	tls "github.com/riteshRcH/go-edge-device-lib-tls"
-	yamux "github.com/riteshRcH/go-edge-device-lib-yamux"
 )
 
 type discoveryNotifee struct {

@@ -13,8 +13,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 
 	"github.com/libp2p/go-eventbus"
+	p2putil "github.com/libp2p/go-libp2p-testing/netutil"
 	ma "github.com/multiformats/go-multiaddr"
-	p2putil "github.com/riteshRcH/go-edge-device-lib-testing/netutil"
 	"github.com/stretchr/testify/require"
 )
 

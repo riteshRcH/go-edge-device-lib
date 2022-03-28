@@ -7,7 +7,7 @@ import (
 	"io"
 	"testing"
 
-	compatv1 "github.com/riteshRcH/go-edge-device-lib-circuit"
+	compatv1 "github.com/libp2p/go-libp2p-circuit"
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"
 
 	"github.com/libp2p/go-libp2p-core/host"

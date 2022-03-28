@@ -11,11 +11,11 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/protocol"
+	discovery "github.com/libp2p/go-libp2p-discovery"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
-	discovery "github.com/riteshRcH/go-edge-device-lib-discovery"
 
+	dht "github.com/libp2p/go-libp2p-kad-dht"
 	"github.com/multiformats/go-multiaddr"
-	dht "github.com/riteshRcH/go-edge-device-lib-kad-dht"
 
 	"github.com/ipfs/go-log/v2"
 )

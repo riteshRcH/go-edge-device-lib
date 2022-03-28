@@ -6,11 +6,11 @@ import (
 	"net"
 	"testing"
 
+	blankhost "github.com/libp2p/go-libp2p-blankhost"
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/transport"
+	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/multiformats/go-multiaddr"
-	blankhost "github.com/riteshRcH/go-edge-device-lib-blankhost"
-	swarmt "github.com/riteshRcH/go-edge-device-lib-swarm/testing"
 )
 
 func makeMA(a string) multiaddr.Multiaddr {
