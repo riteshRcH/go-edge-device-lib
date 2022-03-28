@@ -8,7 +8,7 @@ import (
 	"github.com/libp2p/go-msgio/protoio"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/multiformats/go-varint"
+	"github.com/riteshRcH/go-edge-device-lib/varint"
 )
 
 type DelimitedReader struct {
