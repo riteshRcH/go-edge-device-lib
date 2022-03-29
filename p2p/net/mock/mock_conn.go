@@ -10,8 +10,8 @@ import (
 	ic "github.com/libp2p/go-libp2p-core/crypto"
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
-	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 var connCounter int64

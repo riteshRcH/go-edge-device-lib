@@ -19,7 +19,7 @@ import (
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
 	golog "github.com/ipfs/go-log/v2"
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func main() {

@@ -31,7 +31,7 @@ import (
 	"github.com/libp2p/go-libp2p-testing/race"
 
 	"github.com/libp2p/go-msgio/protoio"
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
