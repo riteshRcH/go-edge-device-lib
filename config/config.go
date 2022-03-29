@@ -32,8 +32,8 @@ import (
 	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
 
 	logging "github.com/ipfs/go-log/v2"
+	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/multiformats/go-multiaddr-dns"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 var log = logging.Logger("p2p-config")

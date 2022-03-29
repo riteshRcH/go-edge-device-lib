@@ -33,9 +33,9 @@ import (
 
 	logging "github.com/ipfs/go-log/v2"
 
+	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/multiformats/go-multiaddr-dns"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
+	manet "github.com/multiformats/go-multiaddr/net"
 	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
 )
 
