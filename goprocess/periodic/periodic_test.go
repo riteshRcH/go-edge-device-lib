@@ -4,7 +4,6 @@ import (
 	"testing"
 	"time"
 
-	ci "github.com/riteshRcH/go-edge-device-lib/cienv"
 	gp "github.com/riteshRcH/go-edge-device-lib/goprocess"
 )
 
@@ -15,11 +14,6 @@ var (
 )
 
 func init() {
-	if ci.IsRunning() {
-		grace = time.Millisecond * 500
-		interval = time.Millisecond * 1000
-		timeout = time.Second * 15
-	}
 }
 
 func between(min, diff, max time.Duration) bool {

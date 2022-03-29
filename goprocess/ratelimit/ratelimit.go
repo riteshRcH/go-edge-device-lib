@@ -1,4 +1,4 @@
-// Package ratelimit is part of github.com/jbenet/goprocess.
+// Package ratelimit is part of github.com/riteshRcH/go-edge-device-lib/goprocess.
 // It provides a simple process that ratelimits child creation.
 // This is done internally with a channel/semaphore.
 // So the call `RateLimiter.LimitedGo` may block until another
@@ -6,7 +6,7 @@
 package ratelimit
 
 import (
-	process "github.com/jbenet/goprocess"
+	process "github.com/riteshRcH/go-edge-device-lib/goprocess"
 )
 
 // RateLimiter limits the spawning of children. It does so

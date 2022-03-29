@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jbenet/goprocess"
+	goprocess "github.com/riteshRcH/go-edge-device-lib/goprocess"
 )
 
 func testClosing(t *testing.T, p goprocess.Process, cancel context.CancelFunc) {

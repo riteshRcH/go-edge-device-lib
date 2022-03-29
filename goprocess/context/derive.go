@@ -3,7 +3,7 @@ package goprocessctx
 import (
 	"context"
 
-	goprocess "github.com/jbenet/goprocess"
+	goprocess "github.com/riteshRcH/go-edge-device-lib/goprocess"
 )
 
 // OnClosingContext derives a context from a given goprocess that will

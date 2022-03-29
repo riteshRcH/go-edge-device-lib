@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jbenet/goprocess"
+	"github.com/riteshRcH/go-edge-device-lib/goprocess"
 )
 
 func ExampleGo() {

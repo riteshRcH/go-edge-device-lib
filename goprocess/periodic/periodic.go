@@ -1,4 +1,4 @@
-// Package periodic is part of github.com/jbenet/goprocess.
+// Package periodic is part of github.com/riteshRcH/go-edge-device-lib/goprocess.
 // It provides a simple periodic processor that calls a function
 // periodically based on some options.
 //
@@ -37,7 +37,7 @@ package periodicproc
 import (
 	"time"
 
-	gp "github.com/jbenet/goprocess"
+	gp "github.com/riteshRcH/go-edge-device-lib/goprocess"
 )
 
 // Every calls the given ProcessFunc at periodic intervals. Internally, it uses

@@ -3,7 +3,7 @@ package goprocessctx
 import (
 	"context"
 
-	goprocess "github.com/jbenet/goprocess"
+	goprocess "github.com/riteshRcH/go-edge-device-lib/goprocess"
 )
 
 // WithContext constructs and returns a Process that respects

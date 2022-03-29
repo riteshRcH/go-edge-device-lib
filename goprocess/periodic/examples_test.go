@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	goprocess "github.com/jbenet/goprocess"
-	periodicproc "github.com/jbenet/goprocess/periodic"
+	goprocess "github.com/riteshRcH/go-edge-device-lib/goprocess"
+	periodicproc "github.com/riteshRcH/go-edge-device-lib/goprocess/periodic"
 )
 
 func ExampleEvery() {
