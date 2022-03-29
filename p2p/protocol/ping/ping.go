@@ -7,12 +7,12 @@ import (
 	"io"
 	"time"
 
-	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 	logging "github.com/ipfs/go-log/v2"
-	pool "github.com/libp2p/go-buffer-pool"
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
+	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
+	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 )
 
 var log = logging.Logger("ping")

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"io"
 
-	pool "github.com/libp2p/go-buffer-pool"
 	"github.com/libp2p/go-msgio/protoio"
+	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/riteshRcH/go-edge-device-lib/varint"

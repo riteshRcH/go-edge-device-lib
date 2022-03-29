@@ -16,8 +16,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 
 	logging "github.com/ipfs/go-log/v2"
-	pool "github.com/libp2p/go-buffer-pool"
 	ma "github.com/multiformats/go-multiaddr"
+	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 )
 
 var log = logging.Logger("relay")
