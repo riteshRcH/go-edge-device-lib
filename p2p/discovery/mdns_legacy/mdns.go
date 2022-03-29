@@ -12,9 +12,9 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 	mdnsnew "github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
 
-	logging "github.com/ipfs/go-log/v2"
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
+	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/whyrusleeping/mdns"
 )
 

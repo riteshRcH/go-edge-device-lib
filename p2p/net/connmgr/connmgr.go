@@ -11,8 +11,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 
-	logging "github.com/ipfs/go-log/v2"
 	ma "github.com/multiformats/go-multiaddr"
+	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 )
 
 var log = logging.Logger("connmgr")

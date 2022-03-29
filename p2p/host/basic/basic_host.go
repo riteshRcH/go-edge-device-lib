@@ -31,7 +31,7 @@ import (
 	inat "github.com/libp2p/go-libp2p-nat"
 	"github.com/libp2p/go-netroute"
 
-	logging "github.com/ipfs/go-log/v2"
+	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 
 	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/multiformats/go-multiaddr-dns"

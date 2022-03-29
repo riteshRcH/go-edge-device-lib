@@ -17,7 +17,7 @@ import (
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	"github.com/multiformats/go-multiaddr"
 
-	"github.com/ipfs/go-log/v2"
+	log "github.com/riteshRcH/go-edge-device-lib/golog"
 )
 
 var logger = log.Logger("rendezvous")

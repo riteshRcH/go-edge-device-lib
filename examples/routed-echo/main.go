@@ -19,7 +19,7 @@ import (
 
 	ds "github.com/riteshRcH/go-edge-device-lib/datastore"
 	dsync "github.com/riteshRcH/go-edge-device-lib/datastore/sync"
-	golog "github.com/ipfs/go-log/v2"
+	golog "github.com/riteshRcH/go-edge-device-lib/golog"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	ma "github.com/multiformats/go-multiaddr"

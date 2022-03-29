@@ -14,9 +14,9 @@ import (
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch/pb"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 
-	logging "github.com/ipfs/go-log/v2"
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
+	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 )
 

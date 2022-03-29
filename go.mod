@@ -12,7 +12,6 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/hashicorp/golang-lru v0.5.4
 	github.com/huin/goupnp v1.0.2 // indirect
-	github.com/ipfs/go-log/v2 v2.5.0
 	github.com/koron/go-ssdp v0.0.2 // indirect
 	github.com/libp2p/go-conn-security-multistream v0.3.0
 	github.com/libp2p/go-eventbus v0.2.1
@@ -36,6 +35,7 @@ require (
 	github.com/libp2p/go-tcp-transport v0.5.1
 	github.com/libp2p/go-ws-transport v0.6.0
 	github.com/libp2p/zeroconf/v2 v2.1.1
+	github.com/mattn/go-isatty v0.0.14
 	github.com/mattn/go-pointer v0.0.1
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1
 	github.com/minio/sha256-simd v1.0.0
@@ -52,6 +52,7 @@ require (
 	github.com/whyrusleeping/mdns v0.0.0-20190826153040-b9b60ed33aa9
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.7.0
+	go.uber.org/zap v1.19.1
 	golang.org/x/crypto v0.0.0-20210813211128-0a44fdfbc16e
 	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c

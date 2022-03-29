@@ -26,7 +26,7 @@ import (
 	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
 
 	"github.com/gogo/protobuf/proto"
-	logging "github.com/ipfs/go-log/v2"
+	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 )
 
 var log = logging.Logger("net/identify")
