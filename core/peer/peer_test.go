@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
-	. "github.com/riteshRcH/go-edge-device-lib/core/peer"
-	"github.com/riteshRcH/go-edge-device-lib/core/test"
+	ic "github.com/libp2p/go-libp2p-core/crypto"
+	. "github.com/libp2p/go-libp2p-core/peer"
+	"github.com/libp2p/go-libp2p-core/test"
 
 	b58 "github.com/mr-tron/base58/base58"
 	mh "github.com/riteshRcH/go-edge-device-lib/multihash"

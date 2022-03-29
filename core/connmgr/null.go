@@ -3,8 +3,8 @@ package connmgr
 import (
 	"context"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/network"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/libp2p/go-libp2p-core/peer"
 )
 
 // NullConnMgr is a ConnMgr that provides no functionality.

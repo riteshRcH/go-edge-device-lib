@@ -6,8 +6,8 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/flow-metrics"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
+	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/libp2p/go-libp2p-core/protocol"
 )
 
 // BandwidthCounter tracks incoming and outgoing data transferred by the local peer.

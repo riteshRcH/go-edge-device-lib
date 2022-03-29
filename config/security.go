@@ -3,11 +3,11 @@ package config
 import (
 	"fmt"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
-	"github.com/riteshRcH/go-edge-device-lib/core/host"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-	"github.com/riteshRcH/go-edge-device-lib/core/sec"
-	"github.com/riteshRcH/go-edge-device-lib/core/sec/insecure"
+	"github.com/libp2p/go-libp2p-core/crypto"
+	"github.com/libp2p/go-libp2p-core/host"
+	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/libp2p/go-libp2p-core/sec"
+	"github.com/libp2p/go-libp2p-core/sec/insecure"
 
 	csms "github.com/libp2p/go-conn-security-multistream"
 )

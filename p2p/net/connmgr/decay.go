@@ -6,8 +6,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/libp2p/go-libp2p-core/connmgr"
+	"github.com/libp2p/go-libp2p-core/peer"
 
 	"github.com/benbjohnson/clock"
 )

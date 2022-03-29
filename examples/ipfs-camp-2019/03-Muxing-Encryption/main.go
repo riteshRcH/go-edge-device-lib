@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
 	"github.com/multiformats/go-multiaddr"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 func main() {

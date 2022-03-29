@@ -58,7 +58,7 @@ type Record interface {
 // where the Record type is defined:
 //
 //    package hello_record
-//    import record "github.com/riteshRcH/go-edge-device-lib/core/record"
+//    import record "github.com/libp2p/go-libp2p-core/record"
 //
 //    func init() {
 //        record.RegisterType(&HelloRecord{})

@@ -7,13 +7,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/libp2p/go-libp2p-core/crypto"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/network"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/libp2p/go-libp2p-core/peer"
 
+	tu "github.com/libp2p/go-libp2p-core/test"
 	ma "github.com/multiformats/go-multiaddr"
-	tu "github.com/riteshRcH/go-edge-device-lib/core/test"
 
 	"github.com/stretchr/testify/require"
 )

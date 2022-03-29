@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/libp2p/go-libp2p-core/test"
 	ma "github.com/multiformats/go-multiaddr"
-	"github.com/riteshRcH/go-edge-device-lib/core/test"
 )
 
 func randomIPv4Addr(t *testing.T) ma.Multiaddr {

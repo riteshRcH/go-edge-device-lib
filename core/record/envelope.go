@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
-	pb "github.com/riteshRcH/go-edge-device-lib/core/record/pb"
+	"github.com/libp2p/go-libp2p-core/crypto"
+	pb "github.com/libp2p/go-libp2p-core/record/pb"
 
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 

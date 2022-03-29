@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
+	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/libp2p/go-libp2p-core/protocol"
 )
 
 func BenchmarkBandwidthCounter(b *testing.B) {

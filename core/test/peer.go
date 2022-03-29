@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/libp2p/go-libp2p-core/peer"
 
 	mh "github.com/riteshRcH/go-edge-device-lib/multihash"
 )

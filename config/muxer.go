@@ -5,9 +5,9 @@ import (
 
 	msmux "github.com/libp2p/go-stream-muxer-multistream"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/libp2p/go-libp2p-core/network"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/libp2p/go-libp2p-core/host"
 )
 
 // MuxC is a stream multiplex transport constructor.

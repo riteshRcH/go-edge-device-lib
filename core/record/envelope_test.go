@@ -5,10 +5,10 @@ import (
 	"errors"
 	"testing"
 
-	crypto "github.com/riteshRcH/go-edge-device-lib/core/crypto"
-	. "github.com/riteshRcH/go-edge-device-lib/core/record"
-	pb "github.com/riteshRcH/go-edge-device-lib/core/record/pb"
-	"github.com/riteshRcH/go-edge-device-lib/core/test"
+	crypto "github.com/libp2p/go-libp2p-core/crypto"
+	. "github.com/libp2p/go-libp2p-core/record"
+	pb "github.com/libp2p/go-libp2p-core/record/pb"
+	"github.com/libp2p/go-libp2p-core/test"
 
 	"github.com/gogo/protobuf/proto"
 )

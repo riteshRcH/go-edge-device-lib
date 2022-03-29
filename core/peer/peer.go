@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/riteshRcH/go-edge-device-lib/cid"
-	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	ic "github.com/libp2p/go-libp2p-core/crypto"
 	b58 "github.com/mr-tron/base58/base58"
+	"github.com/riteshRcH/go-edge-device-lib/cid"
 	mh "github.com/riteshRcH/go-edge-device-lib/multihash"
 )
 

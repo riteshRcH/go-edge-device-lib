@@ -9,8 +9,8 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mocks"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/libp2p/go-libp2p-core/discovery"
+	"github.com/libp2p/go-libp2p-core/peer"
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"

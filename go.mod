@@ -19,6 +19,7 @@ require (
 	github.com/libp2p/go-eventbus v0.2.1
 	github.com/libp2p/go-libp2p-blankhost v0.3.0
 	github.com/libp2p/go-libp2p-circuit v0.6.0
+	github.com/libp2p/go-libp2p-core v0.14.0
 	github.com/libp2p/go-libp2p-mplex v0.6.0
 	github.com/libp2p/go-libp2p-nat v0.1.0
 	github.com/libp2p/go-libp2p-noise v0.3.0

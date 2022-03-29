@@ -1,8 +1,8 @@
 package event
 
 import (
-	"github.com/riteshRcH/go-edge-device-lib/core/network"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/libp2p/go-libp2p-core/peer"
 )
 
 // EvtPeerConnectednessChanged should be emitted every time the "connectedness" to a

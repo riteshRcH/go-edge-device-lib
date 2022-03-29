@@ -8,11 +8,11 @@ import (
 	"os"
 	"sync"
 
+	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/libp2p/go-libp2p-core/protocol"
 	discovery "github.com/libp2p/go-libp2p-discovery"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
-	"github.com/riteshRcH/go-edge-device-lib/core/network"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	"github.com/multiformats/go-multiaddr"

@@ -3,7 +3,7 @@ package introspection
 import (
 	"io"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/introspection/pb"
+	"github.com/libp2p/go-libp2p-core/introspection/pb"
 )
 
 // Introspector is the interface to be satisfied by components that are capable

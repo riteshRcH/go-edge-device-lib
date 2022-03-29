@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/libp2p/go-libp2p-core/peer"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

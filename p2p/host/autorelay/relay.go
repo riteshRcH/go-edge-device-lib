@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
+	"github.com/libp2p/go-libp2p-core/discovery"
 
 	ma "github.com/multiformats/go-multiaddr"
 )

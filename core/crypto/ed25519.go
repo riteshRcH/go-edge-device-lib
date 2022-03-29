@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	pb "github.com/riteshRcH/go-edge-device-lib/core/crypto/pb"
+	pb "github.com/libp2p/go-libp2p-core/crypto/pb"
 )
 
 // Ed25519PrivateKey is an ed25519 private key.

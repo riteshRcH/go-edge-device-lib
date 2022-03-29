@@ -8,8 +8,8 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
-	crypto_pb "github.com/riteshRcH/go-edge-device-lib/core/crypto/pb"
+	"github.com/libp2p/go-libp2p-core/crypto"
+	crypto_pb "github.com/libp2p/go-libp2p-core/crypto/pb"
 )
 
 var message = []byte("Libp2p is the _best_!")

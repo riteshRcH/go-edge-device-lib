@@ -11,11 +11,11 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
-	"github.com/riteshRcH/go-edge-device-lib/core/event"
-	"github.com/riteshRcH/go-edge-device-lib/core/network"
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-	"github.com/riteshRcH/go-edge-device-lib/core/routing"
+	"github.com/libp2p/go-libp2p-core/discovery"
+	"github.com/libp2p/go-libp2p-core/event"
+	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/libp2p/go-libp2p-core/routing"
 
 	basic "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"

@@ -1,11 +1,11 @@
 package config
 
 import (
-	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
-	"github.com/riteshRcH/go-edge-device-lib/core/host"
-	"github.com/riteshRcH/go-edge-device-lib/core/network"
-	"github.com/riteshRcH/go-edge-device-lib/core/pnet"
-	"github.com/riteshRcH/go-edge-device-lib/core/transport"
+	"github.com/libp2p/go-libp2p-core/connmgr"
+	"github.com/libp2p/go-libp2p-core/host"
+	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/libp2p/go-libp2p-core/pnet"
+	"github.com/libp2p/go-libp2p-core/transport"
 )
 
 // TptC is the type for libp2p transport constructors. You probably won't ever

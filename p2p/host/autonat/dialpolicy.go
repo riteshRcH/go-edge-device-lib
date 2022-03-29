@@ -3,9 +3,9 @@ package autonat
 import (
 	"net"
 
+	"github.com/libp2p/go-libp2p-core/host"
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
-	"github.com/riteshRcH/go-edge-device-lib/core/host"
 )
 
 type dialPolicy struct {

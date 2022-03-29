@@ -14,10 +14,10 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/btcec"
+	. "github.com/libp2p/go-libp2p-core/crypto"
+	pb "github.com/libp2p/go-libp2p-core/crypto/pb"
+	"github.com/libp2p/go-libp2p-core/test"
 	"github.com/minio/sha256-simd"
-	. "github.com/riteshRcH/go-edge-device-lib/core/crypto"
-	pb "github.com/riteshRcH/go-edge-device-lib/core/crypto/pb"
-	"github.com/riteshRcH/go-edge-device-lib/core/test"
 )
 
 func TestKeys(t *testing.T) {

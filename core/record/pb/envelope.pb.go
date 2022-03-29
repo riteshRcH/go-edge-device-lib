@@ -6,7 +6,7 @@ package record_pb
 import (
 	fmt "fmt"
 	proto "github.com/gogo/protobuf/proto"
-	pb "github.com/riteshRcH/go-edge-device-lib/core/crypto/pb"
+	pb "github.com/libp2p/go-libp2p-core/crypto/pb"
 	io "io"
 	math "math"
 	math_bits "math/bits"

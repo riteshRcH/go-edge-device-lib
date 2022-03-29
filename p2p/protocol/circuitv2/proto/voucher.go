@@ -5,8 +5,8 @@ import (
 
 	pbv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/pb"
 
-	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-	"github.com/riteshRcH/go-edge-device-lib/core/record"
+	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/libp2p/go-libp2p-core/record"
 )
 
 const RecordDomain = "libp2p-relay-rsvp"
