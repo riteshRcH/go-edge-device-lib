@@ -10,10 +10,10 @@ import (
 	compatv1 "github.com/libp2p/go-libp2p-circuit"
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 
 	ma "github.com/multiformats/go-multiaddr"
 )

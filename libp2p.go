@@ -3,7 +3,7 @@ package libp2p
 import (
 	"github.com/riteshRcH/go-edge-device-lib/config"
 
-	"github.com/libp2p/go-libp2p-core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
 )
 
 // Config describes a set of settings for a libp2p node.

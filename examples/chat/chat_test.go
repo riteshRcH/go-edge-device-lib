@@ -7,7 +7,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
 	"github.com/libp2p/go-libp2p/examples/testutils"
 )

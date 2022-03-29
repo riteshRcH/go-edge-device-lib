@@ -11,11 +11,11 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/util"
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
-	"github.com/libp2p/go-libp2p-core/discovery"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/peer"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 type mockRoutingTable struct {

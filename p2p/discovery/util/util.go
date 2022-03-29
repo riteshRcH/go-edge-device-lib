@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/discovery"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	logging "github.com/ipfs/go-log/v2"
 )

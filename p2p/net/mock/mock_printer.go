@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 // separate object so our interfaces are separate :)

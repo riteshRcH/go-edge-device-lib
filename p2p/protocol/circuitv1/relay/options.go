@@ -1,7 +1,7 @@
 package relay
 
 import (
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 type Resources struct {

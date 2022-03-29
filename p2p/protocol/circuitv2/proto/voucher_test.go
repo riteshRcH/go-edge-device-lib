@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/record"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/record"
 )
 
 func TestReservationVoucher(t *testing.T) {

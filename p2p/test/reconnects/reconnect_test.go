@@ -10,14 +10,14 @@ import (
 
 	bhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/protocol"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 
-	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 	logging "github.com/ipfs/go-log/v2"
+	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 	"github.com/stretchr/testify/require"
 )
 

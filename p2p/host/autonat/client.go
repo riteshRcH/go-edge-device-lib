@@ -7,9 +7,9 @@ import (
 
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat/pb"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 
 	ma "github.com/multiformats/go-multiaddr"

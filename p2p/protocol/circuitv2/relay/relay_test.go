@@ -9,24 +9,24 @@ import (
 	"testing"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 
 	"github.com/libp2p/go-tcp-transport"
 
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/client"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"
 
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
-	"github.com/libp2p/go-libp2p-core/metrics"
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
 	swarm "github.com/libp2p/go-libp2p-swarm"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	ma "github.com/multiformats/go-multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/core/metrics"
 )
 
 func getNetHosts(t *testing.T, ctx context.Context, n int) (hosts []host.Host, upgraders []transport.Upgrader) {
