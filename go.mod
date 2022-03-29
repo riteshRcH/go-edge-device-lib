@@ -9,10 +9,12 @@ require (
 	github.com/davidlazar/go-crypto v0.0.0-20200604182044-b73af7476f6c // indirect
 	github.com/gogo/protobuf v1.3.2
 	github.com/golang/mock v1.6.0
+	github.com/google/gopacket v1.1.19
 	github.com/google/uuid v1.3.0
 	github.com/hashicorp/golang-lru v0.5.4
-	github.com/huin/goupnp v1.0.2 // indirect
-	github.com/koron/go-ssdp v0.0.2 // indirect
+	github.com/huin/goupnp v1.0.2
+	github.com/jackpal/go-nat-pmp v1.0.2
+	github.com/koron/go-ssdp v0.0.2
 	github.com/libp2p/go-conn-security-multistream v0.3.0
 	github.com/libp2p/go-eventbus v0.2.1
 	github.com/libp2p/go-libp2p-blankhost v0.3.0
@@ -54,9 +56,9 @@ require (
 	go.uber.org/multierr v1.7.0
 	go.uber.org/zap v1.19.1
 	golang.org/x/crypto v0.0.0-20210813211128-0a44fdfbc16e
-	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d // indirect
+	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20210816183151-1e6c022a8912 // indirect
+	golang.org/x/sys v0.0.0-20210816183151-1e6c022a8912
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	google.golang.org/grpc v1.40.0 // indirect
