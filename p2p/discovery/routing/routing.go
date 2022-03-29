@@ -8,7 +8,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/routing"
 
-	"github.com/ipfs/go-cid"
+	"github.com/riteshRcH/go-edge-device-lib/cid"
 	mh "github.com/riteshRcH/go-edge-device-lib/multihash"
 )
 

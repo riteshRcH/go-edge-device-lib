@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/go-edge-device-lib"
+	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	discovery "github.com/riteshRcH/go-edge-device-lib/p2p/discovery/routing"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autorelay"
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"
@@ -20,9 +20,9 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/routing"
 
-	"github.com/ipfs/go-cid"
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
+	"github.com/riteshRcH/go-edge-device-lib/cid"
 	"github.com/stretchr/testify/require"
 )
 
