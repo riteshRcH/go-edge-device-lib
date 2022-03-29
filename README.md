@@ -24,7 +24,7 @@
   - [Packages](#packages)
 - [Contribute](#contribute)
 
-## Background
+## Background (go-libp2p-nat is morenat, and go-nat is nat)
 
 [libp2p](https://github.com/libp2p/specs) is a networking stack and library modularized out of [The IPFS Project](https://github.com/ipfs/ipfs), and bundled separately for other tools to use.
 >
