@@ -16,7 +16,7 @@ import (
 
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 
-	u "github.com/ipfs/go-ipfs-util"
+	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/stretchr/testify/require"
 )

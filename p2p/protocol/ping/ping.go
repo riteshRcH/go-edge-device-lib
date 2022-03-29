@@ -7,7 +7,7 @@ import (
 	"io"
 	"time"
 
-	u "github.com/ipfs/go-ipfs-util"
+	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 	logging "github.com/ipfs/go-log/v2"
 	pool "github.com/libp2p/go-buffer-pool"
 	"github.com/libp2p/go-libp2p-core/host"
