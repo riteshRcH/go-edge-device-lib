@@ -22,8 +22,8 @@ import (
 	circuitv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/client"
 	circuitv2_proto "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/proto"
 
+	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 const (

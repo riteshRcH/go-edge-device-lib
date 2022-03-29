@@ -21,8 +21,8 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 
 	"github.com/libp2p/go-msgio/protoio"
+	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 
 	"github.com/stretchr/testify/require"
 )

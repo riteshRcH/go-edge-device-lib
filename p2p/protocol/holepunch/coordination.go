@@ -16,8 +16,8 @@ import (
 
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/libp2p/go-msgio/protoio"
+	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // Protocol is the libp2p protocol for Hole Punching.

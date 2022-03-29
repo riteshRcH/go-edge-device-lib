@@ -22,7 +22,7 @@ import (
 	golog "github.com/ipfs/go-log/v2"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/multiformats/go-multiaddr"
 	rhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/routed"
 )
 

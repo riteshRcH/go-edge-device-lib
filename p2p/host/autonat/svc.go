@@ -14,7 +14,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/peerstore"
 
 	"github.com/libp2p/go-msgio/protoio"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/multiformats/go-multiaddr"
 )
 
 var streamTimeout = 60 * time.Second

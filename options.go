@@ -22,8 +22,8 @@ import (
 	relayv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch"
 
+	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/multiformats/go-multiaddr-dns"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // ListenAddrStrings configures libp2p to listen on the given (unparsed)
