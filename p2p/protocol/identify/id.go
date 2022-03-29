@@ -17,7 +17,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/record"
 
 	"github.com/libp2p/go-eventbus"
-	"github.com/libp2p/go-msgio/protoio"
+	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify/pb"
 

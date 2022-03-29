@@ -20,9 +20,9 @@ import (
 	holepunch_pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch/pb"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 
-	"github.com/libp2p/go-msgio/protoio"
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
+	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 
 	"github.com/stretchr/testify/require"
 )

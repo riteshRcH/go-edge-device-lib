@@ -30,8 +30,8 @@ import (
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/libp2p/go-libp2p-testing/race"
 
-	"github.com/libp2p/go-msgio/protoio"
 	ma "github.com/multiformats/go-multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -10,7 +10,7 @@ import (
 
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify/pb"
 
-	"github.com/libp2p/go-msgio/protoio"
+	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 )
 
 const IDDelta = "/p2p/id/delta/1.0.0"

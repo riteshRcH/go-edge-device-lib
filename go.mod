@@ -30,7 +30,7 @@ require (
 	github.com/libp2p/go-libp2p-tls v0.3.1
 	github.com/libp2p/go-libp2p-transport-upgrader v0.7.1
 	github.com/libp2p/go-libp2p-yamux v0.8.2
-	github.com/libp2p/go-msgio v0.1.0
+	github.com/libp2p/go-msgio v0.1.0 // indirect
 	github.com/libp2p/go-netroute v0.2.0
 	github.com/libp2p/go-stream-muxer-multistream v0.4.0
 	github.com/libp2p/go-tcp-transport v0.5.1

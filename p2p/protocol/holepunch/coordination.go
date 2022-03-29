@@ -15,9 +15,9 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 
 	logging "github.com/ipfs/go-log/v2"
-	"github.com/libp2p/go-msgio/protoio"
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
+	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 )
 
 // Protocol is the libp2p protocol for Hole Punching.
