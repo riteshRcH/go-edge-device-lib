@@ -17,8 +17,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
-	ds "github.com/ipfs/go-datastore"
-	dsync "github.com/ipfs/go-datastore/sync"
+	ds "github.com/riteshRcH/go-edge-device-lib/datastore"
+	dsync "github.com/riteshRcH/go-edge-device-lib/datastore/sync"
 	golog "github.com/ipfs/go-log/v2"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"

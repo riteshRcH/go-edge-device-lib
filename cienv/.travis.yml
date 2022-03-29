@@ -1,0 +1,9 @@
+language: go
+
+go:
+  - 1.12
+
+script:
+  - go test -race -cpu=5 -v ./...
+
+env: TEST_VERBOSE=1

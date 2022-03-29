@@ -4,7 +4,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/ipfs/go-datastore"
+	"github.com/riteshRcH/go-edge-device-lib/datastore"
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 	ma "github.com/multiformats/go-multiaddr"

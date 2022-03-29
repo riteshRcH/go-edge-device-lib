@@ -13,9 +13,9 @@ import (
 	ma "github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
 
-	"github.com/ipfs/go-datastore"
-	"github.com/ipfs/go-datastore/namespace"
-	"github.com/ipfs/go-datastore/query"
+	"github.com/riteshRcH/go-edge-device-lib/datastore"
+	"github.com/riteshRcH/go-edge-device-lib/datastore/namespace"
+	"github.com/riteshRcH/go-edge-device-lib/datastore/query"
 	logging "github.com/ipfs/go-log/v2"
 )
 
