@@ -1,4 +1,4 @@
-package main
+package multiaddr
 
 import (
 	"encoding/hex"
