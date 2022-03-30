@@ -34,8 +34,8 @@ import (
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 
 	ma "github.com/multiformats/go-multiaddr"
-	madns "github.com/multiformats/go-multiaddr-dns"
 	manet "github.com/multiformats/go-multiaddr/net"
+	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
 	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
 )
 

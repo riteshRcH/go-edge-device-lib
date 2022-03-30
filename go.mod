@@ -37,11 +37,11 @@ require (
 	github.com/libp2p/zeroconf/v2 v2.1.1
 	github.com/mattn/go-isatty v0.0.14
 	github.com/mattn/go-pointer v0.0.1
+	github.com/miekg/dns v1.1.43
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1
 	github.com/minio/sha256-simd v1.0.0
 	github.com/mr-tron/base58 v1.2.0
 	github.com/multiformats/go-multiaddr v0.5.0
-	github.com/multiformats/go-multiaddr-dns v0.3.1
 	github.com/multiformats/go-multistream v0.2.2 // indirect
 	github.com/prometheus/common v0.30.0 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect
