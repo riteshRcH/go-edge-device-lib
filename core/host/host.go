@@ -14,7 +14,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/peerstore"
 	"github.com/libp2p/go-libp2p-core/protocol"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 // Host is an object participating in a p2p network, which

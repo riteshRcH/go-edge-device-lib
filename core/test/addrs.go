@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 func GenerateTestAddrs(n int) []ma.Multiaddr {

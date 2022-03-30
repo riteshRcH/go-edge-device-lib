@@ -4,7 +4,7 @@ import (
 	"net"
 	"testing"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 func TestRegisterFrom(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"strings"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 var errIncorrectNetAddr = fmt.Errorf("incorrect network addr conversion")

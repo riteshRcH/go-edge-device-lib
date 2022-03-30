@@ -15,7 +15,7 @@ import (
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"
-	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 
 	log "github.com/riteshRcH/go-edge-device-lib/golog"
 )

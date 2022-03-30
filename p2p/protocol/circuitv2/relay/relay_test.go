@@ -26,7 +26,7 @@ import (
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
 	swarm "github.com/libp2p/go-libp2p-swarm"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 func getNetHosts(t *testing.T, ctx context.Context, n int) (hosts []host.Host, upgraders []transport.Upgrader) {

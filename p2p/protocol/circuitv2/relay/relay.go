@@ -19,8 +19,8 @@ import (
 
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr/net"
 )
 
 const (

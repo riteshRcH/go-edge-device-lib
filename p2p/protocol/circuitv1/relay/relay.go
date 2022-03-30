@@ -17,7 +17,7 @@ import (
 
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 var log = logging.Logger("relay")

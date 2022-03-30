@@ -13,7 +13,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 
 	tu "github.com/libp2p/go-libp2p-core/test"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 
 	"github.com/stretchr/testify/require"
 )

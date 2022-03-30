@@ -4,8 +4,8 @@ import (
 	"errors"
 	"net"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr/net"
 )
 
 var _ manet.Listener = (*Listener)(nil)

@@ -21,8 +21,8 @@ import (
 
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify/pb"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr/net"
 	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
 
 	"github.com/gogo/protobuf/proto"

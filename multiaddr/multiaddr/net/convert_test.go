@@ -5,7 +5,7 @@ import (
 	"runtime"
 	"testing"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 type GenFunc func() (ma.Multiaddr, error)

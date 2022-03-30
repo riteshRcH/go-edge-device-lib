@@ -6,7 +6,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/protocol"
-	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 // Multiaddr aliases the Multiaddr type from github.com/multiformats/go-multiaddr.

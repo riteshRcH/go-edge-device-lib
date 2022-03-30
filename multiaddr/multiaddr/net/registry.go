@@ -5,7 +5,7 @@ import (
 	"net"
 	"sync"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 // FromNetAddrFunc is a generic function which converts a net.Addr to Multiaddress

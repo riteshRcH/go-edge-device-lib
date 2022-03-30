@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"net"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
 )
 
 // Conn is the equivalent of a net.Conn object. It is the
