@@ -3,8 +3,8 @@ package autonat
 import (
 	"github.com/libp2p/go-libp2p-core/network"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr/net"
+	ma "github.com/riteshRcH/go-multiaddr"
+	manet "github.com/riteshRcH/go-multiaddr/net"
 )
 
 var _ network.Notifiee = (*AmbientAutoNAT)(nil)

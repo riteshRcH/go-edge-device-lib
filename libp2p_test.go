@@ -15,7 +15,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/transport"
 	noise "github.com/libp2p/go-libp2p-noise"
 	"github.com/libp2p/go-tcp-transport"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	ma "github.com/riteshRcH/go-multiaddr"
 
 	"github.com/stretchr/testify/require"
 )

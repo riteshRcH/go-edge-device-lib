@@ -23,7 +23,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch"
 
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	ma "github.com/riteshRcH/go-multiaddr"
 )
 
 // ListenAddrStrings configures libp2p to listen on the given (unparsed)

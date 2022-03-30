@@ -34,9 +34,9 @@ import (
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr/net"
 	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
+	ma "github.com/riteshRcH/go-multiaddr"
+	manet "github.com/riteshRcH/go-multiaddr/net"
 )
 
 // The maximum number of address resolution steps we'll perform for a single

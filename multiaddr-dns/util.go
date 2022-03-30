@@ -3,7 +3,7 @@ package madns
 import (
 	"context"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	ma "github.com/riteshRcH/go-multiaddr"
 )
 
 func Matches(maddr ma.Multiaddr) (matches bool) {

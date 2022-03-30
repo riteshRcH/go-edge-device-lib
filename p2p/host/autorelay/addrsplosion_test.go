@@ -3,7 +3,7 @@ package autorelay
 import (
 	"testing"
 
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	ma "github.com/riteshRcH/go-multiaddr"
 	"github.com/stretchr/testify/require"
 )
 

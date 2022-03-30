@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	ma "github.com/riteshRcH/go-multiaddr"
 )
 
 func main() {

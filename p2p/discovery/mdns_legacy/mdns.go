@@ -13,8 +13,8 @@ import (
 	mdnsnew "github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr/net"
+	ma "github.com/riteshRcH/go-multiaddr"
+	manet "github.com/riteshRcH/go-multiaddr/net"
 	"github.com/whyrusleeping/mdns"
 )
 

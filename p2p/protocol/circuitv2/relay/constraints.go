@@ -7,8 +7,8 @@ import (
 
 	"github.com/libp2p/go-libp2p-core/peer"
 	asnutil "github.com/riteshRcH/go-edge-device-lib/asn-util"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr/net"
+	ma "github.com/riteshRcH/go-multiaddr"
+	manet "github.com/riteshRcH/go-multiaddr/net"
 )
 
 var validity = 30 * time.Minute

@@ -33,7 +33,7 @@ import (
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
-	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr/multiaddr"
+	ma "github.com/riteshRcH/go-multiaddr"
 )
 
 var log = logging.Logger("p2p-config")
