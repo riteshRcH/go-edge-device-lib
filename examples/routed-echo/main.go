@@ -22,8 +22,8 @@ import (
 	golog "github.com/riteshRcH/go-edge-device-lib/golog"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"
+	ma "github.com/multiformats/go-multiaddr"
 	rhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/routed"
-	ma "github.com/riteshRcH/go-multiaddr"
 )
 
 // makeRoutedHost creates a LibP2P host with a random peer ID listening on the

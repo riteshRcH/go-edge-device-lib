@@ -17,7 +17,7 @@ import (
 
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
 	p2putil "github.com/libp2p/go-libp2p-testing/netutil"
-	ma "github.com/riteshRcH/go-multiaddr"
+	ma "github.com/multiformats/go-multiaddr"
 )
 
 // IP6 range that gets blackholed (in case our traffic ever makes it out onto

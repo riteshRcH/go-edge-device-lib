@@ -31,9 +31,9 @@ import (
 	swarm "github.com/libp2p/go-libp2p-swarm"
 	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
 
+	ma "github.com/multiformats/go-multiaddr"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
-	ma "github.com/riteshRcH/go-multiaddr"
 )
 
 var log = logging.Logger("p2p-config")

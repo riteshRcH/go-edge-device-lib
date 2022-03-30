@@ -8,8 +8,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 
-	ma "github.com/riteshRcH/go-multiaddr"
-	manet "github.com/riteshRcH/go-multiaddr/net"
+	ma "github.com/multiformats/go-multiaddr"
+	manet "github.com/multiformats/go-multiaddr/net"
 )
 
 // HopTagWeight is the connection manager weight for connections carrying relay hop streams

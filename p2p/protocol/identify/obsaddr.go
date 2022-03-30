@@ -13,8 +13,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peerstore"
 
-	ma "github.com/riteshRcH/go-multiaddr"
-	manet "github.com/riteshRcH/go-multiaddr/net"
+	ma "github.com/multiformats/go-multiaddr"
+	manet "github.com/multiformats/go-multiaddr/net"
 )
 
 // ActivationThresh sets how many times an address must be seen as "activated"

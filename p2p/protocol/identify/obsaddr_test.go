@@ -14,7 +14,7 @@ import (
 
 	"github.com/libp2p/go-eventbus"
 	p2putil "github.com/libp2p/go-libp2p-testing/netutil"
-	ma "github.com/riteshRcH/go-multiaddr"
+	ma "github.com/multiformats/go-multiaddr"
 	"github.com/stretchr/testify/require"
 )
 

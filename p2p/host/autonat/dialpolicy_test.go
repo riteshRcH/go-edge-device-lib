@@ -10,7 +10,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/libp2p/go-libp2p-core/transport"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
-	"github.com/riteshRcH/go-multiaddr"
+	"github.com/multiformats/go-multiaddr"
 )
 
 func makeMA(a string) multiaddr.Multiaddr {

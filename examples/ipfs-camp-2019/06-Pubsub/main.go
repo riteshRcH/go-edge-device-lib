@@ -19,8 +19,8 @@ import (
 	"github.com/libp2p/go-libp2p/p2p/discovery/mdns"
 	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
+	"github.com/multiformats/go-multiaddr"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
-	"github.com/riteshRcH/go-multiaddr"
 )
 
 type discoveryNotifee struct {

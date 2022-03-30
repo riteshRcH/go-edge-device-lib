@@ -15,8 +15,8 @@ import (
 	yamux "github.com/libp2p/go-libp2p-yamux"
 	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
+	"github.com/multiformats/go-multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/net/connmgr"
-	"github.com/riteshRcH/go-multiaddr"
 )
 
 // DefaultSecurity is the default security option.

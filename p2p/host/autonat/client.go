@@ -12,7 +12,7 @@ import (
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 
-	ma "github.com/riteshRcH/go-multiaddr"
+	ma "github.com/multiformats/go-multiaddr"
 )
 
 // NewAutoNATClient creates a fresh instance of an AutoNATClient

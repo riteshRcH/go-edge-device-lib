@@ -6,8 +6,8 @@ import (
 
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
+	ma "github.com/multiformats/go-multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/datastore"
-	ma "github.com/riteshRcH/go-multiaddr"
 )
 
 func TestConnectionGater(t *testing.T) {

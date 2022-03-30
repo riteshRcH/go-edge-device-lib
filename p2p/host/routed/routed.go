@@ -15,7 +15,7 @@ import (
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 
-	ma "github.com/riteshRcH/go-multiaddr"
+	ma "github.com/multiformats/go-multiaddr"
 )
 
 var log = logging.Logger("routedhost")

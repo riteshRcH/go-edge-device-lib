@@ -6,7 +6,7 @@ import (
 
 	"github.com/libp2p/go-libp2p-core/discovery"
 
-	ma "github.com/riteshRcH/go-multiaddr"
+	ma "github.com/multiformats/go-multiaddr"
 )
 
 var (
