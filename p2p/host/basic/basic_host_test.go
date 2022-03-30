@@ -24,7 +24,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
 
 	"github.com/stretchr/testify/assert"

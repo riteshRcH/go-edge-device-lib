@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/miekg/dns"
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 var (

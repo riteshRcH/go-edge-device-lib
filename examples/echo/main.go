@@ -18,8 +18,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/peerstore"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
-	ma "github.com/multiformats/go-multiaddr"
 	golog "github.com/riteshRcH/go-edge-device-lib/golog"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func main() {

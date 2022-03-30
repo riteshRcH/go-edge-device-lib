@@ -10,7 +10,7 @@ import (
 
 	"github.com/libp2p/go-libp2p-core/network"
 	inat "github.com/riteshRcH/go-edge-device-lib/morenat"
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // NATManager is a simple interface to manage NAT devices.

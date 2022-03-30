@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
 )
 

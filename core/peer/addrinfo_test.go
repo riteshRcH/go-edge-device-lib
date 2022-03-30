@@ -3,7 +3,7 @@ package peer_test
 import (
 	"testing"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 
 	. "github.com/libp2p/go-libp2p-core/peer"
 )

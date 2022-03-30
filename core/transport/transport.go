@@ -9,8 +9,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )
 
 // A CapableConn represents a connection that has offers the basic

@@ -8,7 +8,7 @@ import (
 	pb "github.com/libp2p/go-libp2p-core/peer/pb"
 	"github.com/libp2p/go-libp2p-core/record"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 
 	"github.com/gogo/protobuf/proto"
 )

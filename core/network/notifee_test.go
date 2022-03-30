@@ -3,7 +3,7 @@ package network
 import (
 	"testing"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func TestListen(T *testing.T) {

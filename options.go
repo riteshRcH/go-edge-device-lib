@@ -22,7 +22,7 @@ import (
 	relayv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
 )
 

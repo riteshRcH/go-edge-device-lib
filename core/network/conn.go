@@ -7,7 +7,7 @@ import (
 	ic "github.com/libp2p/go-libp2p-core/crypto"
 	"github.com/libp2p/go-libp2p-core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // Conn is a connection to a remote peer. It multiplexes streams.

@@ -14,10 +14,10 @@ import (
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch/pb"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )
 
 // Protocol is the libp2p protocol for Hole Punching.

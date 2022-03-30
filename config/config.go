@@ -31,8 +31,8 @@ import (
 	swarm "github.com/libp2p/go-libp2p-swarm"
 	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
 
-	ma "github.com/multiformats/go-multiaddr"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
 )
 

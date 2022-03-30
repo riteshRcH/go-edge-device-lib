@@ -1,7 +1,7 @@
 package network
 
 import (
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // Notifiee is an interface for an object wishing to receive

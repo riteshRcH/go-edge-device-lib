@@ -13,8 +13,8 @@ import (
 	"github.com/libp2p/zeroconf/v2"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )
 
 const (
