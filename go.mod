@@ -33,7 +33,6 @@ require (
 	github.com/libp2p/go-stream-muxer-multistream v0.4.0
 	github.com/libp2p/go-tcp-transport v0.5.1
 	github.com/libp2p/go-ws-transport v0.6.0
-	github.com/libp2p/zeroconf/v2 v2.1.1
 	github.com/mattn/go-isatty v0.0.14
 	github.com/mattn/go-pointer v0.0.1
 	github.com/miekg/dns v1.1.43
