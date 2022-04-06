@@ -9,7 +9,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/sec"
 	"github.com/riteshRcH/go-edge-device-lib/core/sec/insecure"
 
-	csms "github.com/libp2p/go-conn-security-multistream"
+	csms "github.com/riteshRcH/go-edge-device-lib/conn-security-multistream"
 )
 
 // SecC is a security transport constructor.
