@@ -6,13 +6,13 @@ import (
 	"reflect"
 	"runtime"
 
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
-	"github.com/riteshRcH/core/pnet"
+	"github.com/riteshRcH/go-edge-device-lib/core/pnet"
 
-	"github.com/riteshRcH/core/connmgr"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 )
 
 var errorType = reflect.TypeOf((*error)(nil)).Elem()

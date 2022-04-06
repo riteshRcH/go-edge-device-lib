@@ -7,9 +7,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	ic "github.com/riteshRcH/core/crypto"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )

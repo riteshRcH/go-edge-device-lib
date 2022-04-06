@@ -5,8 +5,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"

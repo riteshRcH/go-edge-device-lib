@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	inat "github.com/riteshRcH/go-edge-device-lib/morenat"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

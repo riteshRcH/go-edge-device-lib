@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 )

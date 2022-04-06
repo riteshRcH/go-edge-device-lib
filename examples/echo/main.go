@@ -11,12 +11,12 @@ import (
 	"log"
 	mrand "math/rand"
 
-	"github.com/riteshRcH/core/crypto"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/peerstore"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 
 	golog "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

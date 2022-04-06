@@ -8,10 +8,10 @@ import (
 	"time"
 
 	"github.com/libp2p/go-eventbus"
-	"github.com/riteshRcH/core/event"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/event"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

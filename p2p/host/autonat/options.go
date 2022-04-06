@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 )
 
 // config holds configurable options for the autonat subsystem.

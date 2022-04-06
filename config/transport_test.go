@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/libp2p/go-tcp-transport"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 
 	"github.com/stretchr/testify/require"
 )

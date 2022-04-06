@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/riteshRcH/core/discovery"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

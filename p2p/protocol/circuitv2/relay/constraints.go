@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/riteshRcH/core/peer"
 	asnutil "github.com/riteshRcH/go-edge-device-lib/asn-util"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )

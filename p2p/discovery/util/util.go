@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/riteshRcH/core/discovery"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 )

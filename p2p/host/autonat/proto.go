@@ -3,7 +3,7 @@ package autonat
 import (
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat/pb"
 
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

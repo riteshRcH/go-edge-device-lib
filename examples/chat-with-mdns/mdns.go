@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
 )

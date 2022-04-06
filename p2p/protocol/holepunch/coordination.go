@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/protocol"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch/pb"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 

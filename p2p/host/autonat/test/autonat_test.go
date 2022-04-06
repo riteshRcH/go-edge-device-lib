@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/event"
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/event"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat"

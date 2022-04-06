@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 // link implements mocknet.Link

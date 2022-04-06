@@ -10,11 +10,11 @@ import (
 
 	noise "github.com/libp2p/go-libp2p-noise"
 	"github.com/libp2p/go-tcp-transport"
-	"github.com/riteshRcH/core/connmgr"
-	"github.com/riteshRcH/core/crypto"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 
 	"github.com/stretchr/testify/require"

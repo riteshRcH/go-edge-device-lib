@@ -14,11 +14,11 @@ import (
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"
 	relayv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"
 
-	"github.com/riteshRcH/core/event"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/routing"
+	"github.com/riteshRcH/go-edge-device-lib/core/event"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/routing"
 
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

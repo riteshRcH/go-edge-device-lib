@@ -8,8 +8,8 @@ import (
 
 	blankhost "github.com/libp2p/go-libp2p-blankhost"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 

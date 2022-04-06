@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/event"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/event"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"

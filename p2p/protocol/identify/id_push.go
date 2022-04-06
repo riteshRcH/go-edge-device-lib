@@ -1,7 +1,7 @@
 package identify
 
 import (
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 )
 
 // IDPush is the protocol.ID of the Identify push protocol. It sends full identify messages containing

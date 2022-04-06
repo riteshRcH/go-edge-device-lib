@@ -10,9 +10,9 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/peerstore"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

@@ -3,7 +3,7 @@ package autonat
 import (
 	"net"
 
-	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )

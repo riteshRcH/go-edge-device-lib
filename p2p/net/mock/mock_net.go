@@ -7,11 +7,11 @@ import (
 	"sort"
 	"sync"
 
-	ic "github.com/riteshRcH/core/crypto"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/peerstore"
+	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 
 	bhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
 

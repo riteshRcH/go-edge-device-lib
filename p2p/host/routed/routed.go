@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/riteshRcH/core/connmgr"
-	"github.com/riteshRcH/core/event"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/peerstore"
-	"github.com/riteshRcH/core/protocol"
+	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
+	"github.com/riteshRcH/go-edge-device-lib/core/event"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
+	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 

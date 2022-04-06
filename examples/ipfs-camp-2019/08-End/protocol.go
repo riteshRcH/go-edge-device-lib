@@ -12,8 +12,8 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
-	"github.com/riteshRcH/core/host"
-	peer "github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	peer "github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 func sendMessage(ctx context.Context, topic *pubsub.Topic, msg string) {

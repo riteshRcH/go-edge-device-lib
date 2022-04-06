@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/require"
 
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/protocol"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	bhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
 )

@@ -12,10 +12,10 @@ import (
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
-	"github.com/riteshRcH/core/discovery"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 type mockRoutingTable struct {

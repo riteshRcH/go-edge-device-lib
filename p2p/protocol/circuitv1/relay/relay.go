@@ -11,9 +11,9 @@ import (
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/pb"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/util"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"

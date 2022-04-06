@@ -1,10 +1,10 @@
 package libp2p
 
 import (
-	"github.com/riteshRcH/core/connmgr"
-	"github.com/riteshRcH/core/control"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
+	"github.com/riteshRcH/go-edge-device-lib/core/control"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

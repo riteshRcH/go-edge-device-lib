@@ -7,7 +7,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
 	"github.com/riteshRcH/go-edge-device-lib/examples/testutils"
 )

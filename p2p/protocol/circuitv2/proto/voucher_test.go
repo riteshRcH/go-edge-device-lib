@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/crypto"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/record"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/record"
 )
 
 func TestReservationVoucher(t *testing.T) {

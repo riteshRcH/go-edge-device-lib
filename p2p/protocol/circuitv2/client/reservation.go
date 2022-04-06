@@ -9,10 +9,10 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/proto"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/util"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/peerstore"
-	"github.com/riteshRcH/core/record"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
+	"github.com/riteshRcH/go-edge-device-lib/core/record"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

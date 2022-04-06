@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
-	tu "github.com/riteshRcH/core/test"
+	tu "github.com/riteshRcH/go-edge-device-lib/core/test"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 
 	"github.com/stretchr/testify/require"

@@ -10,8 +10,8 @@ import (
 	time "time"
 
 	gomock "github.com/golang/mock/gomock"
-	crypto "github.com/riteshRcH/core/crypto"
-	peer "github.com/riteshRcH/core/peer"
+	crypto "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	peer "github.com/riteshRcH/go-edge-device-lib/core/peer"
 	multiaddr "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 

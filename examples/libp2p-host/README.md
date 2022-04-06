@@ -12,7 +12,7 @@ import (
 	"fmt"
 
 	"github.com/riteshRcH/go-edge-device-lib"
-	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 )
 
 // To construct a simple host with all the default settings, just use `New`

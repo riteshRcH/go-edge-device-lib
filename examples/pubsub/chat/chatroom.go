@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 )

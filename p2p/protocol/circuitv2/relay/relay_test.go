@@ -9,23 +9,23 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 
 	"github.com/libp2p/go-tcp-transport"
 
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/client"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"
 
-	"github.com/riteshRcH/core/crypto"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
 	swarm "github.com/libp2p/go-libp2p-swarm"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
-	"github.com/riteshRcH/core/metrics"
+	"github.com/riteshRcH/go-edge-device-lib/core/metrics"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 

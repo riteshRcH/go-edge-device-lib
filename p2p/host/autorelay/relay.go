@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/riteshRcH/core/discovery"
+	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/riteshRcH/core/crypto"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/protocol"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

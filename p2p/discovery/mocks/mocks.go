@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/riteshRcH/core/discovery"
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 type MockDiscoveryServer struct {

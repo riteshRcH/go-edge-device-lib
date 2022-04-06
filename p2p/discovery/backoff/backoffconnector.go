@@ -7,8 +7,8 @@ import (
 
 	lru "github.com/hashicorp/golang-lru"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 // BackoffConnector is a utility to connect to peers, but only if we have not recently tried connecting to them already

@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/test"
+	"github.com/riteshRcH/go-edge-device-lib/core/test"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 

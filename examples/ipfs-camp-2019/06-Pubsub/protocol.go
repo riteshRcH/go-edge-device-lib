@@ -9,9 +9,9 @@ import (
 
 	"io/ioutil"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/protocol"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 )
 
 const chatProtocol = protocol.ID("/libp2p/chat/1.0.0")

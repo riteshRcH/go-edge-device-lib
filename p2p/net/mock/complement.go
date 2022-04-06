@@ -1,7 +1,7 @@
 package mocknet
 
 import (
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 )
 
 // StreamComplement returns the other end of the given stream. This function

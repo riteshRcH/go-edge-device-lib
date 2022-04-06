@@ -1,7 +1,7 @@
 package autorelay
 
 import (
-	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
 )
 
 type AutoRelayHost struct {

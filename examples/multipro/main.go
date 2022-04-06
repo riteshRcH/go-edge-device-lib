@@ -5,9 +5,9 @@ import (
 	"log"
 	"math/rand"
 
-	"github.com/riteshRcH/core/crypto"
-	"github.com/riteshRcH/core/peerstore"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
+	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

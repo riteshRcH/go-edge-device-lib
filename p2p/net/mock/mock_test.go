@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/network"
-	"github.com/riteshRcH/core/peer"
-	"github.com/riteshRcH/core/protocol"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 
 	"github.com/libp2p/go-libp2p-testing/ci"
 	tnet "github.com/libp2p/go-libp2p-testing/net"

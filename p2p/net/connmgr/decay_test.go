@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/connmgr"
-	"github.com/riteshRcH/core/peer"
-	tu "github.com/riteshRcH/core/test"
+	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	tu "github.com/riteshRcH/go-edge-device-lib/core/test"
 	"github.com/stretchr/testify/require"
 
 	"github.com/benbjohnson/clock"

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/riteshRcH/core/host"
-	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/host"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/riteshRcH/go-edge-device-lib/zeroconf"
 

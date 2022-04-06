@@ -7,7 +7,7 @@ import (
 	pbv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/pb"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/util"
 
-	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 )
 
 var (
