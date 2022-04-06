@@ -5,8 +5,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 

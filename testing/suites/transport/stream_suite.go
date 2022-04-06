@@ -15,7 +15,9 @@ import (
 	crand "crypto/rand"
 	mrand "math/rand"
 
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 	"github.com/riteshRcH/go-edge-device-lib/testing/race"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

@@ -5,8 +5,8 @@ import (
 	"crypto/rand"
 	"testing"
 
-	ic "github.com/riteshRcH/go-edge-device-lib/corecrypto"
-	pb "github.com/riteshRcH/go-edge-device-lib/corecrypto/pb"
+	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	pb "github.com/riteshRcH/go-edge-device-lib/core/crypto/pb"
 )
 
 func TestBogusPublicKeyGeneration(t *testing.T) {

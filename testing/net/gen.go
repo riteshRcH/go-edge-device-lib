@@ -7,7 +7,10 @@ import (
 	"sync"
 	"testing"
 
-	ci "github.com/riteshRcH/go-edge-device-lib/corecrypto"
+	ci "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/core/test"
+	tetc "github.com/riteshRcH/testing/etc"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )

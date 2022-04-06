@@ -8,8 +8,8 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	network "github.com/riteshRcH/go-edge-device-lib/corenetwork"
-	peer "github.com/riteshRcH/go-edge-device-lib/corepeer"
+	network "github.com/riteshRcH/go-edge-device-lib/core/network"
+	peer "github.com/riteshRcH/go-edge-device-lib/core/peer"
 )
 
 // MockConnManagementScope is a mock of ConnManagementScope interface.

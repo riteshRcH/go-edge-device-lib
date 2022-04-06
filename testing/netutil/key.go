@@ -6,8 +6,9 @@ import (
 	"io"
 	"testing"
 
-	ic "github.com/riteshRcH/go-edge-device-lib/corecrypto"
-	pb "github.com/riteshRcH/go-edge-device-lib/corecrypto/pb"
+	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	pb "github.com/riteshRcH/go-edge-device-lib/core/crypto/pb"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

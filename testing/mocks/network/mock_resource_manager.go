@@ -8,9 +8,9 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	network "github.com/riteshRcH/go-edge-device-lib/corenetwork"
-	peer "github.com/riteshRcH/go-edge-device-lib/corepeer"
-	protocol "github.com/riteshRcH/go-edge-device-lib/coreprotocol"
+	network "github.com/riteshRcH/go-edge-device-lib/core/network"
+	peer "github.com/riteshRcH/go-edge-device-lib/core/peer"
+	protocol "github.com/riteshRcH/go-edge-device-lib/core/protocol"
 )
 
 // MockResourceManager is a mock of ResourceManager interface.

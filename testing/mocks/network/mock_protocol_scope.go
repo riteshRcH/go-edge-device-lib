@@ -8,8 +8,8 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	network "github.com/riteshRcH/go-edge-device-lib/corenetwork"
-	protocol "github.com/riteshRcH/go-edge-device-lib/coreprotocol"
+	network "github.com/riteshRcH/go-edge-device-lib/core/network"
+	protocol "github.com/riteshRcH/go-edge-device-lib/core/protocol"
 )
 
 // MockProtocolScope is a mock of ProtocolScope interface.

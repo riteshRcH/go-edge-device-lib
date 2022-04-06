@@ -3,8 +3,8 @@ package tnet
 import (
 	"testing"
 
-	"github.com/libp2p/go-libp2p-core/peer"
-	ci "github.com/riteshRcH/go-edge-device-lib/corecrypto"
+	ci "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
