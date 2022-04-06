@@ -27,7 +27,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 	"github.com/riteshRcH/go-edge-device-lib/core/record"
 
-	"github.com/libp2p/go-eventbus"
+	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 	inat "github.com/riteshRcH/go-edge-device-lib/morenat"
 	"github.com/riteshRcH/go-edge-device-lib/netroute"
 

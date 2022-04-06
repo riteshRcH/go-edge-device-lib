@@ -10,7 +10,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
-	"github.com/libp2p/go-eventbus"
+	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"

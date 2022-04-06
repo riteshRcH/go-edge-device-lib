@@ -7,11 +7,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/libp2p/go-eventbus"
 	"github.com/riteshRcH/go-edge-device-lib/core/event"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

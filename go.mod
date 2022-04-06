@@ -15,7 +15,6 @@ require (
 	github.com/jackpal/go-nat-pmp v1.0.2
 	github.com/koron/go-ssdp v0.0.2
 	github.com/libp2p/go-conn-security-multistream v0.3.0
-	github.com/libp2p/go-eventbus v0.2.1
 	github.com/libp2p/go-libp2p-blankhost v0.3.0
 	github.com/libp2p/go-libp2p-circuit v0.6.0
 	github.com/libp2p/go-libp2p-mplex v0.6.0

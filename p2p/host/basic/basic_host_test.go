@@ -10,7 +10,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/libp2p/go-eventbus"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/core/event"
 	"github.com/riteshRcH/go-edge-device-lib/core/helpers"
@@ -21,6 +20,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 	"github.com/riteshRcH/go-edge-device-lib/core/record"
 	"github.com/riteshRcH/go-edge-device-lib/core/test"
+	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 

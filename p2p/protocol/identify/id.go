@@ -16,7 +16,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 	"github.com/riteshRcH/go-edge-device-lib/core/record"
 
-	"github.com/libp2p/go-eventbus"
+	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify/pb"

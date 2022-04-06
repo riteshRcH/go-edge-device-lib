@@ -7,11 +7,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-eventbus"
 	"github.com/riteshRcH/go-edge-device-lib/core/event"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
+	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
