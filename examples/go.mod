@@ -11,7 +11,7 @@ require (
 	github.com/libp2p/go-libp2p-noise v0.3.0
 	github.com/libp2p/go-libp2p-swarm v0.10.2
 	github.com/libp2p/go-libp2p-tls v0.3.1
-	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220406201643-3592528580df
+	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220406202135-2e2c0ee8f04f
 )
 
 require (

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/multiformats/go-multicodec"
+	"github.com/riteshRcH/go-edge-device-lib/multicodec"
 )
 
 func TestFlagValue(t *testing.T) {
