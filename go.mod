@@ -36,7 +36,6 @@ require (
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1
 	github.com/minio/sha256-simd v1.0.0
 	github.com/mr-tron/base58 v1.2.0
-	github.com/multiformats/go-multicodec v0.4.1
 	github.com/raulk/go-watchdog v1.2.0
 	github.com/riteshRcH/testing v0.0.0-20220406003417-082ca063d768
 	github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572
