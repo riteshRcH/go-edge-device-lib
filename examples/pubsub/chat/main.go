@@ -8,10 +8,10 @@ import (
 	"time"
 
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
-	"github.com/libp2p/go-libp2p/p2p/discovery/mdns"
 	"github.com/riteshRcH/core/host"
 	"github.com/riteshRcH/core/peer"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
+	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
 )
 
 // DiscoveryInterval is how often we re-publish our mDNS records.

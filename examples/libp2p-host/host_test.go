@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/libp2p/go-libp2p/examples/testutils"
+	"github.com/riteshRcH/go-edge-device-lib/examples/testutils"
 )
 
 func TestMain(t *testing.T) {

@@ -5,11 +5,11 @@ import (
 	"log"
 	"time"
 
-	p2p "github.com/libp2p/go-libp2p/examples/multipro/pb"
 	"github.com/riteshRcH/core/crypto"
 	"github.com/riteshRcH/core/host"
 	"github.com/riteshRcH/core/peer"
 	"github.com/riteshRcH/core/protocol"
+	p2p "github.com/riteshRcH/go-edge-device-lib/examples/multipro/pb"
 
 	ggio "github.com/gogo/protobuf/io"
 	"github.com/gogo/protobuf/proto"
