@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/go-edge-device-lib/core/event"
 	"github.com/riteshRcH/testing/race"
 
 	"github.com/stretchr/testify/require"

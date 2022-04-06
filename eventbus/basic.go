@@ -7,7 +7,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/go-edge-device-lib/core/event"
 )
 
 ///////////////////////
