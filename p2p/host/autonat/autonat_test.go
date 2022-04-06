@@ -15,7 +15,7 @@ import (
 	bhost "github.com/libp2p/go-libp2p-blankhost"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/stretchr/testify/require"
 )
 

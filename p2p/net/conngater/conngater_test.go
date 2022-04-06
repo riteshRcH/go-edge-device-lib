@@ -7,7 +7,7 @@ import (
 	"github.com/riteshRcH/core/network"
 	"github.com/riteshRcH/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/datastore"
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func TestConnectionGater(t *testing.T) {

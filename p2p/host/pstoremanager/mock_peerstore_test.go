@@ -12,7 +12,7 @@ import (
 	gomock "github.com/golang/mock/gomock"
 	crypto "github.com/riteshRcH/core/crypto"
 	peer "github.com/riteshRcH/core/peer"
-	multiaddr "github.com/riteshRcH/multiaddr"
+	multiaddr "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // MockPeerstore is a mock of Peerstore interface.

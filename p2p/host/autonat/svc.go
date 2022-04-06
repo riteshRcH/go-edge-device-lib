@@ -14,7 +14,7 @@ import (
 	"github.com/riteshRcH/core/peerstore"
 
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 var streamTimeout = 60 * time.Second

@@ -13,7 +13,7 @@ import (
 	"github.com/riteshRcH/core/protocol"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
-	"github.com/riteshRcH/multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func handleStream(stream network.Stream) {

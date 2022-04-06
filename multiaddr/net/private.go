@@ -3,7 +3,7 @@ package manet
 import (
 	"net"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // Private4 and Private6 are well-known private networks

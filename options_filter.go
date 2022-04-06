@@ -6,7 +6,7 @@ import (
 	"github.com/riteshRcH/core/network"
 	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // filtersConnectionGater is an adapter that turns multiaddr.Filter into a

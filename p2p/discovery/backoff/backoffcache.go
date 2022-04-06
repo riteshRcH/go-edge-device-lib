@@ -9,7 +9,7 @@ import (
 	"github.com/riteshRcH/core/discovery"
 	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // BackoffDiscovery is an implementation of discovery that caches peer data and attenuates repeated queries

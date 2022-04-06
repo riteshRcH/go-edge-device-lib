@@ -11,7 +11,7 @@ import (
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"
 
 	swarm "github.com/libp2p/go-libp2p-swarm"
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func main() {

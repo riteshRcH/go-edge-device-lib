@@ -10,7 +10,7 @@ Basic Use:
   import (
     "bytes"
     "strings"
-    ma "github.com/riteshRcH/multiaddr"
+    ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
   )
 
   // construct from a string (err signals parse failure)

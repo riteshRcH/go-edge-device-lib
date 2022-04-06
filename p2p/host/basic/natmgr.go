@@ -10,7 +10,7 @@ import (
 
 	"github.com/riteshRcH/core/network"
 	inat "github.com/riteshRcH/go-edge-device-lib/morenat"
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // NATManager is a simple interface to manage NAT devices.

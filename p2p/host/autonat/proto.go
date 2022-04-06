@@ -5,7 +5,7 @@ import (
 
 	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // AutoNATProto identifies the autonat service protocol

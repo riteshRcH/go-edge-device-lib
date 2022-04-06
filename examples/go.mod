@@ -12,8 +12,7 @@ require (
 	github.com/libp2p/go-libp2p-swarm v0.10.2
 	github.com/libp2p/go-libp2p-tls v0.3.1
 	github.com/riteshRcH/core v0.0.0-20220403201238-b84e50eb9a55
-	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220406165551-ef5816f4f18e
-	github.com/riteshRcH/multiaddr v0.0.0-20220402164736-0522cc1847da
+	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220406173133-2c5d7f6a7fd4
 )
 
 require (
@@ -115,6 +114,7 @@ require (
 	github.com/prometheus/procfs v0.7.3 // indirect
 	github.com/raulk/clock v1.1.0 // indirect
 	github.com/raulk/go-watchdog v1.2.0 // indirect
+	github.com/riteshRcH/multiaddr v0.0.0-20220402164736-0522cc1847da // indirect
 	github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/whyrusleeping/go-keyspace v0.0.0-20160322163242-5b898ac5add1 // indirect

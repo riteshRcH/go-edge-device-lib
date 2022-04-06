@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	maddr "github.com/riteshRcH/multiaddr"
+	maddr "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 var (

@@ -45,7 +45,7 @@ import (
 	"github.com/riteshRcH/core/peerstore"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
-	"github.com/riteshRcH/multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func handleStream(s network.Stream) {

@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/riteshRcH/core/test"
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func randomIPv4Addr(t *testing.T) ma.Multiaddr {

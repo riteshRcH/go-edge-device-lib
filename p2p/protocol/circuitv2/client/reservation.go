@@ -14,7 +14,7 @@ import (
 	"github.com/riteshRcH/core/peerstore"
 	"github.com/riteshRcH/core/record"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 var ReserveTimeout = time.Minute

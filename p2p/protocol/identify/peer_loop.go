@@ -15,7 +15,7 @@ import (
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify/pb"
 
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 var errProtocolNotSupported = errors.New("protocol not supported")

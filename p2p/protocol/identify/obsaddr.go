@@ -13,8 +13,8 @@ import (
 	"github.com/riteshRcH/core/network"
 	"github.com/riteshRcH/core/peerstore"
 
-	ma "github.com/riteshRcH/multiaddr"
-	manet "github.com/riteshRcH/multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )
 
 // ActivationThresh sets how many times an address must be seen as "activated"

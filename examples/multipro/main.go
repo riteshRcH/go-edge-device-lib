@@ -9,7 +9,7 @@ import (
 	"github.com/riteshRcH/core/peerstore"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func main() {

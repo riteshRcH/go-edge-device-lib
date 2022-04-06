@@ -6,7 +6,7 @@ import (
 
 	"github.com/riteshRcH/core/discovery"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 var (

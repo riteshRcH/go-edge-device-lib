@@ -31,14 +31,13 @@ require (
 	github.com/libp2p/go-ws-transport v0.6.0
 	github.com/mattn/go-isatty v0.0.14
 	github.com/mattn/go-pointer v0.0.1
-	github.com/miekg/dns v1.1.47
+	github.com/miekg/dns v1.1.48
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1
 	github.com/minio/sha256-simd v1.0.0
 	github.com/mr-tron/base58 v1.2.0
 	github.com/multiformats/go-multicodec v0.4.1
 	github.com/raulk/go-watchdog v1.2.0
 	github.com/riteshRcH/core v0.0.0-20220403201238-b84e50eb9a55
-	github.com/riteshRcH/multiaddr v0.0.0-20220402164736-0522cc1847da
 	github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572
 	github.com/spaolacci/murmur3 v1.1.0
 	github.com/stretchr/testify v1.7.1
@@ -46,9 +45,9 @@ require (
 	go.uber.org/multierr v1.8.0
 	go.uber.org/zap v1.21.0
 	golang.org/x/crypto v0.0.0-20220331220935-ae2d96664a29
-	golang.org/x/net v0.0.0-20220325170049-de3da57026de
+	golang.org/x/net v0.0.0-20220403103023-749bd193bc2b
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20220330033206-e17cdc41300f
+	golang.org/x/sys v0.0.0-20220406163625-3f8b81556e12
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
 	lukechampine.com/blake3 v1.1.7

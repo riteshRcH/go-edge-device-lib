@@ -14,8 +14,8 @@ import (
 	"github.com/riteshRcH/core/peer"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
-	ma "github.com/riteshRcH/multiaddr"
-	manet "github.com/riteshRcH/multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )
 
 var log = logging.Logger("autonat")

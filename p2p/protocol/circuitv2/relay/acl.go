@@ -3,7 +3,7 @@ package relay
 import (
 	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // ACLFilter is an Access Control mechanism for relayed connect.

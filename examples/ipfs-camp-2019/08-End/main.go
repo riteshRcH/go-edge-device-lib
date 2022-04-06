@@ -18,8 +18,8 @@ import (
 	"github.com/riteshRcH/core/peer"
 	"github.com/riteshRcH/core/routing"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
+	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
-	"github.com/riteshRcH/multiaddr"
 )
 
 type mdnsNotifee struct {

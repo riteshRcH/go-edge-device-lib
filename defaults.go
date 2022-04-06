@@ -15,8 +15,8 @@ import (
 	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
 	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/net/connmgr"
-	"github.com/riteshRcH/multiaddr"
 )
 
 // DefaultSecurity is the default security option.

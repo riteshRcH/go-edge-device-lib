@@ -7,7 +7,7 @@ import (
 	"github.com/riteshRcH/core/network"
 	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 // AutoNAT is the interface for NAT autodiscovery

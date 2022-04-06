@@ -9,7 +9,7 @@ import (
 	ws "github.com/libp2p/go-ws-transport"
 	"github.com/riteshRcH/core/peer"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
-	"github.com/riteshRcH/multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func main() {

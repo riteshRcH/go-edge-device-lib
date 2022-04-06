@@ -3,7 +3,7 @@ package manet
 import (
 	"testing"
 
-	ma "github.com/riteshRcH/multiaddr"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/stretchr/testify/require"
 )
 

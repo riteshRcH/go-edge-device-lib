@@ -10,7 +10,7 @@ import (
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/core/peer"
 	"github.com/riteshRcH/core/transport"
-	"github.com/riteshRcH/multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
 func makeMA(a string) multiaddr.Multiaddr {

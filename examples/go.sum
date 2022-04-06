@@ -974,8 +974,8 @@ github.com/riteshRcH/core v0.0.0-20220403201238-b84e50eb9a55 h1:y9wAYmg4itkHQmYb
 github.com/riteshRcH/core v0.0.0-20220403201238-b84e50eb9a55/go.mod h1:65wupEdHCH0oiO/DHhE7rwz+zENdSOstkSELgpE2lKc=
 github.com/riteshRcH/go-edge-device-lib v0.0.0-20220401005934-08ff83f8d508/go.mod h1:lA3SogeYlTorI38LN4i2p1feMm7+lhP16rLns18c8TM=
 github.com/riteshRcH/go-edge-device-lib v0.0.0-20220403201141-238a5d3dd2f3/go.mod h1:lA3SogeYlTorI38LN4i2p1feMm7+lhP16rLns18c8TM=
-github.com/riteshRcH/go-edge-device-lib v0.0.0-20220406165551-ef5816f4f18e h1:a9fnsbAJXfdq31nPIcd0SeQOHA1aZE1/xpWMA4J1150=
-github.com/riteshRcH/go-edge-device-lib v0.0.0-20220406165551-ef5816f4f18e/go.mod h1:KBaAa0XtnZxrREMJtOYBnwWAt2axoQFT+zOXTglnzSc=
+github.com/riteshRcH/go-edge-device-lib v0.0.0-20220406173133-2c5d7f6a7fd4 h1:CPieUol3iEZ7BSMhMweDR/vwXXhfoE99q8VwYiy/kYE=
+github.com/riteshRcH/go-edge-device-lib v0.0.0-20220406173133-2c5d7f6a7fd4/go.mod h1:KBaAa0XtnZxrREMJtOYBnwWAt2axoQFT+zOXTglnzSc=
 github.com/riteshRcH/multiaddr v0.0.0-20220402164736-0522cc1847da h1:ZIS5C5O5lSeTtMcCEDkwN0yncPm4OFNewk0Zbm6CFR0=
 github.com/riteshRcH/multiaddr v0.0.0-20220402164736-0522cc1847da/go.mod h1:mTx+K/36FUjfbxTG0kEzIV7Quhk03DXw6z2r3CgcHfk=
 github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af/go.mod h1:XWv6SoW27p1b0cqNHllgS5HIMJraePCO15w5zCzIWYg=

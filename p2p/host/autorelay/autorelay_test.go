@@ -21,8 +21,8 @@ import (
 	"github.com/riteshRcH/core/routing"
 
 	"github.com/riteshRcH/go-edge-device-lib/cid"
-	ma "github.com/riteshRcH/multiaddr"
-	manet "github.com/riteshRcH/multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 	"github.com/stretchr/testify/require"
 )
 

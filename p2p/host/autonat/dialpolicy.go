@@ -4,8 +4,8 @@ import (
 	"net"
 
 	"github.com/riteshRcH/core/host"
-	ma "github.com/riteshRcH/multiaddr"
-	manet "github.com/riteshRcH/multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )
 
 type dialPolicy struct {

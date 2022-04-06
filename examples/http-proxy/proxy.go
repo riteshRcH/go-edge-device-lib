@@ -17,8 +17,8 @@ import (
 	"github.com/riteshRcH/core/peerstore"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
-	ma "github.com/riteshRcH/multiaddr"
-	manet "github.com/riteshRcH/multiaddr/net"
+	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )
 
 // Protocol defines the libp2p protocol that we will use for the libp2p proxy
