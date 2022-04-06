@@ -3,7 +3,7 @@ package madns
 import (
 	"context"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 func Matches(maddr ma.Multiaddr) (matches bool) {

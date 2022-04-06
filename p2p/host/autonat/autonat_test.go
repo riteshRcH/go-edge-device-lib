@@ -7,15 +7,15 @@ import (
 
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat/pb"
 
-	"github.com/libp2p/go-libp2p-core/event"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
-	ma "github.com/multiformats/go-multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
+	ma "github.com/riteshRcH/multiaddr"
 	"github.com/stretchr/testify/require"
 )
 

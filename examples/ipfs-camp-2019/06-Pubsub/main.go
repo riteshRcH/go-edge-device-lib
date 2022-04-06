@@ -7,10 +7,6 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/routing"
 	disc "github.com/libp2p/go-libp2p-discovery"
 	kaddht "github.com/libp2p/go-libp2p-kad-dht"
 	mplex "github.com/libp2p/go-libp2p-mplex"
@@ -19,8 +15,12 @@ import (
 	"github.com/libp2p/go-libp2p/p2p/discovery/mdns"
 	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
-	"github.com/multiformats/go-multiaddr"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/routing"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
+	"github.com/riteshRcH/multiaddr"
 )
 
 type discoveryNotifee struct {

@@ -8,13 +8,13 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/peer"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/riteshRcH/go-edge-device-lib/zeroconf"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
+	ma "github.com/riteshRcH/multiaddr"
+	manet "github.com/riteshRcH/multiaddr/net"
 )
 
 const (

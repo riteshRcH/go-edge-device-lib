@@ -8,13 +8,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/connmgr"
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/metrics"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/peerstore"
-	"github.com/libp2p/go-libp2p-core/pnet"
+	"github.com/riteshRcH/core/connmgr"
+	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/core/metrics"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/peerstore"
+	"github.com/riteshRcH/core/pnet"
 
 	"github.com/riteshRcH/go-edge-device-lib/config"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autorelay"
@@ -22,8 +22,8 @@ import (
 	relayv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch"
 
-	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 // ListenAddrStrings configures libp2p to listen on the given (unparsed)

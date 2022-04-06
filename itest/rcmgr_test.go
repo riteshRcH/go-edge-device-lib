@@ -11,8 +11,8 @@ import (
 
 	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
 
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
 	"github.com/stretchr/testify/require"

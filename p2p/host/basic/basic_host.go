@@ -17,15 +17,15 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/ping"
 
-	"github.com/libp2p/go-libp2p-core/connmgr"
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/event"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/peerstore"
-	"github.com/libp2p/go-libp2p-core/protocol"
-	"github.com/libp2p/go-libp2p-core/record"
+	"github.com/riteshRcH/core/connmgr"
+	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/peerstore"
+	"github.com/riteshRcH/core/protocol"
+	"github.com/riteshRcH/core/record"
 
 	"github.com/libp2p/go-eventbus"
 	inat "github.com/riteshRcH/go-edge-device-lib/morenat"
@@ -33,10 +33,10 @@ import (
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
 	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
+	ma "github.com/riteshRcH/multiaddr"
+	manet "github.com/riteshRcH/multiaddr/net"
 )
 
 // The maximum number of address resolution steps we'll perform for a single

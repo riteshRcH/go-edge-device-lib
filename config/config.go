@@ -5,18 +5,18 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/connmgr"
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/metrics"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/peerstore"
-	"github.com/libp2p/go-libp2p-core/pnet"
-	"github.com/libp2p/go-libp2p-core/routing"
-	"github.com/libp2p/go-libp2p-core/sec"
-	"github.com/libp2p/go-libp2p-core/transport"
 	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
+	"github.com/riteshRcH/core/connmgr"
+	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/metrics"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/peerstore"
+	"github.com/riteshRcH/core/pnet"
+	"github.com/riteshRcH/core/routing"
+	"github.com/riteshRcH/core/sec"
+	"github.com/riteshRcH/core/transport"
 
 	drouting "github.com/riteshRcH/go-edge-device-lib/p2p/discovery/routing"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat"
@@ -31,9 +31,9 @@ import (
 	swarm "github.com/libp2p/go-libp2p-swarm"
 	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
 
-	ma "github.com/multiformats/go-multiaddr"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 var log = logging.Logger("p2p-config")

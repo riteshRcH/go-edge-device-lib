@@ -5,7 +5,7 @@ import (
 	"net"
 	"testing"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 var ip4a = net.IPAddr{IP: net.ParseIP("192.0.2.1")}

@@ -10,11 +10,11 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/proto"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/util"
 
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/peerstore"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/peerstore"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 const maxMessageSize = 4096

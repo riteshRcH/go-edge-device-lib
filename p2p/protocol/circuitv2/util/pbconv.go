@@ -6,9 +6,9 @@ import (
 	pbv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/pb"
 	pbv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/pb"
 
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 func PeerToPeerInfoV1(p *pbv1.CircuitRelay_Peer) (peer.AddrInfo, error) {

@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/protocol"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/protocol"
 
 	"github.com/libp2p/go-libp2p-testing/ci"
 	tnet "github.com/libp2p/go-libp2p-testing/net"

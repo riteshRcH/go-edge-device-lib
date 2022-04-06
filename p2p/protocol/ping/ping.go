@@ -7,9 +7,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"

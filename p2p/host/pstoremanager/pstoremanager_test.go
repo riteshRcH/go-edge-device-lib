@@ -6,9 +6,9 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/pstoremanager"
 
-	"github.com/libp2p/go-libp2p-core/event"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 
 	"github.com/libp2p/go-eventbus"
 

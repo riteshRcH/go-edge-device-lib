@@ -8,22 +8,22 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/event"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/peerstore"
-	"github.com/libp2p/go-libp2p-core/record"
+	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/peerstore"
+	"github.com/riteshRcH/core/record"
 
 	"github.com/libp2p/go-eventbus"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify/pb"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
 	msmux "github.com/riteshRcH/go-edge-device-lib/multistream"
+	ma "github.com/riteshRcH/multiaddr"
+	manet "github.com/riteshRcH/multiaddr/net"
 
 	"github.com/gogo/protobuf/proto"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"

@@ -7,12 +7,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/connmgr"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/connmgr"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 var log = logging.Logger("connmgr")

@@ -7,13 +7,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/crypto"
+	"github.com/riteshRcH/core/crypto"
 
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 
-	tu "github.com/libp2p/go-libp2p-core/test"
-	ma "github.com/multiformats/go-multiaddr"
+	tu "github.com/riteshRcH/core/test"
+	ma "github.com/riteshRcH/multiaddr"
 
 	"github.com/stretchr/testify/require"
 )

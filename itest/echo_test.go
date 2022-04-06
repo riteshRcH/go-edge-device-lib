@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/peerstore"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/peerstore"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
 	"github.com/stretchr/testify/require"

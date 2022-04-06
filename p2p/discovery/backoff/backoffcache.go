@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/discovery"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/discovery"
+	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 // BackoffDiscovery is an implementation of discovery that caches peer data and attenuates repeated queries

@@ -11,19 +11,19 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/libp2p/go-libp2p-core/discovery"
-	"github.com/libp2p/go-libp2p-core/event"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/routing"
+	"github.com/riteshRcH/core/discovery"
+	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/routing"
 
 	basic "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"
 	circuitv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/client"
 	circuitv2_proto "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/proto"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
+	ma "github.com/riteshRcH/multiaddr"
+	manet "github.com/riteshRcH/multiaddr/net"
 )
 
 const (

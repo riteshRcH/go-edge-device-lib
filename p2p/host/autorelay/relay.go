@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/discovery"
+	"github.com/riteshRcH/core/discovery"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 var (

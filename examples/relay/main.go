@@ -4,14 +4,14 @@ import (
 	"context"
 	"log"
 
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"
 
 	swarm "github.com/libp2p/go-libp2p-swarm"
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 func main() {

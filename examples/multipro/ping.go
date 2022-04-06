@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/network"
 
 	proto "github.com/gogo/protobuf/proto"
 	uuid "github.com/google/uuid"

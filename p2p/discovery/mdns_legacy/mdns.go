@@ -8,13 +8,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/peer"
 	mdnsnew "github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	ma "github.com/riteshRcH/multiaddr"
+	manet "github.com/riteshRcH/multiaddr/net"
 	"github.com/whyrusleeping/mdns"
 )
 

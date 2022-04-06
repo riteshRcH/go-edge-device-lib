@@ -6,9 +6,9 @@ import (
 	"time"
 
 	blhost "github.com/libp2p/go-libp2p-blankhost"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

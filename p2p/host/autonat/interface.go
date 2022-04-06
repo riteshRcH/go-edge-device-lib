@@ -4,10 +4,10 @@ import (
 	"context"
 	"io"
 
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 // AutoNAT is the interface for NAT autodiscovery

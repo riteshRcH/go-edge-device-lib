@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/protocol"
+	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/protocol"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
-	"github.com/multiformats/go-multiaddr"
+	"github.com/riteshRcH/multiaddr"
 )
 
 func handleStream(stream network.Stream) {

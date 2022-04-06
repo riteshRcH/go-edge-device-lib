@@ -6,9 +6,9 @@ import (
 
 	relayv2 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"
 
-	"github.com/libp2p/go-libp2p-core/event"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/network"
 )
 
 type RelayManager struct {

@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/riteshRcH/core/network"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/transport"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/transport"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 var circuitProtocol = ma.ProtocolWithCode(ma.P_CIRCUIT)

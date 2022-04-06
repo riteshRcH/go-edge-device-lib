@@ -3,9 +3,9 @@ package config
 import (
 	"testing"
 
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/transport"
 	"github.com/libp2p/go-tcp-transport"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/transport"
 
 	"github.com/stretchr/testify/require"
 )

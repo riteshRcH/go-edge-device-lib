@@ -3,8 +3,8 @@ package autorelay
 import (
 	"encoding/binary"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
+	ma "github.com/riteshRcH/multiaddr"
+	manet "github.com/riteshRcH/multiaddr/net"
 )
 
 // This function cleans up a relay's address set to remove private addresses and curtail

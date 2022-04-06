@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/discovery"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/routing"
+	"github.com/riteshRcH/core/discovery"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/routing"
 
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 	mh "github.com/riteshRcH/go-edge-device-lib/multihash"

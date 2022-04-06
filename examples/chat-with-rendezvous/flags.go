@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"
-	maddr "github.com/multiformats/go-multiaddr"
+	maddr "github.com/riteshRcH/multiaddr"
 )
 
 // A new type we need for writing a custom flag parser

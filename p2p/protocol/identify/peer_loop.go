@@ -7,15 +7,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/protocol"
-	"github.com/libp2p/go-libp2p-core/record"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/protocol"
+	"github.com/riteshRcH/core/record"
 
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify/pb"
 
-	ma "github.com/multiformats/go-multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 var errProtocolNotSupported = errors.New("protocol not supported")

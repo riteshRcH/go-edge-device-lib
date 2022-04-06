@@ -12,15 +12,15 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/proto"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/util"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/record"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/record"
 
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	ma "github.com/riteshRcH/multiaddr"
+	manet "github.com/riteshRcH/multiaddr/net"
 )
 
 const (

@@ -6,12 +6,12 @@ import (
 	"time"
 
 	connmgr "github.com/libp2p/go-libp2p-connmgr"
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/routing"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	noise "github.com/libp2p/go-libp2p-noise"
 	libp2ptls "github.com/libp2p/go-libp2p-tls"
+	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/routing"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 )
 

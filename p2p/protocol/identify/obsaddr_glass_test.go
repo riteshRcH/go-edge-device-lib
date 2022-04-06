@@ -6,7 +6,7 @@ package identify
 import (
 	"testing"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 	"github.com/stretchr/testify/require"
 )
 

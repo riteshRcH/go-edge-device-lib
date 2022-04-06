@@ -3,11 +3,11 @@ package basichost
 import (
 	"sync"
 
-	"github.com/libp2p/go-libp2p-core/event"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/event"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 type peerConnectWatcher struct {

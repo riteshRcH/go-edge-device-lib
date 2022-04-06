@@ -10,11 +10,11 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/peerstore"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/peerstore"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 var (

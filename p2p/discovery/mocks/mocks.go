@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/discovery"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/discovery"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/peer"
 )
 
 type MockDiscoveryServer struct {

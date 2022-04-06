@@ -3,9 +3,9 @@ package autonat
 import (
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat/pb"
 
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 // AutoNATProto identifies the autonat service protocol

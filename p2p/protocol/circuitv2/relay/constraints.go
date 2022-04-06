@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-libp2p-core/peer"
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr/net"
+	"github.com/riteshRcH/core/peer"
 	asnutil "github.com/riteshRcH/go-edge-device-lib/asn-util"
+	ma "github.com/riteshRcH/multiaddr"
+	manet "github.com/riteshRcH/multiaddr/net"
 )
 
 var validity = 30 * time.Minute

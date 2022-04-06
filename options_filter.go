@@ -1,12 +1,12 @@
 package libp2p
 
 import (
-	"github.com/libp2p/go-libp2p-core/connmgr"
-	"github.com/libp2p/go-libp2p-core/control"
-	"github.com/libp2p/go-libp2p-core/network"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/riteshRcH/core/connmgr"
+	"github.com/riteshRcH/core/control"
+	"github.com/riteshRcH/core/network"
+	"github.com/riteshRcH/core/peer"
 
-	ma "github.com/multiformats/go-multiaddr"
+	ma "github.com/riteshRcH/multiaddr"
 )
 
 // filtersConnectionGater is an adapter that turns multiaddr.Filter into a

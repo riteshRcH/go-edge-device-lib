@@ -6,13 +6,13 @@ import (
 	"reflect"
 	"runtime"
 
-	"github.com/libp2p/go-libp2p-core/network"
+	"github.com/riteshRcH/core/network"
 
-	"github.com/libp2p/go-libp2p-core/pnet"
+	"github.com/riteshRcH/core/pnet"
 
-	"github.com/libp2p/go-libp2p-core/connmgr"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/transport"
+	"github.com/riteshRcH/core/connmgr"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/transport"
 )
 
 var errorType = reflect.TypeOf((*error)(nil)).Elem()

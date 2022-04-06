@@ -8,14 +8,14 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/libp2p/go-libp2p-core/connmgr"
-	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/libp2p/go-libp2p-core/host"
-	"github.com/libp2p/go-libp2p-core/peer"
-	"github.com/libp2p/go-libp2p-core/transport"
 	noise "github.com/libp2p/go-libp2p-noise"
 	"github.com/libp2p/go-tcp-transport"
-	ma "github.com/multiformats/go-multiaddr"
+	"github.com/riteshRcH/core/connmgr"
+	"github.com/riteshRcH/core/crypto"
+	"github.com/riteshRcH/core/host"
+	"github.com/riteshRcH/core/peer"
+	"github.com/riteshRcH/core/transport"
+	ma "github.com/riteshRcH/multiaddr"
 
 	"github.com/stretchr/testify/require"
 )
