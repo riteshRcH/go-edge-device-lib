@@ -6,6 +6,7 @@ require (
 	github.com/benbjohnson/clock v1.3.0
 	github.com/btcsuite/btcd v0.22.0-beta
 	github.com/coreos/go-semver v0.3.0
+	github.com/flynn/noise v1.0.0
 	github.com/gogo/protobuf v1.3.2
 	github.com/golang/mock v1.6.0
 	github.com/google/gopacket v1.1.19
@@ -40,6 +41,7 @@ require (
 	github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572
 	github.com/spaolacci/murmur3 v1.1.0
 	github.com/stretchr/testify v1.7.1
+	github.com/syndtr/goleveldb v1.0.0
 	github.com/whyrusleeping/mdns v0.0.0-20190826153040-b9b60ed33aa9
 	go.uber.org/atomic v1.9.0
 	go.uber.org/multierr v1.8.0
