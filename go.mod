@@ -6,6 +6,7 @@ require (
 	github.com/benbjohnson/clock v1.3.0
 	github.com/btcsuite/btcd v0.22.0-beta
 	github.com/coreos/go-semver v0.3.0
+	github.com/dgraph-io/badger v1.6.2
 	github.com/flynn/noise v1.0.0
 	github.com/gogo/protobuf v1.3.2
 	github.com/golang/mock v1.6.0
