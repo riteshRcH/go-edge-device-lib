@@ -8,7 +8,7 @@ import (
 	"net"
 	"sync"
 
-	mplex "github.com/libp2p/go-mplex"
+	mplex "github.com/riteshRcH/go-edge-device-lib/mplex"
 )
 
 var jsTestData = "test data from js %d"
