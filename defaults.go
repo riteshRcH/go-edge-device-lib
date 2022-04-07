@@ -7,7 +7,6 @@ import (
 
 	mplex "github.com/libp2p/go-libp2p-mplex"
 	noise "github.com/libp2p/go-libp2p-noise"
-	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
 	quic "github.com/libp2p/go-libp2p-quic-transport"
 	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
 	tls "github.com/libp2p/go-libp2p-tls"
@@ -17,6 +16,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/net/connmgr"
+	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
 )
 
 // DefaultSecurity is the default security option.

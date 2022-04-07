@@ -25,10 +25,10 @@ import (
 	coretest "github.com/riteshRcH/go-edge-device-lib/core/test"
 
 	blhost "github.com/libp2p/go-libp2p-blankhost"
-	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
 	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/libp2p/go-libp2p-testing/race"
 	"github.com/riteshRcH/go-edge-device-lib/eventbus"
+	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
 
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

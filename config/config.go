@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/libp2p/go-libp2p-peerstore/pstoremem"
 	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
@@ -17,6 +16,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
 	"github.com/riteshRcH/go-edge-device-lib/core/sec"
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
+	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
 
 	drouting "github.com/riteshRcH/go-edge-device-lib/p2p/discovery/routing"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat"
