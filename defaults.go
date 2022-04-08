@@ -5,11 +5,11 @@ package libp2p
 import (
 	"crypto/rand"
 
-	mplex "github.com/libp2p/go-libp2p-mplex"
-	noise "github.com/libp2p/go-libp2p-noise"
-	quic "github.com/libp2p/go-libp2p-quic-transport"
+	mplex "github.com/riteshRcH/go-edge-device-lib/mplex"
+	noise "github.com/riteshRcH/go-edge-device-lib/noise"
+	quic "github.com/riteshRcH/go-edge-device-lib/quic"
 	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
-	yamux "github.com/libp2p/go-libp2p-yamux"
+	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
 	ws "github.com/libp2p/go-ws-transport"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	tls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"

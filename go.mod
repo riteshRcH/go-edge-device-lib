@@ -25,7 +25,6 @@ require (
 	github.com/libp2p/go-libp2p-resource-manager v0.1.5
 	github.com/libp2p/go-libp2p-swarm v0.10.2
 	github.com/libp2p/go-libp2p-testing v0.8.0
-	github.com/libp2p/go-libp2p-tls v0.3.1
 	github.com/libp2p/go-libp2p-yamux v0.8.2
 	github.com/libp2p/go-stream-muxer-multistream v0.4.0
 	github.com/libp2p/go-ws-transport v0.6.0
