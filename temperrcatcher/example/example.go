@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	tec "github.com/jbenet/go-temp-err-catcher"
+	tec "github.com/riteshRcH/go-edge-device-lib/temperrcatcher"
 )
 
 var (
