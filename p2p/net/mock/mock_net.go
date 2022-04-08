@@ -15,9 +15,9 @@ import (
 
 	bhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
 
-	p2putil "github.com/libp2p/go-libp2p-testing/netutil"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
+	p2putil "github.com/riteshRcH/go-edge-device-lib/testing/netutil"
 )
 
 // IP6 range that gets blackholed (in case our traffic ever makes it out onto

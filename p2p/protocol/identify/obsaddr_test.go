@@ -12,9 +12,9 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
-	p2putil "github.com/libp2p/go-libp2p-testing/netutil"
 	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	p2putil "github.com/riteshRcH/go-edge-device-lib/testing/netutil"
 	"github.com/stretchr/testify/require"
 )
 

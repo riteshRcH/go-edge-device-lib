@@ -15,9 +15,9 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 
-	"github.com/libp2p/go-libp2p-testing/ci"
-	tnet "github.com/libp2p/go-libp2p-testing/net"
-	"github.com/libp2p/go-libp2p-testing/race"
+	"github.com/riteshRcH/go-edge-device-lib/testing/ci"
+	tnet "github.com/riteshRcH/go-edge-device-lib/testing/net"
+	"github.com/riteshRcH/go-edge-device-lib/testing/race"
 )
 
 func TestNetworkSetup(t *testing.T) {

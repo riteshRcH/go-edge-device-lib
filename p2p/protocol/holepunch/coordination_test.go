@@ -9,11 +9,11 @@ import (
 
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 
-	"github.com/libp2p/go-libp2p-testing/race"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
+	"github.com/riteshRcH/go-edge-device-lib/testing/race"
 
 	relayv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/relay"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch"

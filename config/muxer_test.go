@@ -10,7 +10,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	bhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
 
-	yamux "github.com/libp2p/go-libp2p-yamux"
+	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
 )
 
 func TestMuxerSimple(t *testing.T) {

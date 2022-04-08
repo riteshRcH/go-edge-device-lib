@@ -16,7 +16,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
-	"github.com/libp2p/go-libp2p-noise/pb"
+	"github.com/riteshRcH/go-edge-device-lib/noise/pb"
 )
 
 // payloadSigPrefix is prepended to our Noise static key before signing with

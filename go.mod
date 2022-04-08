@@ -20,12 +20,15 @@ require (
 	github.com/koron/go-ssdp v0.0.2
 	github.com/libp2p/go-libp2p-blankhost v0.3.0
 	github.com/libp2p/go-libp2p-circuit v0.6.0
-	github.com/libp2p/go-libp2p-noise v0.3.0
+	github.com/libp2p/go-libp2p-mplex v0.6.0 // indirect
+	github.com/libp2p/go-libp2p-quic-transport v0.16.1 // indirect
 	github.com/libp2p/go-libp2p-resource-manager v0.1.5
 	github.com/libp2p/go-libp2p-swarm v0.10.2
-	github.com/libp2p/go-libp2p-testing v0.8.0
-	github.com/libp2p/go-libp2p-yamux v0.8.2
-	github.com/libp2p/go-stream-muxer-multistream v0.4.0
+	github.com/libp2p/go-libp2p-tls v0.3.1 // indirect
+	github.com/libp2p/go-libp2p-transport-upgrader v0.7.1 // indirect
+	github.com/libp2p/go-libp2p-yamux v0.8.2 // indirect
+	github.com/libp2p/go-msgio v0.1.0 // indirect
+	github.com/libp2p/go-tcp-transport v0.5.1 // indirect
 	github.com/libp2p/go-ws-transport v0.6.0
 	github.com/lucas-clemente/quic-go v0.25.0
 	github.com/marten-seemann/tcp v0.0.0-20210406111302-dfbc87cc63fd
@@ -36,9 +39,10 @@ require (
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1
 	github.com/minio/sha256-simd v1.0.0
 	github.com/mr-tron/base58 v1.2.0
+	github.com/multiformats/go-multistream v0.2.2 // indirect
 	github.com/prometheus/client_golang v1.12.1
+	github.com/prometheus/common v0.33.0 // indirect
 	github.com/raulk/go-watchdog v1.2.0
-	github.com/riteshRcH/testing v0.0.0-20220406003417-082ca063d768
 	github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572
 	github.com/spaolacci/murmur3 v1.1.0
 	github.com/stretchr/testify v1.7.1
@@ -54,6 +58,7 @@ require (
 	golang.org/x/sys v0.0.0-20220406163625-3f8b81556e12
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	google.golang.org/grpc v1.45.0
+	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
 	lukechampine.com/blake3 v1.1.7
 )

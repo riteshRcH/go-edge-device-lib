@@ -8,7 +8,6 @@ require (
 	github.com/libp2p/go-libp2p-connmgr v0.3.1
 	github.com/libp2p/go-libp2p-discovery v0.6.0
 	github.com/libp2p/go-libp2p-kad-dht v0.15.0
-	github.com/libp2p/go-libp2p-noise v0.3.0
 	github.com/libp2p/go-libp2p-swarm v0.10.2
 	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220408144044-890210f616b6
 )
@@ -56,6 +55,7 @@ require (
 	github.com/libp2p/go-libp2p-blankhost v0.3.0 // indirect
 	github.com/libp2p/go-libp2p-core v0.14.0 // indirect
 	github.com/libp2p/go-libp2p-kbucket v0.4.7 // indirect
+	github.com/libp2p/go-libp2p-noise v0.3.0 // indirect
 	github.com/libp2p/go-libp2p-peerstore v0.6.0 // indirect
 	github.com/libp2p/go-libp2p-record v0.1.3 // indirect
 	github.com/libp2p/go-libp2p-resource-manager v0.1.5 // indirect
