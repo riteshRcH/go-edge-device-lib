@@ -6,7 +6,7 @@ import (
 	"net"
 	"testing"
 
-	blankhost "github.com/libp2p/go-libp2p-blankhost"
+	blankhost "github.com/riteshRcH/go-edge-device-lib/blankhost"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"

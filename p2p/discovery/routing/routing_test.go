@@ -10,7 +10,7 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/util"
 
-	bhost "github.com/libp2p/go-libp2p-blankhost"
+	bhost "github.com/riteshRcH/go-edge-device-lib/blankhost"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"

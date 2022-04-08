@@ -21,7 +21,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
-	bhost "github.com/libp2p/go-libp2p-blankhost"
+	bhost "github.com/riteshRcH/go-edge-device-lib/blankhost"
 	"github.com/riteshRcH/go-edge-device-lib/core/metrics"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"

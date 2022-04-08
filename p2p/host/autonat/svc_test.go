@@ -10,7 +10,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
-	bhost "github.com/libp2p/go-libp2p-blankhost"
+	bhost "github.com/riteshRcH/go-edge-device-lib/blankhost"
 	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

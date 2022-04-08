@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	blhost "github.com/libp2p/go-libp2p-blankhost"
+	blhost "github.com/riteshRcH/go-edge-device-lib/blankhost"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"

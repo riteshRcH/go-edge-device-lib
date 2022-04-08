@@ -24,7 +24,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/record"
 	coretest "github.com/riteshRcH/go-edge-device-lib/core/test"
 
-	blhost "github.com/libp2p/go-libp2p-blankhost"
+	blhost "github.com/riteshRcH/go-edge-device-lib/blankhost"
 	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
 	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
