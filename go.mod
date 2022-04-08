@@ -22,7 +22,6 @@ require (
 	github.com/libp2p/go-libp2p-circuit v0.6.0
 	github.com/libp2p/go-libp2p-mplex v0.6.0 // indirect
 	github.com/libp2p/go-libp2p-quic-transport v0.16.1 // indirect
-	github.com/libp2p/go-libp2p-resource-manager v0.1.5
 	github.com/libp2p/go-libp2p-swarm v0.10.2
 	github.com/libp2p/go-libp2p-tls v0.3.1 // indirect
 	github.com/libp2p/go-libp2p-transport-upgrader v0.7.1 // indirect
@@ -40,6 +39,7 @@ require (
 	github.com/minio/sha256-simd v1.0.0
 	github.com/mr-tron/base58 v1.2.0
 	github.com/multiformats/go-multistream v0.2.2 // indirect
+	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58
 	github.com/prometheus/client_golang v1.12.1
 	github.com/prometheus/common v0.33.0 // indirect
 	github.com/raulk/go-watchdog v1.2.0
