@@ -28,14 +28,16 @@ require (
 	github.com/libp2p/go-libp2p-tls v0.3.1
 	github.com/libp2p/go-libp2p-yamux v0.8.2
 	github.com/libp2p/go-stream-muxer-multistream v0.4.0
-	github.com/libp2p/go-tcp-transport v0.5.1
 	github.com/libp2p/go-ws-transport v0.6.0
+	github.com/marten-seemann/tcp v0.0.0-20210406111302-dfbc87cc63fd
 	github.com/mattn/go-isatty v0.0.14
 	github.com/mattn/go-pointer v0.0.1
 	github.com/miekg/dns v1.1.48
+	github.com/mikioh/tcpinfo v0.0.0-20190314235526-30a79bb1804b
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1
 	github.com/minio/sha256-simd v1.0.0
 	github.com/mr-tron/base58 v1.2.0
+	github.com/prometheus/client_golang v1.12.1
 	github.com/raulk/go-watchdog v1.2.0
 	github.com/riteshRcH/testing v0.0.0-20220406003417-082ca063d768
 	github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572
