@@ -6,6 +6,7 @@ require (
 	github.com/benbjohnson/clock v1.3.0
 	github.com/btcsuite/btcd v0.22.0-beta
 	github.com/coreos/go-semver v0.3.0
+	github.com/davidlazar/go-crypto v0.0.0-20200604182044-b73af7476f6c
 	github.com/dgraph-io/badger v1.6.2
 	github.com/flynn/noise v1.0.0
 	github.com/gogo/protobuf v1.3.2
@@ -25,7 +26,6 @@ require (
 	github.com/libp2p/go-libp2p-swarm v0.10.2
 	github.com/libp2p/go-libp2p-testing v0.8.0
 	github.com/libp2p/go-libp2p-tls v0.3.1
-	github.com/libp2p/go-libp2p-transport-upgrader v0.7.1
 	github.com/libp2p/go-libp2p-yamux v0.8.2
 	github.com/libp2p/go-stream-muxer-multistream v0.4.0
 	github.com/libp2p/go-tcp-transport v0.5.1

@@ -29,7 +29,7 @@ import (
 
 	blankhost "github.com/libp2p/go-libp2p-blankhost"
 	swarm "github.com/libp2p/go-libp2p-swarm"
-	tptu "github.com/libp2p/go-libp2p-transport-upgrader"
+	tptu "github.com/riteshRcH/go-edge-device-lib/upgrader"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

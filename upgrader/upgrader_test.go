@@ -6,7 +6,7 @@ import (
 	"net"
 	"testing"
 
-	upgrader "github.com/libp2p/go-libp2p-transport-upgrader"
+	upgrader "github.com/riteshRcH/go-edge-device-lib/upgrader"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
