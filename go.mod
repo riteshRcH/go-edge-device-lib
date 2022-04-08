@@ -13,6 +13,7 @@ require (
 	github.com/golang/mock v1.6.0
 	github.com/google/gopacket v1.1.19
 	github.com/google/uuid v1.3.0
+	github.com/gorilla/websocket v1.4.2
 	github.com/hashicorp/golang-lru v0.5.4
 	github.com/huin/goupnp v1.0.3
 	github.com/jackpal/go-nat-pmp v1.0.2
@@ -28,7 +29,6 @@ require (
 	github.com/libp2p/go-libp2p-yamux v0.8.2 // indirect
 	github.com/libp2p/go-msgio v0.1.0 // indirect
 	github.com/libp2p/go-tcp-transport v0.5.1 // indirect
-	github.com/libp2p/go-ws-transport v0.6.0
 	github.com/lucas-clemente/quic-go v0.25.0
 	github.com/marten-seemann/tcp v0.0.0-20210406111302-dfbc87cc63fd
 	github.com/mattn/go-isatty v0.0.14

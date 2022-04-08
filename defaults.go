@@ -5,18 +5,18 @@ package libp2p
 import (
 	"crypto/rand"
 
-	mplex "github.com/riteshRcH/go-edge-device-lib/mplex"
-	noise "github.com/riteshRcH/go-edge-device-lib/noise"
-	quic "github.com/riteshRcH/go-edge-device-lib/quic"
-	rcmgr "github.com/riteshRcH/go-edge-device-lib/rcmgr"
-	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
-	ws "github.com/libp2p/go-ws-transport"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	tls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"
+	mplex "github.com/riteshRcH/go-edge-device-lib/mplex"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	noise "github.com/riteshRcH/go-edge-device-lib/noise"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/net/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
+	quic "github.com/riteshRcH/go-edge-device-lib/quic"
+	rcmgr "github.com/riteshRcH/go-edge-device-lib/rcmgr"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
+	ws "github.com/riteshRcH/go-edge-device-lib/websocket"
+	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
 )
 
 // DefaultSecurity is the default security option.

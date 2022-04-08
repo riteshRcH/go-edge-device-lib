@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	ws "github.com/libp2p/go-ws-transport"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
+	ws "github.com/riteshRcH/go-edge-device-lib/websocket"
 )
 
 func main() {

@@ -10,7 +10,6 @@ import (
 	kaddht "github.com/libp2p/go-libp2p-kad-dht"
 	mplex "github.com/libp2p/go-libp2p-mplex"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
-	ws "github.com/libp2p/go-ws-transport"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
@@ -19,6 +18,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
+	ws "github.com/riteshRcH/go-edge-device-lib/websocket"
 	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
 )
 
