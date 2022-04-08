@@ -16,18 +16,18 @@ require (
 	github.com/hashicorp/golang-lru v0.5.4
 	github.com/huin/goupnp v1.0.3
 	github.com/jackpal/go-nat-pmp v1.0.2
+	github.com/klauspost/compress v1.13.6
 	github.com/koron/go-ssdp v0.0.2
 	github.com/libp2p/go-libp2p-blankhost v0.3.0
 	github.com/libp2p/go-libp2p-circuit v0.6.0
-	github.com/libp2p/go-libp2p-mplex v0.6.0
 	github.com/libp2p/go-libp2p-noise v0.3.0
-	github.com/libp2p/go-libp2p-quic-transport v0.16.1
 	github.com/libp2p/go-libp2p-resource-manager v0.1.5
 	github.com/libp2p/go-libp2p-swarm v0.10.2
 	github.com/libp2p/go-libp2p-testing v0.8.0
 	github.com/libp2p/go-libp2p-yamux v0.8.2
 	github.com/libp2p/go-stream-muxer-multistream v0.4.0
 	github.com/libp2p/go-ws-transport v0.6.0
+	github.com/lucas-clemente/quic-go v0.25.0
 	github.com/marten-seemann/tcp v0.0.0-20210406111302-dfbc87cc63fd
 	github.com/mattn/go-isatty v0.0.14
 	github.com/mattn/go-pointer v0.0.1
