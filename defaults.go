@@ -11,12 +11,12 @@ import (
 	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
 	tls "github.com/libp2p/go-libp2p-tls"
 	yamux "github.com/libp2p/go-libp2p-yamux"
-	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/net/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
+	"github.com/riteshRcH/go-edge-device-lib/tcp"
 )
 
 // DefaultSecurity is the default security option.

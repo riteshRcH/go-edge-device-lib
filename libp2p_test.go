@@ -9,13 +9,13 @@ import (
 	"testing"
 
 	noise "github.com/libp2p/go-libp2p-noise"
-	"github.com/libp2p/go-tcp-transport"
 	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	"github.com/riteshRcH/go-edge-device-lib/tcp"
 
 	"github.com/stretchr/testify/require"
 )

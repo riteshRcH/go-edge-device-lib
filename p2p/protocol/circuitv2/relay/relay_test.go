@@ -11,7 +11,7 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 
-	"github.com/libp2p/go-tcp-transport"
+	"github.com/riteshRcH/go-edge-device-lib/tcp"
 
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/client"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/relay"

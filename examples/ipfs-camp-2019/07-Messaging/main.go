@@ -12,7 +12,6 @@ import (
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	tls "github.com/libp2p/go-libp2p-tls"
 	yamux "github.com/libp2p/go-libp2p-yamux"
-	"github.com/libp2p/go-tcp-transport"
 	ws "github.com/libp2p/go-ws-transport"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
@@ -20,6 +19,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
+	"github.com/riteshRcH/go-edge-device-lib/tcp"
 )
 
 type mdnsNotifee struct {
