@@ -8,7 +8,7 @@ import (
 	mplex "github.com/riteshRcH/go-edge-device-lib/mplex"
 	noise "github.com/riteshRcH/go-edge-device-lib/noise"
 	quic "github.com/riteshRcH/go-edge-device-lib/quic"
-	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
+	rcmgr "github.com/riteshRcH/go-edge-device-lib/rcmgr"
 	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
 	ws "github.com/libp2p/go-ws-transport"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"

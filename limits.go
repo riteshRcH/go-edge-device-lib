@@ -11,7 +11,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/ping"
 
-	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
+	rcmgr "github.com/riteshRcH/go-edge-device-lib/rcmgr"
 )
 
 // SetDefaultServiceLimits sets the default limits for bundled libp2p services

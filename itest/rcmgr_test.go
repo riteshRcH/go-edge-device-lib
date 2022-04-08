@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	rcmgr "github.com/libp2p/go-libp2p-resource-manager"
+	rcmgr "github.com/riteshRcH/go-edge-device-lib/rcmgr"
 
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
