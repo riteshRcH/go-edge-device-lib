@@ -20,7 +20,6 @@ require (
 	github.com/libp2p/go-libp2p-circuit v0.6.0
 	github.com/libp2p/go-libp2p-mplex v0.6.0
 	github.com/libp2p/go-libp2p-noise v0.3.0
-	github.com/libp2p/go-libp2p-peerstore v0.6.0
 	github.com/libp2p/go-libp2p-quic-transport v0.16.1
 	github.com/libp2p/go-libp2p-resource-manager v0.1.5
 	github.com/libp2p/go-libp2p-swarm v0.10.2
@@ -45,6 +44,7 @@ require (
 	github.com/syndtr/goleveldb v1.0.0
 	github.com/whyrusleeping/mdns v0.0.0-20190826153040-b9b60ed33aa9
 	go.uber.org/atomic v1.9.0
+	go.uber.org/goleak v1.1.11
 	go.uber.org/multierr v1.8.0
 	go.uber.org/zap v1.21.0
 	golang.org/x/crypto v0.0.0-20220331220935-ae2d96664a29
