@@ -8,11 +8,11 @@ import (
 	connmgr "github.com/libp2p/go-libp2p-connmgr"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	noise "github.com/libp2p/go-libp2p-noise"
-	libp2ptls "github.com/libp2p/go-libp2p-tls"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
+	libp2ptls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"
 )
 
 func main() {

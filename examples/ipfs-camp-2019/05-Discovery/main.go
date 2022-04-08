@@ -8,11 +8,11 @@ import (
 	"syscall"
 
 	mplex "github.com/libp2p/go-libp2p-mplex"
-	tls "github.com/libp2p/go-libp2p-tls"
 	yamux "github.com/libp2p/go-libp2p-yamux"
 	ws "github.com/libp2p/go-ws-transport"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	tls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
 )

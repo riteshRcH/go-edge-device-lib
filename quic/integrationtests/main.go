@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/libp2p/go-libp2p-quic-transport/integrationtests/conn"
-	"github.com/libp2p/go-libp2p-quic-transport/integrationtests/stream"
-	"github.com/libp2p/go-libp2p-quic-transport/integrationtests/transport"
+	"github.com/riteshRcH/go-edge-device-lib/quic/integrationtests/conn"
+	"github.com/riteshRcH/go-edge-device-lib/quic/integrationtests/stream"
+	"github.com/riteshRcH/go-edge-device-lib/quic/integrationtests/transport"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
