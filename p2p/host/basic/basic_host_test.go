@@ -10,7 +10,6 @@ import (
 	"testing"
 	"time"
 
-	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/core/event"
 	"github.com/riteshRcH/go-edge-device-lib/core/helpers"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
@@ -23,6 +22,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/host/autonat"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
+	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"

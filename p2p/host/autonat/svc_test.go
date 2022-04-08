@@ -11,7 +11,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
-	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
+	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/stretchr/testify/require"

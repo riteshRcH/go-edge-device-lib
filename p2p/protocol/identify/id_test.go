@@ -25,9 +25,9 @@ import (
 	coretest "github.com/riteshRcH/go-edge-device-lib/core/test"
 
 	blhost "github.com/libp2p/go-libp2p-blankhost"
-	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/eventbus"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
+	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/testing/race"
 
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"

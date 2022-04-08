@@ -28,7 +28,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch"
 
 	blankhost "github.com/libp2p/go-libp2p-blankhost"
-	swarm "github.com/libp2p/go-libp2p-swarm"
+	swarm "github.com/riteshRcH/go-edge-device-lib/swarm"
 	tptu "github.com/riteshRcH/go-edge-device-lib/upgrader"
 
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"

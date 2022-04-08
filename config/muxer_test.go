@@ -5,10 +5,10 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
-	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	bhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
+	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
 
 	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
 )

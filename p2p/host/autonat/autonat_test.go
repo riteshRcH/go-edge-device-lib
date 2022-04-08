@@ -13,9 +13,9 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	bhost "github.com/libp2p/go-libp2p-blankhost"
-	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
 	"github.com/stretchr/testify/require"
 )
 
