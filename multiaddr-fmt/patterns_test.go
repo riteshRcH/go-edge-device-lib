@@ -33,11 +33,6 @@ var TestVectors = map[string]*testVector{
 		Good:    []string{"/ip4/1.2.3.4/udp/3456/utp", "/ip6/::/udp/0/utp"},
 		Bad:     []string{"/ip4/0.0.0.0/tcp/12345/utp", "/ip6/1.2.3.4/ip4/0.0.0.0/udp/1234/utp", "/utp"},
 	},
-	"QUIC": {
-		Pattern: QUIC,
-		Good:    []string{"/ip4/1.2.3.4/udp/1234/quic", "/ip6/::/udp/1234/quic"},
-		Bad:     []string{"/ip4/0.0.0.0/tcp/12345/quic", "/ip6/1.2.3.4/ip4/0.0.0.0/udp/1234/quic", "/quic"},
-	},
 	"IPFS": {
 		Pattern: IPFS,
 		Good: []string{
@@ -68,12 +63,12 @@ var TestVectors = map[string]*testVector{
 	"HTTP": {
 		Pattern: HTTP,
 		Good:    []string{"/ip4/1.2.3.4/http", "/dns4/example.io/http", "/dns6/::/tcp/7011/http", "/ip6/fc00::/http"},
-		Bad:     []string{"/ip4/1.2.3.4/https", "/ip4/0.0.0.0/tcp/12345/quic", "/ip6/fc00::/tcp/5523", "/dnsaddr/example.io/http"},
+		Bad:     []string{"/ip4/1.2.3.4/https", "/ip6/fc00::/tcp/5523", "/dnsaddr/example.io/http"},
 	},
 	"HTTPS": {
 		Pattern: HTTPS,
 		Good:    []string{"/ip4/1.2.3.4/https", "/dns4/example.io/https", "/dns6/::/tcp/7011/https", "/ip6/fc00::/https"},
-		Bad:     []string{"/ip4/1.2.3.4/http", "/ip4/0.0.0.0/tcp/12345/quic", "/ip6/fc00::/tcp/5523"},
+		Bad:     []string{"/ip4/1.2.3.4/http", "/ip6/fc00::/tcp/5523"},
 	},
 }
 
@@ -100,13 +95,13 @@ func TestProtocolMatching(t *testing.T) {
 }
 
 func TestReliableGroup(t *testing.T) {
-	assertMatches(t, Reliable, TestVectors["UTP"].Good, TestVectors["TCP"].Good, TestVectors["QUIC"].Good)
+	assertMatches(t, Reliable, TestVectors["UTP"].Good, TestVectors["TCP"].Good)
 	assertMismatches(t, Reliable, TestVectors["IP"].Good, TestVectors["UDP"].Good, TestVectors["IPFS"].Good)
 }
 
 func TestUnreliableGroup(t *testing.T) {
 	assertMatches(t, Unreliable, TestVectors["UDP"].Good)
-	assertMismatches(t, Unreliable, TestVectors["IP"].Good, TestVectors["TCP"].Good, TestVectors["UTP"].Good, TestVectors["IPFS"].Good, TestVectors["QUIC"].Good)
+	assertMismatches(t, Unreliable, TestVectors["IP"].Good, TestVectors["TCP"].Good, TestVectors["UTP"].Good, TestVectors["IPFS"].Good)
 }
 
 func assertMatches(t *testing.T, p Pattern, args ...[]string) {

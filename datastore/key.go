@@ -49,7 +49,7 @@ func RawKey(s string) Key {
 		return Key{"/"}
 	}
 
-	// perform a quick sanity check that the key is in the correct
+	// perform a fast sanity check that the key is in the correct
 	// format, if it is not then it is a programmer error and it is
 	// okay to panic
 	if len(s) == 0 || s[0] != '/' || (len(s) > 1 && s[len(s)-1] == '/') {

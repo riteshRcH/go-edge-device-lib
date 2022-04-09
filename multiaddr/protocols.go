@@ -13,7 +13,6 @@ const (
 	P_DCCP              = 0x0021
 	P_IP6               = 0x0029
 	P_IP6ZONE           = 0x002A
-	P_QUIC              = 0x01CC
 	P_SCTP              = 0x0084
 	P_CIRCUIT           = 0x0122
 	P_UDT               = 0x012D
@@ -165,11 +164,6 @@ var (
 		Code:  P_UDT,
 		VCode: CodeToVarint(P_UDT),
 	}
-	protoQUIC = Protocol{
-		Name:  "quic",
-		Code:  P_QUIC,
-		VCode: CodeToVarint(P_QUIC),
-	}
 	protoHTTP = Protocol{
 		Name:  "http",
 		Code:  P_HTTP,
@@ -247,7 +241,6 @@ func init() {
 		protoGARLIC32,
 		protoUTP,
 		protoUDT,
-		protoQUIC,
 		protoHTTP,
 		protoHTTPS,
 		protoP2P,

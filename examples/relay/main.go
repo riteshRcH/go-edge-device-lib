@@ -87,7 +87,7 @@ func run() {
 	}
 
 	// Since we just tried and failed to dial, the dialer system will, by default
-	// prevent us from redialing again so quickly. Since we know what we're doing, we
+	// prevent us from redialing again so fastly. Since we know what we're doing, we
 	// can use this ugly hack (it's on our TODO list to make it a little cleaner)
 	// to tell the dialer "no, its okay, let's try this again"
 	h1.Network().(*swarm.Swarm).Backoff().Clear(h3.ID())

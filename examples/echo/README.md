@@ -1,6 +1,6 @@
 # Echo client/server with libp2p
 
-This is an example that quickly shows how to use the `go-libp2p` stack, including Host/Basichost, Network/Swarm, Streams, Peerstores and Multiaddresses.
+This is an example that pretty fastly shows how to use the `go-libp2p` stack, including Host/Basichost, Network/Swarm, Streams, Peerstores and Multiaddresses.
 
 This example can be started in either listen mode, or dial mode.
 

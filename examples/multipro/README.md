@@ -32,7 +32,7 @@ The idea is to use libp2p protocol multiplexing on a per-message basis.
 
 ### Features
 1. 2 fully implemented protocols using an RPC-like request-response pattern - Ping and Echo
-2. Scaffolding for quickly implementing new app-level versioned RPC-like protocols
+2. Scaffolding for pretty fastly implementing new app-level versioned RPC-like protocols
 3. Full authentication of incoming message data by author (who might not be the message's sender peer)
 4. Base p2p format in protobufs with fields shared by all protocol messages
 5. Full access to request data when processing a response.

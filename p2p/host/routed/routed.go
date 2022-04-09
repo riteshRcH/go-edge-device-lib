@@ -21,7 +21,7 @@ import (
 var log = logging.Logger("routedhost")
 
 // AddressTTL is the expiry time for our addresses.
-// We expire them quickly.
+// We expire them pretty fast.
 const AddressTTL = time.Second * 10
 
 // RoutedHost is a p2p Host that includes a routing system.

@@ -318,7 +318,7 @@ func TestConnectionGating(t *testing.T) {
 	}
 
 	for n, tc := range tcs {
-		for _, useQuic := range []bool{false, true} {
+		for _, useQuic := range []bool{false, false} {
 			trString := "TCP"
 			optTransport := OptDisableQUIC
 			if useQuic {
@@ -388,34 +388,6 @@ func TestTypedNilConn(t *testing.T) {
 	require.Error(t, err)
 	// If we fail to dial, the connection should be nil.
 	require.Nil(t, c)
-}
-
-func TestPreventDialListenAddr(t *testing.T) {
-	s := GenSwarm(t, OptDialOnly)
-	if err := s.Listen(ma.StringCast("/ip4/0.0.0.0/udp/0/quic")); err != nil {
-		t.Fatal(err)
-	}
-	addrs, err := s.InterfaceListenAddresses()
-	if err != nil {
-		t.Fatal(err)
-	}
-	var addr ma.Multiaddr
-	for _, a := range addrs {
-		_, s, err := manet.DialArgs(a)
-		if err != nil {
-			t.Fatal(err)
-		}
-		if strings.Split(s, ":")[0] == "127.0.0.1" {
-			addr = a
-			break
-		}
-	}
-	remote := peer.ID("foobar")
-	s.Peerstore().AddAddr(remote, addr, time.Hour)
-	_, err = s.DialPeer(context.Background(), remote)
-	if !errors.Is(err, swarm.ErrNoGoodAddresses) {
-		t.Fatal("expected dial to fail: %w", err)
-	}
 }
 
 func TestStreamCount(t *testing.T) {

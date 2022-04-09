@@ -47,14 +47,11 @@ h2, err := libp2p.New(
 	// Multiple listen addresses
 	libp2p.ListenAddrStrings(
 		"/ip4/0.0.0.0/tcp/9000",      // regular tcp connections
-		"/ip4/0.0.0.0/udp/9000/quic", // a UDP endpoint for the QUIC transport
 	),
 	// support TLS connections
 	libp2p.Security(libp2ptls.ID, libp2ptls.New),
 	// support Noise connections
 	libp2p.Security(noise.ID, noise.New),
-	// support QUIC
-	libp2p.Transport(libp2pquic.NewTransport),
 	// support any other default transports (TCP)
 	libp2p.DefaultTransports,
 	// Let's prevent our peer from having too many

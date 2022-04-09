@@ -16,7 +16,6 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
-	quic "github.com/riteshRcH/go-edge-device-lib/libp2pquic"
 	msmux "github.com/riteshRcH/go-edge-device-lib/stream-muxer-multistream"
 	tcp "github.com/riteshRcH/go-edge-device-lib/tcp"
 	tnet "github.com/riteshRcH/go-edge-device-lib/testing/net"
@@ -46,17 +45,6 @@ func makeSwarm(t *testing.T) *Swarm {
 		t.Fatal(err)
 	}
 	if err := s.Listen(p.Addr); err != nil {
-		t.Fatal(err)
-	}
-
-	quicTransport, err := quic.NewTransport(p.PrivKey, nil, nil, nil)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if err := s.AddTransport(quicTransport); err != nil {
-		t.Fatal(err)
-	}
-	if err := s.Listen(ma.StringCast("/ip4/127.0.0.1/udp/0/quic")); err != nil {
 		t.Fatal(err)
 	}
 
@@ -167,7 +155,7 @@ func TestDialWorkerLoopFailure(t *testing.T) {
 
 	p2 := tnet.RandPeerNetParamsOrFatal(t)
 
-	s1.Peerstore().AddAddrs(p2.ID, []ma.Multiaddr{ma.StringCast("/ip4/11.0.0.1/tcp/1234"), ma.StringCast("/ip4/11.0.0.1/udp/1234/quic")}, peerstore.PermanentAddrTTL)
+	s1.Peerstore().AddAddrs(p2.ID, []ma.Multiaddr{ma.StringCast("/ip4/11.0.0.1/tcp/1234")}, peerstore.PermanentAddrTTL)
 
 	reqch := make(chan dialRequest)
 	resch := make(chan dialResponse)
@@ -192,7 +180,7 @@ func TestDialWorkerLoopConcurrentFailure(t *testing.T) {
 
 	p2 := tnet.RandPeerNetParamsOrFatal(t)
 
-	s1.Peerstore().AddAddrs(p2.ID, []ma.Multiaddr{ma.StringCast("/ip4/11.0.0.1/tcp/1234"), ma.StringCast("/ip4/11.0.0.1/udp/1234/quic")}, peerstore.PermanentAddrTTL)
+	s1.Peerstore().AddAddrs(p2.ID, []ma.Multiaddr{ma.StringCast("/ip4/11.0.0.1/tcp/1234")}, peerstore.PermanentAddrTTL)
 
 	reqch := make(chan dialRequest)
 	worker := newDialWorker(s1, p2.ID, reqch)
@@ -240,7 +228,7 @@ func TestDialWorkerLoopConcurrentMix(t *testing.T) {
 	defer s2.Close()
 
 	s1.Peerstore().AddAddrs(s2.LocalPeer(), s2.ListenAddresses(), peerstore.PermanentAddrTTL)
-	s1.Peerstore().AddAddrs(s2.LocalPeer(), []ma.Multiaddr{ma.StringCast("/ip4/11.0.0.1/tcp/1234"), ma.StringCast("/ip4/11.0.0.1/udp/1234/quic")}, peerstore.PermanentAddrTTL)
+	s1.Peerstore().AddAddrs(s2.LocalPeer(), []ma.Multiaddr{ma.StringCast("/ip4/11.0.0.1/tcp/1234")}, peerstore.PermanentAddrTTL)
 
 	reqch := make(chan dialRequest)
 	worker := newDialWorker(s1, s2.LocalPeer(), reqch)

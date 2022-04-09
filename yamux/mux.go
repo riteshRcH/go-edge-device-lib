@@ -28,7 +28,7 @@ type Config struct {
 	// ConnectionWriteTimeout is meant to be a "safety valve" timeout after
 	// we which will suspect a problem with the underlying connection and
 	// close it. This is only applied to writes, where's there's generally
-	// an expectation that things will move along quickly.
+	// an expectation that things will move along pretty fast.
 	ConnectionWriteTimeout time.Duration
 
 	// MaxIncomingStreams is maximum number of concurrent incoming streams

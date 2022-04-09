@@ -614,7 +614,7 @@ func TestGC(t *testing.T) {
 // TestDiskUsage verifies we fetch some badger size correctly.
 // Because the Size metric is only updated every minute in badger and
 // this interval is not configurable, we re-open the database
-// (the size is always calculated on Open) to make things quick.
+// (the size is always calculated on Open) to make things fast.
 func TestDiskUsage(t *testing.T) {
 	path, err := ioutil.TempDir(os.TempDir(), "testing_badger_")
 	if err != nil {

@@ -19,10 +19,6 @@ func TestIsFdConsuming(t *testing.T) {
 			addr:          "/ip4/127.0.0.1/tcp/20",
 			isFdConsuming: true,
 		},
-		"quic": {
-			addr:          "/ip4/127.0.0.1/udp/0/quic",
-			isFdConsuming: false,
-		},
 		"addr-without-registered-transport": {
 			addr:          "/ip4/127.0.0.1/tcp/20/ws",
 			isFdConsuming: true,
@@ -30,10 +26,6 @@ func TestIsFdConsuming(t *testing.T) {
 		"relay-tcp": {
 			addr:          fmt.Sprintf("/ip4/127.0.0.1/tcp/20/p2p-circuit/p2p/%s", test.RandPeerIDFatal(t)),
 			isFdConsuming: true,
-		},
-		"relay-quic": {
-			addr:          fmt.Sprintf("/ip4/127.0.0.1/udp/20/quic/p2p-circuit/p2p/%s", test.RandPeerIDFatal(t)),
-			isFdConsuming: false,
 		},
 		"relay-without-serveraddr": {
 			addr:          fmt.Sprintf("/p2p-circuit/p2p/%s", test.RandPeerIDFatal(t)),

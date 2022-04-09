@@ -18,7 +18,6 @@ import (
 	csms "github.com/riteshRcH/go-edge-device-lib/conn-security-multistream"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
-	quic "github.com/riteshRcH/go-edge-device-lib/libp2pquic"
 	msmux "github.com/riteshRcH/go-edge-device-lib/stream-muxer-multistream"
 	swarm "github.com/riteshRcH/go-edge-device-lib/swarm"
 	tnet "github.com/riteshRcH/go-edge-device-lib/testing/net"
@@ -156,20 +155,6 @@ func GenSwarm(t *testing.T, opts ...Option) *swarm.Swarm {
 		}
 		if !cfg.dialOnly {
 			if err := s.Listen(p.Addr); err != nil {
-				t.Fatal(err)
-			}
-		}
-	}
-	if !cfg.disableQUIC {
-		quicTransport, err := quic.NewTransport(p.PrivKey, nil, cfg.connectionGater, nil)
-		if err != nil {
-			t.Fatal(err)
-		}
-		if err := s.AddTransport(quicTransport); err != nil {
-			t.Fatal(err)
-		}
-		if !cfg.dialOnly {
-			if err := s.Listen(ma.StringCast("/ip4/127.0.0.1/udp/0/quic")); err != nil {
 				t.Fatal(err)
 			}
 		}

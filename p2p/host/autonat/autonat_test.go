@@ -254,7 +254,7 @@ func TestAutoNATObservationRecording(t *testing.T) {
 
 	expectEvent(t, s, network.ReachabilityPublic)
 
-	// a single recording should have confidence still at 0, and transition to private quickly.
+	// a single recording should have confidence still at 0, and transition to private pretty fast.
 	an.recordObservation(autoNATResult{network.ReachabilityPrivate, nil})
 	if an.Status() != network.ReachabilityPrivate {
 		t.Fatalf("failed to transition to private.")

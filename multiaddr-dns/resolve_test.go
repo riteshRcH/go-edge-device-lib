@@ -96,25 +96,6 @@ func TestSimpleIPResolve(t *testing.T) {
 	}
 }
 
-func TestResolveMultiple(t *testing.T) {
-	ctx := context.Background()
-	resolver := makeResolver()
-
-	addrs, err := resolver.Resolve(ctx, ma.StringCast("/dns4/example.com/quic/dns6/example.com"))
-	if err != nil {
-		t.Error(err)
-	}
-	for i, x := range []ma.Multiaddr{ip4ma, ip4mb} {
-		for j, y := range []ma.Multiaddr{ip6ma, ip6mb} {
-			expected := ma.Join(x, ma.StringCast("/quic"), y)
-			actual := addrs[i*2+j]
-			if !expected.Equal(actual) {
-				t.Fatalf("expected %s, got %s", expected, actual)
-			}
-		}
-	}
-}
-
 func TestResolveMultipleAdjacent(t *testing.T) {
 	ctx := context.Background()
 	resolver := makeResolver()
@@ -126,25 +107,6 @@ func TestResolveMultipleAdjacent(t *testing.T) {
 	for i, x := range []ma.Multiaddr{ip4ma, ip4mb} {
 		for j, y := range []ma.Multiaddr{ip6ma, ip6mb} {
 			expected := ma.Join(x, y)
-			actual := addrs[i*2+j]
-			if !expected.Equal(actual) {
-				t.Fatalf("expected %s, got %s", expected, actual)
-			}
-		}
-	}
-}
-
-func TestResolveMultipleSandwitch(t *testing.T) {
-	ctx := context.Background()
-	resolver := makeResolver()
-
-	addrs, err := resolver.Resolve(ctx, ma.StringCast("/quic/dns4/example.com/dns6/example.com/http"))
-	if err != nil {
-		t.Error(err)
-	}
-	for i, x := range []ma.Multiaddr{ip4ma, ip4mb} {
-		for j, y := range []ma.Multiaddr{ip6ma, ip6mb} {
-			expected := ma.Join(ma.StringCast("/quic"), x, y, ma.StringCast("/http"))
 			actual := addrs[i*2+j]
 			if !expected.Equal(actual) {
 				t.Fatalf("expected %s, got %s", expected, actual)
@@ -176,19 +138,6 @@ func TestNonResolvable(t *testing.T) {
 	}
 	if len(addrs) != 1 || !addrs[0].Equal(ip4ma) {
 		t.Fatalf("expected [%s], got %+v", ip4ma, addrs)
-	}
-}
-
-func TestLongMatch(t *testing.T) {
-	ctx := context.Background()
-	resolver := makeResolver()
-
-	res, err := resolver.Resolve(ctx, ma.StringCast("/dnsaddr/example.com/quic/quic/quic/quic"))
-	if err != nil {
-		t.Error(err)
-	}
-	if len(res) != 0 {
-		t.Error("expected no results")
 	}
 }
 

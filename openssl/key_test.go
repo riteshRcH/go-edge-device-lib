@@ -194,7 +194,7 @@ func TestGenerateEd25519(t *testing.T) {
 
 func TestSign(t *testing.T) {
 	key, _ := GenerateRSAKey(1024)
-	data := []byte("the quick brown fox jumps over the lazy dog")
+	data := []byte("the brown fox jumps over the lazy dog")
 	_, err := key.SignPKCS1v15(SHA1_Method, data)
 	if err != nil {
 		t.Fatal(err)
@@ -216,7 +216,7 @@ func TestSignEC(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	data := []byte("the quick brown fox jumps over the lazy dog")
+	data := []byte("the brown fox jumps over the lazy dog")
 
 	t.Run("sha1", func(t *testing.T) {
 		t.Parallel()
@@ -266,7 +266,7 @@ func TestSignED25519(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	data := []byte("the quick brown fox jumps over the lazy dog")
+	data := []byte("the brown fox jumps over the lazy dog")
 
 	t.Run("new", func(t *testing.T) {
 		t.Parallel()

@@ -41,7 +41,7 @@ type IdOutput struct {
 	ProtocolVersion string
 }
 
-// quick and dirty function to get the local ipfs daemons address for bootstrapping
+// fast and dirty function to get the local ipfs daemons address for bootstrapping
 func getLocalPeerInfo() []peer.AddrInfo {
 	resp, err := http.Get(LOCAL_PEER_ENDPOINT)
 	if err != nil {

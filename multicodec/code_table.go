@@ -354,9 +354,6 @@ const (
 	// Noise is a draft code tagged "multiaddr".
 	Noise Code = 0x01c6 // noise
 
-	// Quic is a permanent code tagged "multiaddr".
-	Quic Code = 0x01cc // quic
-
 	// Ws is a permanent code tagged "multiaddr".
 	Ws Code = 0x01dd // ws
 
@@ -1586,7 +1583,6 @@ var knownCodes = []Code{
 	Garlic32,
 	Tls,
 	Noise,
-	Quic,
 	Ws,
 	Wss,
 	P2pWebsocketStar,
@@ -2073,7 +2069,6 @@ func (c Code) Tag() string {
 		Garlic32,
 		Tls,
 		Noise,
-		Quic,
 		Ws,
 		Wss,
 		P2pWebsocketStar,

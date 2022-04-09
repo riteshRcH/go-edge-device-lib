@@ -8,11 +8,10 @@ import (
 func TestSplitFirstLast(t *testing.T) {
 	ipStr := "/ip4/0.0.0.0"
 	tcpStr := "/tcp/123"
-	quicStr := "/quic"
 	ipfsStr := "/ipfs/QmPSQnBKM9g7BaUcZCvswUJVscQ1ipjmwxN5PXCjkp9EQ7"
 
 	for _, x := range [][]string{
-		{ipStr, tcpStr, quicStr, ipfsStr},
+		{ipStr, tcpStr, ipfsStr},
 		{ipStr, tcpStr, ipfsStr},
 		{ipStr, tcpStr},
 		{ipStr},
@@ -106,11 +105,10 @@ func TestSplitFirstLast(t *testing.T) {
 func TestSplitFunc(t *testing.T) {
 	ipStr := "/ip4/0.0.0.0"
 	tcpStr := "/tcp/123"
-	quicStr := "/quic"
 	ipfsStr := "/ipfs/QmPSQnBKM9g7BaUcZCvswUJVscQ1ipjmwxN5PXCjkp9EQ7"
 
 	for _, x := range [][]string{
-		{ipStr, tcpStr, quicStr, ipfsStr},
+		{ipStr, tcpStr, ipfsStr},
 		{ipStr, tcpStr, ipfsStr},
 		{ipStr, tcpStr},
 		{ipStr},

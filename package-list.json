@@ -17,7 +17,6 @@
     "Transport",
     ["libp2p/go-ws-transport", "go-ws-transport", "WebSocket transport"],
     ["libp2p/go-tcp-transport", "go-tcp-transport", "TCP transport"],
-    ["libp2p/go-libp2p-quic-transport", "go-libp2p-quic-transport", "QUIC transport"],
     ["libp2p/go-udp-transport", "go-udp-transport", "UDP transport"],
     ["libp2p/go-utp-transport", "go-utp-transport", "uTorrent transport (UTP)"],
     ["libp2p/go-libp2p-circuit", "go-libp2p-circuit", "relay transport"],

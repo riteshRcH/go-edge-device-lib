@@ -425,7 +425,7 @@ func TestGracePeriod(t *testing.T) {
 		}
 	}
 
-	// quickly add 30 connections (sending us above the high watermark)
+	// in fast succession add 30 connections (sending us above the high watermark)
 	for i := 0; i < 30; i++ {
 		rc := randConn(t, not.Disconnected)
 		conns = append(conns, rc)
@@ -465,7 +465,7 @@ func TestQuickBurstRespectsSilencePeriod(t *testing.T) {
 
 	var conns []network.Conn
 
-	// quickly produce 30 connections (sending us above the high watermark)
+	// in fast succession produce 30 connections (sending us above the high watermark)
 	for i := 0; i < 30; i++ {
 		rc := randConn(t, not.Disconnected)
 		conns = append(conns, rc)

@@ -272,7 +272,7 @@ func TestDialBackoff(t *testing.T) {
 		case <-s3done:
 			t.Error("s3 should not happen yet")
 		case <-time.After(time.Millisecond):
-			// s2 may finish very quickly, so let's get out.
+			// s2 may finish very pretty fast, so let's get out.
 		}
 
 		// 3) s1->s2 should succeed.

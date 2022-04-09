@@ -37,14 +37,11 @@ var UDP = Or(
 // Define UTP as 'utp' on top of udp (on top of ipv4 or ipv6).
 var UTP = And(UDP, Base(ma.P_UTP))
 
-// Define QUIC as 'quic' on top of udp (on top of ipv4 or ipv6)
-var QUIC = And(UDP, Base(ma.P_QUIC))
-
 // Define unreliable transport as udp
 var Unreliable = Or(UDP)
 
-// Now define a Reliable transport as either tcp or utp or quic
-var Reliable = Or(TCP, UTP, QUIC)
+// Now define a Reliable transport as either tcp or utp
+var Reliable = Or(TCP, UTP)
 
 // P2P can run over any reliable underlying transport protocol
 var P2P = And(Reliable, Base(ma.P_P2P))
