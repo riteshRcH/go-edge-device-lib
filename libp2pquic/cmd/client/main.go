@@ -8,7 +8,7 @@ import (
 	"log"
 	"os"
 
-	libp2pquic github.com/riteshRcH/go-edge-device-lib/libp2pquic"
+	libp2pquic "github.com/riteshRcH/go-edge-device-lib/libp2pquic"
 	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
