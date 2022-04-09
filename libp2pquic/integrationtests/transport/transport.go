@@ -4,7 +4,7 @@
 package transport
 
 import (
-	libp2pquic "github.com/riteshRcH/go-edge-device-lib/quic"
+	libp2pquic github.com/riteshRcH/go-edge-device-lib/libp2pquic"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"

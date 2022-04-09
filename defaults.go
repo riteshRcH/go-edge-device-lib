@@ -12,7 +12,7 @@ import (
 	noise "github.com/riteshRcH/go-edge-device-lib/noise"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/net/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
-	quic "github.com/riteshRcH/go-edge-device-lib/quic"
+	quic github.com/riteshRcH/go-edge-device-lib/libp2pquic"
 	rcmgr "github.com/riteshRcH/go-edge-device-lib/rcmgr"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
 	ws "github.com/riteshRcH/go-edge-device-lib/websocket"
