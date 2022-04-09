@@ -7,7 +7,6 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	tls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"
-	mplex "github.com/riteshRcH/go-edge-device-lib/mplex"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	noise "github.com/riteshRcH/go-edge-device-lib/noise"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/net/connmgr"
