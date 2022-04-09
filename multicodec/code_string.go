@@ -986,7 +986,7 @@ var _Code_map = map[Code]string{
 	10711332: _Code_name[5443:5459],
 	11639056: _Code_name[5459:5468],
 	11704592: _Code_name[5468:5478],
-	11770128: _Code_name[5478:5489],
+	11770128: _Code_name[5478:5485],
 }
 
 func (i Code) String() string {
