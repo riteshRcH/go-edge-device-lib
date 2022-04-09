@@ -15,7 +15,7 @@ import (
 	rcmgr "github.com/riteshRcH/go-edge-device-lib/rcmgr"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
 	ws "github.com/riteshRcH/go-edge-device-lib/websocket"
-	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
+	yamux "github.com/riteshRcH/go-edge-device-lib/sm_yamux"
 )
 
 // DefaultSecurity is the default security option.
