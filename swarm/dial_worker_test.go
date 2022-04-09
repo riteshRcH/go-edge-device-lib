@@ -16,7 +16,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
-	quic github.com/riteshRcH/go-edge-device-lib/libp2pquic"
+	quic "github.com/riteshRcH/go-edge-device-lib/libp2pquic"
 	msmux "github.com/riteshRcH/go-edge-device-lib/stream-muxer-multistream"
 	tcp "github.com/riteshRcH/go-edge-device-lib/tcp"
 	tnet "github.com/riteshRcH/go-edge-device-lib/testing/net"
