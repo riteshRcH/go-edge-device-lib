@@ -7,8 +7,8 @@ import (
 	"net"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/pnet"
+	"github.com/riteshRcH/go-edge-device-lib/core/pnet/salsa"
 
-	"github.com/davidlazar/go-crypto/salsa20"
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 )
 
@@ -35,7 +35,7 @@ func (c *pskConn) Read(out []byte) (int, error) {
 		if err != nil {
 			return 0, errShortNonce
 		}
-		c.readS20 = salsa20.New(c.psk, nonce)
+		c.readS20 = salsa.New(c.psk, nonce)
 	}
 
 	n, err := c.Conn.Read(out) // read to in
@@ -57,7 +57,7 @@ func (c *pskConn) Write(in []byte) (int, error) {
 			return 0, err
 		}
 
-		c.writeS20 = salsa20.New(c.psk, nonce)
+		c.writeS20 = salsa.New(c.psk, nonce)
 	}
 	out := pool.Get(len(in))
 	defer pool.Put(out)
