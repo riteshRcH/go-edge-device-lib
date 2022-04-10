@@ -4,11 +4,13 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"strconv"
 	"sync"
 	"sync/atomic"
 	"time"
 
 	pb "github.com/riteshRcH/go-edge-device-lib/relay/pb"
+	"go.uber.org/zap"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
@@ -18,12 +20,10 @@ import (
 
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
-
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
-var log = logging.Logger("relay")
+var log, _ = zap.NewProduction()
 
 const ProtoID = "/libp2p/circuit/relay/0.1.0"
 
@@ -112,9 +112,8 @@ func NewRelay(h host.Host, upgrader transport.Upgrader, opts ...RelayOpt) (*Rela
 		case OptHop:
 			r.hop = true
 		case OptDiscovery:
-			log.Errorf(
-				"circuit.OptDiscovery is now a no-op: %s",
-				"dialing peers with a random relay is no longer supported",
+			log.Error("OptDiscovery",
+				zap.String("circuit.OptDiscovery is now a no-op", "dialing peers with a random relay is no longer supported"),
 			)
 		default:
 			return nil, fmt.Errorf("unrecognized option: %d", opt)
@@ -150,7 +149,7 @@ func (r *Relay) GetActiveHops() int32 {
 
 func (r *Relay) DialPeer(ctx context.Context, relay peer.AddrInfo, dest peer.AddrInfo) (*Conn, error) {
 
-	log.Debugf("dialing peer %s through relay %s", dest.ID, relay.ID)
+	log.Debug("dialing peer " + string(dest.ID) + " through relay " + string(relay.ID))
 
 	if len(relay.Addrs) > 0 {
 		r.host.Peerstore().AddAddrs(relay.ID, relay.Addrs, peerstore.TempAddrTTL)
@@ -246,7 +245,7 @@ func (r *Relay) CanHop(ctx context.Context, id peer.ID) (bool, error) {
 func (r *Relay) handleNewStream(s network.Stream) {
 	s.SetReadDeadline(time.Now().Add(streamTimeout))
 
-	log.Infof("new relay stream from: %s", s.Conn().RemotePeer())
+	log.Info("new relay stream from: " + s.Conn().RemotePeer().String())
 
 	rd := newDelimitedReader(s, maxMessageSize)
 	defer rd.Close()
@@ -269,7 +268,7 @@ func (r *Relay) handleNewStream(s network.Stream) {
 	case pb.CircuitRelay_CAN_HOP:
 		r.handleCanHop(s, &msg)
 	default:
-		log.Warnf("unexpected relay handshake: %d", msg.GetType())
+		log.Warn("unexpected relay handshake: ", zap.Int(msg.GetType().String(), int(msg.GetType())))
 		r.handleError(s, pb.CircuitRelay_MALFORMED_MESSAGE)
 	}
 }
@@ -324,7 +323,7 @@ func (r *Relay) handleHopStream(s network.Stream, msg *pb.CircuitRelay) {
 
 	bs, err := r.host.NewStream(ctx, dst.ID, ProtoID)
 	if err != nil {
-		log.Debugf("error opening relay stream to %s: %s", dst.ID.Pretty(), err.Error())
+		log.Debug("error opening relay stream to " + dst.ID.Pretty() + ": " + err.Error())
 		if err == network.ErrNoConn {
 			r.handleError(s, pb.CircuitRelay_HOP_NO_CONN_TO_DST)
 		} else {
@@ -345,7 +344,7 @@ func (r *Relay) handleHopStream(s network.Stream, msg *pb.CircuitRelay) {
 
 	err = wr.WriteMsg(msg)
 	if err != nil {
-		log.Debugf("error writing stop handshake: %s", err.Error())
+		log.Debug("error writing stop handshake: " + err.Error())
 		bs.Reset()
 		r.handleError(s, pb.CircuitRelay_HOP_CANT_OPEN_DST_STREAM)
 		return
@@ -355,21 +354,21 @@ func (r *Relay) handleHopStream(s network.Stream, msg *pb.CircuitRelay) {
 
 	err = rd.ReadMsg(msg)
 	if err != nil {
-		log.Debugf("error reading stop response: %s", err.Error())
+		log.Debug("error reading stop response: " + err.Error())
 		bs.Reset()
 		r.handleError(s, pb.CircuitRelay_HOP_CANT_OPEN_DST_STREAM)
 		return
 	}
 
 	if msg.GetType() != pb.CircuitRelay_STATUS {
-		log.Debugf("unexpected relay stop response: not a status message (%d)", msg.GetType())
+		log.Debug("unexpected relay stop response: not a status message", zap.Int(msg.GetType().String(), int(msg.GetType())))
 		bs.Reset()
 		r.handleError(s, pb.CircuitRelay_HOP_CANT_OPEN_DST_STREAM)
 		return
 	}
 
 	if msg.GetCode() != pb.CircuitRelay_SUCCESS {
-		log.Debugf("relay stop failure: %d", msg.GetCode())
+		log.Debug("relay stop failure: ", zap.Int(msg.GetCode().String(), int(msg.GetCode())))
 		bs.Reset()
 		r.handleError(s, msg.GetCode())
 		return
@@ -377,14 +376,14 @@ func (r *Relay) handleHopStream(s network.Stream, msg *pb.CircuitRelay) {
 
 	err = r.writeResponse(s, pb.CircuitRelay_SUCCESS)
 	if err != nil {
-		log.Debugf("error writing relay response: %s", err.Error())
+		log.Debug("error writing relay response: " + err.Error())
 		bs.Reset()
 		s.Reset()
 		return
 	}
 
 	// relay connection
-	log.Infof("relaying connection between %s and %s", src.ID.Pretty(), dst.ID.Pretty())
+	log.Info("relaying connection between " + src.ID.Pretty() + " and " + dst.ID.Pretty())
 
 	// reset deadline
 	bs.SetDeadline(time.Time{})
@@ -411,7 +410,7 @@ func (r *Relay) handleHopStream(s network.Stream, msg *pb.CircuitRelay) {
 
 		count, err := io.CopyBuffer(s, bs, buf)
 		if err != nil {
-			log.Debugf("relay copy error: %s", err)
+			log.Debug("relay copy error: " + err.Error())
 			// Reset both.
 			s.Reset()
 			bs.Reset()
@@ -419,7 +418,7 @@ func (r *Relay) handleHopStream(s network.Stream, msg *pb.CircuitRelay) {
 			// propagate the close
 			s.CloseWrite()
 		}
-		log.Debugf("relayed %d bytes from %s to %s", count, dst.ID.Pretty(), src.ID.Pretty())
+		log.Debug("relayed ", zap.Int64("bytes", count), zap.String("from", dst.ID.Pretty()), zap.String("to", src.ID.Pretty()))
 	}()
 
 	go func() {
@@ -430,7 +429,7 @@ func (r *Relay) handleHopStream(s network.Stream, msg *pb.CircuitRelay) {
 
 		count, err := io.CopyBuffer(bs, s, buf)
 		if err != nil {
-			log.Debugf("relay copy error: %s", err)
+			log.Debug("relay copy error: " + err.Error())
 			// Reset both.
 			bs.Reset()
 			s.Reset()
@@ -438,7 +437,7 @@ func (r *Relay) handleHopStream(s network.Stream, msg *pb.CircuitRelay) {
 			// propagate the close
 			bs.CloseWrite()
 		}
-		log.Debugf("relayed %d bytes from %s to %s", count, src.ID.Pretty(), dst.ID.Pretty())
+		log.Debug("relayed ", zap.Int64("bytes", count), zap.String("from", src.ID.Pretty()), zap.String("to", dst.ID.Pretty()))
 	}()
 }
 
@@ -455,7 +454,7 @@ func (r *Relay) handleStopStream(s network.Stream, msg *pb.CircuitRelay) {
 		return
 	}
 
-	log.Infof("relay connection from: %s", src.ID)
+	log.Info("relay connection from: " + src.ID.Pretty())
 
 	if len(src.Addrs) > 0 {
 		r.host.Peerstore().AddAddrs(src.ID, src.Addrs, peerstore.TempAddrTTL)
@@ -479,18 +478,18 @@ func (r *Relay) handleCanHop(s network.Stream, msg *pb.CircuitRelay) {
 
 	if err != nil {
 		s.Reset()
-		log.Debugf("error writing relay response: %s", err.Error())
+		log.Debug("error writing relay response: " + err.Error())
 	} else {
 		s.Close()
 	}
 }
 
 func (r *Relay) handleError(s network.Stream, code pb.CircuitRelay_Status) {
-	log.Warnf("relay error: %s (%d)", pb.CircuitRelay_Status_name[int32(code)], code)
+	log.Warn("relay error: " + pb.CircuitRelay_Status_name[int32(code)] + " (" + strconv.Itoa(int(code)) + ")")
 	err := r.writeResponse(s, code)
 	if err != nil {
 		s.Reset()
-		log.Debugf("error writing relay response: %s", err.Error())
+		log.Debug("error writing relay response: " + err.Error())
 	} else {
 		s.Close()
 	}
