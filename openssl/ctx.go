@@ -28,13 +28,13 @@ import (
 	"unsafe"
 
 	"github.com/mattn/go-pointer"
-	"github.com/spacemonkeygo/spacelog"
+	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 )
 
 var (
 	ssl_ctx_idx = C.X_SSL_CTX_new_index()
-
-	logger = spacelog.GetLogger()
+	
+	logger = logging.Logger("openssl")
 )
 
 type Ctx struct {
