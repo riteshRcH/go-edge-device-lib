@@ -1,9 +1,9 @@
 package helpers
 
 import (
+	"strconv"
 	"strings"
 
-	"github.com/coreos/go-semver/semver"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 )
 
@@ -15,10 +15,16 @@ import (
 // TODO
 func MultistreamSemverMatcher(base protocol.ID) (func(string) bool, error) {
 	parts := strings.Split(string(base), "/")
-	vers, err := semver.NewVersion(parts[len(parts)-1])
-	if err != nil {
-		return nil, err
-	}
+
+	// semver example
+	// 1.2.3-beta.1+meta
+	// 1 == major
+	// 2 == minor
+	// 3 == patch
+	// beta.1 == pre-release
+	// meta == build metadata
+
+	semver := strings.Split(parts[len(parts)-1], ".")
 
 	return func(check string) bool {
 		chparts := strings.Split(check, "/")
@@ -32,11 +38,17 @@ func MultistreamSemverMatcher(base protocol.ID) (func(string) bool, error) {
 			}
 		}
 
-		chvers, err := semver.NewVersion(chparts[len(chparts)-1])
+		checkAgainstSemver := strings.Split(chparts[len(chparts)-1], ".")
+
+		semverMinor, err := strconv.Atoi(semver[1])
+		if err != nil {
+			return false
+		}
+		checkAgainstSemverMinor, err := strconv.Atoi(checkAgainstSemver[1])
 		if err != nil {
 			return false
 		}
 
-		return vers.Major == chvers.Major && vers.Minor >= chvers.Minor
+		return semver[0] == checkAgainstSemver[0] && semverMinor >= checkAgainstSemverMinor
 	}, nil
 }
