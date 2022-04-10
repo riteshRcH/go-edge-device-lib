@@ -7,7 +7,7 @@ import (
 	"net"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/pnet"
-	"github.com/riteshRcH/go-edge-device-lib/core/pnet/salsa"
+	"github.com/riteshRcH/go-edge-device-lib/pnet/salsa"
 
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
 )
