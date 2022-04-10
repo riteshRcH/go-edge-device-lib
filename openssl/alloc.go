@@ -6,7 +6,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/mattn/go-pointer"
+	"github.com/riteshRcH/go-edge-device-lib/openssl/pointer"
 )
 
 //export go_ssl_crypto_ex_free

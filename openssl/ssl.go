@@ -21,7 +21,7 @@ import (
 	"os"
 	"unsafe"
 
-	"github.com/mattn/go-pointer"
+	"github.com/riteshRcH/go-edge-device-lib/openssl/pointer"
 )
 
 type SSLTLSExtErr int

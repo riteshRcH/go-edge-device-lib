@@ -27,8 +27,8 @@ import (
 	"time"
 	"unsafe"
 
+	"github.com/riteshRcH/go-edge-device-lib/openssl/pointer"
 	"github.com/riteshRcH/go-edge-device-lib/openssl/utils"
-	"github.com/mattn/go-pointer"
 )
 
 var (

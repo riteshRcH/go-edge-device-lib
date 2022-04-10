@@ -18,7 +18,6 @@ require (
 	github.com/koron/go-ssdp v0.0.2
 	github.com/marten-seemann/tcp v0.0.0-20210406111302-dfbc87cc63fd
 	github.com/mattn/go-isatty v0.0.14
-	github.com/mattn/go-pointer v0.0.1
 	github.com/miekg/dns v1.1.48
 	github.com/mikioh/tcpinfo v0.0.0-20190314235526-30a79bb1804b
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1

@@ -27,13 +27,13 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/mattn/go-pointer"
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	"github.com/riteshRcH/go-edge-device-lib/openssl/pointer"
 )
 
 var (
 	ssl_ctx_idx = C.X_SSL_CTX_new_index()
-	
+
 	logger = logging.Logger("openssl")
 )
 
