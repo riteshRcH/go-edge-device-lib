@@ -8,8 +8,8 @@ require (
 	github.com/libp2p/go-libp2p-connmgr v0.3.1
 	github.com/libp2p/go-libp2p-discovery v0.6.0
 	github.com/libp2p/go-libp2p-kad-dht v0.15.0
-	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220410232352-83ef10f85b22
-
+	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220411005434-bac69e5a83e1
+	go.uber.org/zap v1.21.0
 )
 
 require (
@@ -91,7 +91,6 @@ require (
 	go.opencensus.io v0.23.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
-	go.uber.org/zap v1.21.0 // indirect
 	golang.org/x/crypto v0.0.0-20220331220935-ae2d96664a29 // indirect
 	golang.org/x/mod v0.4.2 // indirect
 	golang.org/x/net v0.0.0-20220403103023-749bd193bc2b // indirect

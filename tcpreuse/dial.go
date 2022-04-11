@@ -7,7 +7,10 @@ import (
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 	"github.com/riteshRcH/go-edge-device-lib/reuseport"
+	"go.uber.org/zap"
 )
+
+var log, _ = zap.NewProduction()
 
 type dialer interface {
 	Dial(network, addr string) (net.Conn, error)
