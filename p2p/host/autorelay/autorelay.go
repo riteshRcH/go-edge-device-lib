@@ -274,13 +274,13 @@ func (ar *AutoRelay) refreshRelayReservation(ctx context.Context, p peer.ID) err
 	defer ar.mx.Unlock()
 
 	if err != nil {
-		log.Debugf("failed to refresh relay slot reservation with %s: %s", p, err)
+		log.Debug(fmt.Sprintf("failed to refresh relay slot reservation with %s: %s", p, err))
 
 		delete(ar.relays, p)
 		// unprotect the connection
 		ar.host.ConnManager().Unprotect(p, autorelayTag)
 	} else {
-		log.Debugf("refreshed relay slot reservation with %s", p)
+		log.Debug(fmt.Sprintf("refreshed relay slot reservation with %s", p))
 		ar.relays[p] = rsvp
 	}
 
@@ -309,12 +309,12 @@ func (ar *AutoRelay) findRelays(ctx context.Context) {
 func (ar *AutoRelay) findRelaysOnce(ctx context.Context) bool {
 	relays, err := ar.discoverRelays(ctx)
 	if err != nil {
-		log.Debugf("error discovering relays: %s", err)
+		log.Debug(fmt.Sprintf("error discovering relays: %s", err))
 		return false
 	}
-	log.Debugf("discovered %d relays", len(relays))
+	log.Debug(fmt.Sprintf("discovered %d relays", len(relays)))
 	relays = ar.selectRelays(ctx, relays)
-	log.Debugf("selected %d relays", len(relays))
+	log.Debug(fmt.Sprintf("selected %d relays", len(relays)))
 
 	var found bool
 	for _, pi := range relays {
@@ -366,7 +366,7 @@ func (ar *AutoRelay) tryRelay(ctx context.Context, pi peer.AddrInfo) (*circuitv2
 
 	protos, err := ar.host.Peerstore().SupportsProtocols(pi.ID, protoIDv1, protoIDv2)
 	if err != nil {
-		log.Debugf("error checking relay protocol support for peer %s: %s", pi.ID, err)
+		log.Debug(fmt.Sprintf("error checking relay protocol support for peer %s: %s", pi.ID, err))
 		return nil, false
 	}
 
@@ -386,14 +386,14 @@ protoLoop:
 	case supportsv2:
 		rsvp, err := circuitv2.Reserve(ctx, ar.host, pi)
 		if err != nil {
-			log.Debugf("error reserving slot with %s: %s", pi.ID, err)
+			log.Debug(fmt.Sprintf("error reserving slot with %s: %s", pi.ID, err))
 			return nil, false
 		}
 		return rsvp, true
 	case supportsv1:
 		ok, err := relayv1.CanHop(ctx, ar.host, pi.ID)
 		if err != nil {
-			log.Debugf("error querying relay %s for v1 hop: %s", pi.ID, err)
+			log.Debug(fmt.Sprintf("error querying relay %s for v1 hop: %s", pi.ID, err))
 			return nil, false
 		}
 		return nil, ok
@@ -410,14 +410,14 @@ func (ar *AutoRelay) connect(ctx context.Context, pi peer.AddrInfo) bool {
 		var err error
 		pi, err = ar.router.FindPeer(ctx, pi.ID)
 		if err != nil {
-			log.Debugf("error finding relay peer %s: %s", pi.ID, err.Error())
+			log.Debug(fmt.Sprintf("error finding relay peer %s: %s", pi.ID, err.Error()))
 			return false
 		}
 	}
 
 	err := ar.host.Connect(ctx, pi)
 	if err != nil {
-		log.Debugf("error connecting to relay %s: %s", pi.ID, err.Error())
+		log.Debug(fmt.Sprintf("error connecting to relay %s: %s", pi.ID, err.Error()))
 		return false
 	}
 

@@ -8,7 +8,7 @@ require (
 	github.com/libp2p/go-libp2p-connmgr v0.3.1
 	github.com/libp2p/go-libp2p-discovery v0.6.0
 	github.com/libp2p/go-libp2p-kad-dht v0.15.0
-	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220411131708-b3765b2d7bca
+	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220411131828-f5ee66775b64
 	go.uber.org/zap v1.21.0
 )
 
