@@ -2,6 +2,7 @@ package pstoremanager
 
 import (
 	"context"
+	"fmt"
 	"sync"
 	"time"
 
@@ -9,11 +10,10 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
-
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	"go.uber.org/zap"
 )
 
-var log = logging.Logger("pstoremanager")
+var log, _ = zap.NewProduction()
 
 type Option func(*PeerstoreManager) error
 
@@ -70,7 +70,7 @@ func (m *PeerstoreManager) Start() {
 	m.cancel = cancel
 	sub, err := m.eventBus.Subscribe(&event.EvtPeerConnectednessChanged{})
 	if err != nil {
-		log.Warnf("subscription failed. Peerstore manager not activated. Error: %s", err)
+		log.Warn(fmt.Sprintf("subscription failed. Peerstore manager not activated. Error: %s", err))
 		return
 	}
 	m.refCount.Add(1)

@@ -16,6 +16,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/ping"
+	"go.uber.org/zap"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
@@ -31,8 +32,6 @@ import (
 	inat "github.com/riteshRcH/go-edge-device-lib/morenat"
 	"github.com/riteshRcH/go-edge-device-lib/netroute"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
-
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	madns "github.com/riteshRcH/go-edge-device-lib/multiaddr-dns"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
@@ -46,7 +45,7 @@ const maxAddressResolution = 32
 // addrChangeTickrInterval is the interval between two address change ticks.
 var addrChangeTickrInterval = 5 * time.Second
 
-var log = logging.Logger("basichost")
+var log, _ = zap.NewProduction()
 
 var (
 	// DefaultNegotiationTimeout is the default value for HostOpts.NegotiationTimeout.
@@ -298,10 +297,10 @@ func (h *BasicHost) updateLocalIpAddr() {
 	// Try to use the default ipv4/6 addresses.
 
 	if r, err := netroute.New(); err != nil {
-		log.Debugw("failed to build Router for kernel's routing table", "error", err)
+		log.Debug(fmt.Sprintln("failed to build Router for kernel's routing table", "error", err))
 	} else {
 		if _, _, localIPv4, err := r.Route(net.IPv4zero); err != nil {
-			log.Debugw("failed to fetch local IPv4 address", "error", err)
+			log.Debug(fmt.Sprintln("failed to fetch local IPv4 address", "error", err))
 		} else if localIPv4.IsGlobalUnicast() {
 			maddr, err := manet.FromIP(localIPv4)
 			if err == nil {
@@ -310,7 +309,7 @@ func (h *BasicHost) updateLocalIpAddr() {
 		}
 
 		if _, _, localIPv6, err := r.Route(net.IPv6unspecified); err != nil {
-			log.Debugw("failed to fetch local IPv6 address", "error", err)
+			log.Debug(fmt.Sprintln("failed to fetch local IPv6 address", "error", err))
 		} else if localIPv6.IsGlobalUnicast() {
 			maddr, err := manet.FromIP(localIPv6)
 			if err == nil {
@@ -324,7 +323,7 @@ func (h *BasicHost) updateLocalIpAddr() {
 	if err != nil {
 		// This usually shouldn't happen, but we could be in some kind
 		// of funky restricted environment.
-		log.Errorw("failed to resolve local interface addresses", "error", err)
+		log.Error(fmt.Sprintln("failed to resolve local interface addresses", "error", err))
 
 		// Add the loopback addresses to the filtered addrs and use them as the non-filtered addrs.
 		// Then bail. There's nothing else we can do here.
@@ -370,7 +369,7 @@ func (h *BasicHost) newStreamHandler(s network.Stream) {
 
 	if h.negtimeout > 0 {
 		if err := s.SetDeadline(time.Now().Add(h.negtimeout)); err != nil {
-			log.Debug("setting stream deadline: ", err)
+			log.Debug(fmt.Sprintln("setting stream deadline: ", err))
 			s.Reset()
 			return
 		}
@@ -380,13 +379,13 @@ func (h *BasicHost) newStreamHandler(s network.Stream) {
 	took := time.Since(before)
 	if err != nil {
 		if err == io.EOF {
-			logf := log.Debugf
+			logf := log.Debug
 			if took > time.Second*10 {
-				logf = log.Warnf
+				logf = log.Warn
 			}
-			logf("protocol EOF: %s (took %s)", s.Conn().RemotePeer(), took)
+			logf(fmt.Sprintf("protocol EOF: %s (took %s)", s.Conn().RemotePeer(), took))
 		} else {
-			log.Debugf("protocol mux failed: %s (took %s)", err, took)
+			log.Debug(fmt.Sprintf("protocol mux failed: %s (took %s)", err, took))
 		}
 		s.Reset()
 		return
@@ -399,19 +398,19 @@ func (h *BasicHost) newStreamHandler(s network.Stream) {
 
 	if h.negtimeout > 0 {
 		if err := s.SetDeadline(time.Time{}); err != nil {
-			log.Debugf("resetting stream deadline: ", err)
+			log.Debug(fmt.Sprintln("resetting stream deadline: ", err))
 			s.Reset()
 			return
 		}
 	}
 
 	if err := s.SetProtocol(protocol.ID(protoID)); err != nil {
-		log.Debugf("error setting stream protocol: %s", err)
+		log.Debug(fmt.Sprintf("error setting stream protocol: %s", err))
 		s.Reset()
 		return
 	}
 
-	log.Debugf("protocol negotiation took %s", took)
+	log.Debug(fmt.Sprintf("protocol negotiation took %s", took))
 
 	go handle(protoID, s)
 }
@@ -491,21 +490,21 @@ func (h *BasicHost) background() {
 			// add signed peer record to the event
 			sr, err := h.makeSignedPeerRecord(changeEvt)
 			if err != nil {
-				log.Errorf("error creating a signed peer record from the set of current addresses, err=%s", err)
+				log.Error(fmt.Sprintf("error creating a signed peer record from the set of current addresses, err=%s", err))
 				return
 			}
 			changeEvt.SignedPeerRecord = sr
 
 			// persist the signed record to the peerstore
 			if _, err := h.caBook.ConsumePeerRecord(sr, peerstore.PermanentAddrTTL); err != nil {
-				log.Errorf("failed to persist signed peer record in peer store, err=%s", err)
+				log.Error(fmt.Sprintf("failed to persist signed peer record in peer store, err=%s", err))
 				return
 			}
 		}
 
 		// emit addr change event on the bus
 		if err := h.emitters.evtLocalAddrsUpdated.Emit(*changeEvt); err != nil {
-			log.Warnf("error emitting event for updated addrs: %s", err)
+			log.Warn(fmt.Sprintf("error emitting event for updated addrs: %s", err))
 		}
 	}
 
@@ -736,11 +735,11 @@ func (h *BasicHost) resolveAddrs(ctx context.Context, pi peer.AddrInfo) ([]ma.Mu
 		// We've resolved too many addresses. We can keep all the fully
 		// resolved addresses but we'll need to skip the rest.
 		if resolveSteps >= maxAddressResolution {
-			log.Warnf(
-				"peer %s asked us to resolve too many addresses: %s/%s",
-				pi.ID,
-				resolveSteps,
-				maxAddressResolution,
+			log.Warn(
+				fmt.Sprintf("peer %s asked us to resolve too many addresses: %s/%s",
+					pi.ID,
+					resolveSteps,
+					maxAddressResolution),
 			)
 			continue
 		}
@@ -749,14 +748,14 @@ func (h *BasicHost) resolveAddrs(ctx context.Context, pi peer.AddrInfo) ([]ma.Mu
 		reqaddr := addr.Encapsulate(p2paddr)
 		resaddrs, err := h.maResolver.Resolve(ctx, reqaddr)
 		if err != nil {
-			log.Infof("error resolving %s: %s", reqaddr, err)
+			log.Info(fmt.Sprintf("error resolving %s: %s", reqaddr, err))
 		}
 
 		// add the results to the toResolve list.
 		for _, res := range resaddrs {
 			pi, err := peer.AddrInfoFromP2pAddr(res)
 			if err != nil {
-				log.Infof("error parsing %s: %s", res, err)
+				log.Info(fmt.Sprintf("error parsing %s: %s", res, err))
 			}
 			toResolve = append(toResolve, pi.Addrs...)
 		}
@@ -768,7 +767,7 @@ func (h *BasicHost) resolveAddrs(ctx context.Context, pi peer.AddrInfo) ([]ma.Mu
 // dialPeer opens a connection to peer, and makes sure to identify
 // the connection once it has been opened.
 func (h *BasicHost) dialPeer(ctx context.Context, p peer.ID) error {
-	log.Debugf("host %s dialing %s", h.ID(), p)
+	log.Debug(fmt.Sprintf("host %s dialing %s", h.ID(), p))
 	c, err := h.Network().DialPeer(ctx, p)
 	if err != nil {
 		return err
@@ -785,7 +784,7 @@ func (h *BasicHost) dialPeer(ctx context.Context, p peer.ID) error {
 		return ctx.Err()
 	}
 
-	log.Debugf("host %s finished dialing %s", h.ID(), p)
+	log.Debug(fmt.Sprintf("host %s finished dialing %s", h.ID(), p))
 	return nil
 }
 
@@ -833,7 +832,7 @@ func (h *BasicHost) AllAddrs() []ma.Multiaddr {
 	if resolved, err := manet.ResolveUnspecifiedAddresses(listenAddrs, filteredIfaceAddrs); err != nil {
 		// This can happen if we're listening on no addrs, or listening
 		// on IPv6 addrs, but only have IPv4 interface addrs.
-		log.Debugw("failed to resolve listen addrs", "error", err)
+		log.Debug(fmt.Sprintln("failed to resolve listen addrs", "error", err))
 	} else {
 		finalAddrs = append(finalAddrs, resolved...)
 	}
@@ -901,7 +900,7 @@ func (h *BasicHost) AllAddrs() []ma.Multiaddr {
 
 			naddr, err := manet.ToNetAddr(transport)
 			if err != nil {
-				log.Error("error parsing net multiaddr %q: %s", transport, err)
+				log.Error(fmt.Sprintf("error parsing net multiaddr %q: %s", transport, err))
 				continue
 			}
 
@@ -937,7 +936,7 @@ func (h *BasicHost) AllAddrs() []ma.Multiaddr {
 
 			mappedMaddr, err := manet.FromNetAddr(mappedAddr)
 			if err != nil {
-				log.Errorf("mapped addr can't be turned into a multiaddr %q: %s", mappedAddr, err)
+				log.Error(fmt.Sprintf("mapped addr can't be turned into a multiaddr %q: %s", mappedAddr, err))
 				continue
 			}
 

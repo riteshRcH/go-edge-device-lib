@@ -3,6 +3,7 @@ package autonat
 import (
 	"context"
 	"errors"
+	"fmt"
 	"math/rand"
 	"sync/atomic"
 	"time"
@@ -12,13 +13,13 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/eventbus"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 )
 
-var log = logging.Logger("autonat")
+var log, _ = zap.NewProduction()
 
 // AmbientAutoNAT is the implementation of ambient NAT autodiscovery
 type AmbientAutoNAT struct {
@@ -207,7 +208,7 @@ func (as *AmbientAutoNAT) background() {
 					}
 				}
 			default:
-				log.Errorf("unknown event type: %T", e)
+				log.Error(fmt.Sprintf("unknown event type: %T", e))
 			}
 
 		// probe finished.
@@ -284,7 +285,7 @@ func (as *AmbientAutoNAT) scheduleProbe() time.Duration {
 func (as *AmbientAutoNAT) recordObservation(observation autoNATResult) {
 	currentStatus := as.status.Load().(autoNATResult)
 	if observation.Reachability == network.ReachabilityPublic {
-		log.Debugf("NAT status is public")
+		log.Debug("NAT status is public")
 		changed := false
 		if currentStatus.Reachability != network.ReachabilityPublic {
 			// we are flipping our NATStatus, so confidence drops to 0
@@ -309,7 +310,7 @@ func (as *AmbientAutoNAT) recordObservation(observation autoNATResult) {
 			as.emitStatus()
 		}
 	} else if observation.Reachability == network.ReachabilityPrivate {
-		log.Debugf("NAT status is private")
+		log.Debug("NAT status is private")
 		if currentStatus.Reachability == network.ReachabilityPublic {
 			if as.confidence > 0 {
 				as.confidence--
@@ -333,7 +334,7 @@ func (as *AmbientAutoNAT) recordObservation(observation autoNATResult) {
 		// don't just flip to unknown, reduce confidence first
 		as.confidence--
 	} else {
-		log.Debugf("NAT status is unknown")
+		log.Debug("NAT status is unknown")
 		as.status.Store(autoNATResult{network.ReachabilityUnknown, nil})
 		if currentStatus.Reachability != network.ReachabilityUnknown {
 			if as.service != nil {
@@ -378,11 +379,11 @@ func (as *AmbientAutoNAT) probe(pi *peer.AddrInfo) {
 	var result autoNATResult
 	switch {
 	case err == nil:
-		log.Debugf("Dialback through %s successful; public address is %s", pi.ID.Pretty(), a.String())
+		log.Debug(fmt.Sprintf("Dialback through %s successful; public address is %s", pi.ID.Pretty(), a.String()))
 		result.Reachability = network.ReachabilityPublic
 		result.address = a
 	case IsDialError(err):
-		log.Debugf("Dialback through %s failed", pi.ID.Pretty())
+		log.Debug(fmt.Sprintf("Dialback through %s failed", pi.ID.Pretty()))
 		result.Reachability = network.ReachabilityPrivate
 	default:
 		result.Reachability = network.ReachabilityUnknown

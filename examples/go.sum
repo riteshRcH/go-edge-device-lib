@@ -952,8 +952,8 @@ github.com/raulk/clock v1.1.0/go.mod h1:3MpVxdZ/ODBQDxbN+kzshf5OSZwPjtMDx6BBXBmO
 github.com/raulk/go-watchdog v1.2.0 h1:konN75pw2BMmZ+AfuAm5rtFsWcJpKF3m02rKituuXNo=
 github.com/raulk/go-watchdog v1.2.0/go.mod h1:lzSbAl5sh4rtI8tYHU01BWIDzgzqaQLj6RcA1i4mlqI=
 github.com/rcrowley/go-metrics v0.0.0-20181016184325-3113b8401b8a/go.mod h1:bCqnVzQkZxMG4s8nGwiZ5l3QUCyqpo9Y+/ZMZ9VjZe4=
-github.com/riteshRcH/go-edge-device-lib v0.0.0-20220411030820-2da5607ca943 h1:dPUWtJDu9wPew1w8HQaTyhQNqs1Dp8K+y1tH2js6WgQ=
-github.com/riteshRcH/go-edge-device-lib v0.0.0-20220411030820-2da5607ca943/go.mod h1:Psyq+dqnsfBB4MfUiw/32vvuQ/0co+mGhQN8D8o6dlw=
+github.com/riteshRcH/go-edge-device-lib v0.0.0-20220411124630-e727d519a5a2 h1:hETJV7bBp36jm6qUCbFpYCY0WzUhhd+OSE7f4UdTXt4=
+github.com/riteshRcH/go-edge-device-lib v0.0.0-20220411124630-e727d519a5a2/go.mod h1:Psyq+dqnsfBB4MfUiw/32vvuQ/0co+mGhQN8D8o6dlw=
 github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af/go.mod h1:XWv6SoW27p1b0cqNHllgS5HIMJraePCO15w5zCzIWYg=
 github.com/rogpeppe/fastuuid v1.2.0/go.mod h1:jVj6XXZzXRy/MSR5jhDC/2q6DgLz+nrA6LYCDYWNEvQ=
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=

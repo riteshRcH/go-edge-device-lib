@@ -2,15 +2,15 @@ package util
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	"go.uber.org/zap"
 )
 
-var log = logging.Logger("discovery-util")
+var log, _ = zap.NewProduction()
 
 // FindPeers is a utility function that synchronously collects peers from a Discoverer.
 func FindPeers(ctx context.Context, d discovery.Discoverer, ns string, opts ...discovery.Option) ([]peer.AddrInfo, error) {
@@ -34,7 +34,7 @@ func Advertise(ctx context.Context, a discovery.Advertiser, ns string, opts ...d
 		for {
 			ttl, err := a.Advertise(ctx, ns, opts...)
 			if err != nil {
-				log.Debugf("Error advertising %s: %s", ns, err.Error())
+				log.Debug(fmt.Sprintf("Error advertising %s: %s", ns, err.Error()))
 				if ctx.Err() != nil {
 					return
 				}

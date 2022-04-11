@@ -1,7 +1,7 @@
 package autorelay
 
 import (
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	"go.uber.org/zap"
 )
 
-var log = logging.Logger("autorelay")
+var log, _ = zap.NewProduction()

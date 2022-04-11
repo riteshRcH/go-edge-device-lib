@@ -3,6 +3,7 @@ package mdns
 import (
 	"context"
 	"errors"
+	"fmt"
 	"io"
 	"math/rand"
 	"strings"
@@ -10,8 +11,8 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/riteshRcH/go-edge-device-lib/zeroconf"
+	"go.uber.org/zap"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
@@ -23,7 +24,7 @@ const (
 	dnsaddrPrefix = "dnsaddr="
 )
 
-var log = logging.Logger("mdns")
+var log, _ = zap.NewProduction()
 
 type Service interface {
 	Start() error
@@ -165,14 +166,14 @@ func (s *mdnsService) startResolver(ctx context.Context) {
 				}
 				addr, err := ma.NewMultiaddr(s[len(dnsaddrPrefix):])
 				if err != nil {
-					log.Debugf("failed to parse multiaddr: %s", err)
+					log.Debug(fmt.Sprintf("failed to parse multiaddr: %s", err))
 					continue
 				}
 				addrs = append(addrs, addr)
 			}
 			infos, err := peer.AddrInfosFromP2pAddrs(addrs...)
 			if err != nil {
-				log.Debugf("failed to get peer info: %s", err)
+				log.Debug(fmt.Sprintf("failed to get peer info: %s", err))
 				continue
 			}
 			for _, info := range infos {
@@ -183,7 +184,7 @@ func (s *mdnsService) startResolver(ctx context.Context) {
 	go func() {
 		defer s.resolverWG.Done()
 		if err := zeroconf.Browse(ctx, s.serviceName, mdnsDomain, entryChan); err != nil {
-			log.Debugf("zeroconf browsing failed: %s", err)
+			log.Debug(fmt.Sprintf("zeroconf browsing failed: %s", err))
 		}
 	}()
 }

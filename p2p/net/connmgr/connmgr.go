@@ -2,6 +2,7 @@ package connmgr
 
 import (
 	"context"
+	"fmt"
 	"sort"
 	"sync"
 	"sync/atomic"
@@ -10,12 +11,12 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
-var log = logging.Logger("connmgr")
+var log, _ = zap.NewProduction()
 
 // BasicConnMgr is a ConnManager that trims connections whenever the count exceeds the
 // high watermark. New connections are given a grace period before they're subject
@@ -149,10 +150,10 @@ func (cm *BasicConnMgr) memoryEmergency() {
 	connCount := int(atomic.LoadInt32(&cm.connCount))
 	target := connCount - cm.cfg.lowWater
 	if target < 0 {
-		log.Warnw("Low on memory, but we only have a few connections", "num", connCount, "low watermark", cm.cfg.lowWater)
+		log.Warn(fmt.Sprintln("Low on memory, but we only have a few connections", "num", connCount, "low watermark", cm.cfg.lowWater))
 		return
 	} else {
-		log.Warnf("Low on memory. Closing %d connections.", target)
+		log.Warn(fmt.Sprintf("Low on memory. Closing %d connections.", target))
 	}
 
 	cm.trimMutex.Lock()
@@ -161,7 +162,7 @@ func (cm *BasicConnMgr) memoryEmergency() {
 
 	// Trim connections without paying attention to the silence period.
 	for _, c := range cm.getConnsToCloseEmergency(target) {
-		log.Infow("low on memory. closing conn", "peer", c.RemotePeer())
+		log.Info(fmt.Sprintln("low on memory. closing conn", "peer", c.RemotePeer()))
 		c.Close()
 	}
 
@@ -345,7 +346,7 @@ func (cm *BasicConnMgr) doTrim() {
 func (cm *BasicConnMgr) trim() {
 	// do the actual trim.
 	for _, c := range cm.getConnsToClose() {
-		log.Infow("closing conn", "peer", c.RemotePeer())
+		log.Info(fmt.Sprintln("closing conn", "peer", c.RemotePeer()))
 		c.Close()
 	}
 }
@@ -543,7 +544,7 @@ func (cm *BasicConnMgr) UntagPeer(p peer.ID, tag string) {
 
 	pi, ok := s.peers[p]
 	if !ok {
-		log.Info("tried to remove tag from untracked peer: ", p)
+		log.Info(fmt.Sprintln("tried to remove tag from untracked peer: ", p))
 		return
 	}
 
@@ -644,7 +645,7 @@ func (nn *cmNotifee) Connected(n network.Network, c network.Conn) {
 
 	_, ok = pinfo.conns[c]
 	if ok {
-		log.Error("received connected notification for conn we are already tracking: ", p)
+		log.Error(fmt.Sprintln("received connected notification for conn we are already tracking: ", p))
 		return
 	}
 
@@ -664,13 +665,13 @@ func (nn *cmNotifee) Disconnected(n network.Network, c network.Conn) {
 
 	cinf, ok := s.peers[p]
 	if !ok {
-		log.Error("received disconnected notification for peer we are not tracking: ", p)
+		log.Error(fmt.Sprintln("received disconnected notification for peer we are not tracking: ", p))
 		return
 	}
 
 	_, ok = cinf.conns[c]
 	if !ok {
-		log.Error("received disconnected notification for conn we are not tracking: ", p)
+		log.Error(fmt.Sprintln("received disconnected notification for conn we are not tracking: ", p))
 		return
 	}
 

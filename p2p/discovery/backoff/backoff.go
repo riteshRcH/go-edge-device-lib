@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	"go.uber.org/zap"
 )
 
-var log = logging.Logger("discovery-backoff")
+var log, _ = zap.NewProduction()
 
 type BackoffFactory func() BackoffStrategy
 

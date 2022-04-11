@@ -12,13 +12,12 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
-
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	"go.uber.org/zap"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
-var log = logging.Logger("routedhost")
+var log, _ = zap.NewProduction()
 
 // AddressTTL is the expiry time for our addresses.
 // We expire them pretty fast.
@@ -86,7 +85,7 @@ func (rh *RoutedHost) Connect(ctx context.Context, pi peer.AddrInfo) error {
 
 		relayID, err := peer.IDFromString(relay)
 		if err != nil {
-			log.Debugf("failed to parse relay ID in address %s: %s", relay, err)
+			log.Debug(fmt.Sprintf("failed to parse relay ID in address %s: %s", relay, err))
 			continue
 		}
 
@@ -97,7 +96,7 @@ func (rh *RoutedHost) Connect(ctx context.Context, pi peer.AddrInfo) error {
 
 		relayAddrs, err := rh.findPeerAddrs(ctx, relayID)
 		if err != nil {
-			log.Debugf("failed to find relay %s: %s", relay, err)
+			log.Debug(fmt.Sprintf("failed to find relay %s: %s", relay, err))
 			continue
 		}
 
@@ -117,10 +116,10 @@ func (rh *RoutedHost) findPeerAddrs(ctx context.Context, id peer.ID) ([]ma.Multi
 
 	if pi.ID != id {
 		err = fmt.Errorf("routing failure: provided addrs for different peer")
-		log.Errorw("got wrong peer",
+		log.Error(fmt.Sprintln("got wrong peer",
 			"error", err,
 			"wantedPeer", id,
-			"gotPeer", pi.ID,
+			"gotPeer", pi.ID),
 		)
 		return nil, err
 	}

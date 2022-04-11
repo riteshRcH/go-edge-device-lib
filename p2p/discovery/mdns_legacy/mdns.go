@@ -3,6 +3,7 @@ package mdns_legacy
 import (
 	"context"
 	"errors"
+	"fmt"
 	"io"
 	"net"
 	"sync"
@@ -11,8 +12,8 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	mdnsnew "github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 	"github.com/whyrusleeping/mdns"
@@ -23,7 +24,7 @@ func init() {
 	mdns.DisableLogging = true
 }
 
-var log = logging.Logger("mdns_legacy")
+var log, _ = zap.NewProduction()
 
 const ServiceTag = "_ipfs-discovery._udp"
 
@@ -75,7 +76,7 @@ func NewMdnsService(ctx context.Context, peerhost host.Host, interval time.Durat
 
 	addrs, err := getDialableListenAddrs(peerhost)
 	if err != nil {
-		log.Warn(err)
+		log.Warn(fmt.Sprintln(err))
 	} else {
 		port = addrs[0].Port
 		for _, a := range addrs {
@@ -140,7 +141,7 @@ func (m *mdnsService) pollForEntries(ctx context.Context) {
 
 		err := mdns.Query(qp)
 		if err != nil {
-			log.Warnw("mdns lookup error", "error", err)
+			log.Warn(fmt.Sprintln("mdns lookup error", "error", err))
 		}
 		close(entriesCh)
 		log.Debug("mdns query complete")
@@ -156,10 +157,10 @@ func (m *mdnsService) pollForEntries(ctx context.Context) {
 }
 
 func (m *mdnsService) handleEntry(e *mdns.ServiceEntry) {
-	log.Debugf("Handling MDNS entry: [IPv4 %s][IPv6 %s]:%d %s", e.AddrV4, e.AddrV6, e.Port, e.Info)
+	log.Debug(fmt.Sprintf("Handling MDNS entry: [IPv4 %s][IPv6 %s]:%d %s", e.AddrV4, e.AddrV6, e.Port, e.Info))
 	mpeer, err := peer.Decode(e.Info)
 	if err != nil {
-		log.Warn("Error parsing peer ID from mdns entry: ", err)
+		log.Warn(fmt.Sprintln("Error parsing peer ID from mdns entry: ", err))
 		return
 	}
 
@@ -183,7 +184,7 @@ func (m *mdnsService) handleEntry(e *mdns.ServiceEntry) {
 		Port: e.Port,
 	})
 	if err != nil {
-		log.Warn("Error parsing multiaddr from mdns entry: ", err)
+		log.Warn(fmt.Sprintln("Error parsing multiaddr from mdns entry: ", err))
 		return
 	}
 
