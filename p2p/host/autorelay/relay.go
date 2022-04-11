@@ -2,6 +2,7 @@ package autorelay
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/discovery"
@@ -24,7 +25,7 @@ func Advertise(ctx context.Context, advertise discovery.Advertiser) {
 				for {
 					ttl, err := advertise.Advertise(ctx, RelayRendezvous, discovery.TTL(AdvertiseTTL))
 					if err != nil {
-						log.Debugf("Error advertising %s: %s", RelayRendezvous, err.Error())
+						log.Debug(fmt.Sprintf("Error advertising %s: %s", RelayRendezvous, err.Error()))
 						if ctx.Err() != nil {
 							return
 						}
