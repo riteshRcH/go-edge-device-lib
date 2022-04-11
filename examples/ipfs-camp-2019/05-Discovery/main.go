@@ -7,11 +7,11 @@ import (
 	"os/signal"
 	"syscall"
 
-	mplex "github.com/libp2p/go-libp2p-mplex"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	tls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
+	mplex "github.com/riteshRcH/go-edge-device-lib/peerstream_multiplex"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
 	ws "github.com/riteshRcH/go-edge-device-lib/websocket"
 	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"

@@ -8,7 +8,6 @@ import (
 	"syscall"
 
 	kaddht "github.com/libp2p/go-libp2p-kad-dht"
-	mplex "github.com/libp2p/go-libp2p-mplex"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
@@ -17,6 +16,7 @@ import (
 	tls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"
+	mplex "github.com/riteshRcH/go-edge-device-lib/peerstream_multiplex"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
 	ws "github.com/riteshRcH/go-edge-device-lib/websocket"
 	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
