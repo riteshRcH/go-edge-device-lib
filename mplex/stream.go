@@ -3,6 +3,7 @@ package multiplex
 import (
 	"context"
 	"errors"
+	"fmt"
 	"io"
 	"sync"
 	"time"
@@ -225,7 +226,7 @@ func (s *Stream) CloseWrite() error {
 	err := s.mp.sendMsg(ctx.Done(), nil, s.id.header(closeTag), nil)
 	// We failed to close the stream after 2 minutes, something is probably wrong.
 	if err != nil && !s.mp.isShutdown() {
-		log.Warnf("Error closing stream: %s; killing connection", err.Error())
+		log.Warn(fmt.Sprintf("Error closing stream: %s; killing connection", err.Error()))
 		s.mp.Close()
 	}
 	return err

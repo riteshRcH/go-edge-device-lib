@@ -17,6 +17,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/testing/ci"
 
 	"github.com/stretchr/testify/require"
