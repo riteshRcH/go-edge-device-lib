@@ -2,6 +2,7 @@ package swarm_test
 
 import (
 	"context"
+	"fmt"
 	"net"
 	"sync"
 	"testing"
@@ -93,7 +94,7 @@ func TestSimultDials(t *testing.T) {
 		errs := make(chan error, 20) // 2 connect calls in each of the 10 for-loop iterations
 		connect := func(s *Swarm, dst peer.ID, addr ma.Multiaddr) {
 			// copy for other peer
-			log.Debugf("TestSimultOpen: connecting: %s --> %s (%s)", s.LocalPeer(), dst, addr)
+			log.Debug(fmt.Sprintf("TestSimultOpen: connecting: %s --> %s (%s)", s.LocalPeer(), dst, addr))
 			s.Peerstore().AddAddr(dst, addr, peerstore.TempAddrTTL)
 			if _, err := s.DialPeer(ctx, dst); err != nil {
 				errs <- err
@@ -532,7 +533,7 @@ func TestDialSimultaneousJoin(t *testing.T) {
 			return
 		}
 
-		t.Logf("first dial succedded; conn: %+v", c)
+		t.Log(fmt.Sprintf("first dial succedded; conn: %+v", c))
 
 		connch <- c
 		errs <- nil
@@ -557,7 +558,7 @@ func TestDialSimultaneousJoin(t *testing.T) {
 			return
 		}
 
-		t.Logf("second dial succedded; conn: %+v", c)
+		t.Log(fmt.Sprintf("second dial succedded; conn: %+v", c))
 
 		connch <- c
 		errs <- nil
@@ -575,7 +576,7 @@ func TestDialSimultaneousJoin(t *testing.T) {
 			return
 		}
 
-		t.Logf("third dial succedded; conn: %+v", c)
+		t.Log(fmt.Sprintf("third dial succedded; conn: %+v", c))
 
 		connch <- c
 		errs <- nil

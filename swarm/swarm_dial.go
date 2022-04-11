@@ -221,7 +221,7 @@ func (db *DialBackoff) cleanup() {
 // etc. to achieve connection.
 func (s *Swarm) DialPeer(ctx context.Context, p peer.ID) (network.Conn, error) {
 	if s.gater != nil && !s.gater.InterceptPeerDial(p) {
-		log.Debugf("gater disallowed outbound connection to peer %s", p.Pretty())
+		log.Debug(fmt.Sprintf("gater disallowed outbound connection to peer %s", p.Pretty()))
 		return nil, &DialError{Peer: p, Cause: ErrGaterDisallowedConnection}
 	}
 
@@ -238,7 +238,7 @@ func (s *Swarm) DialPeer(ctx context.Context, p peer.ID) (network.Conn, error) {
 // It is gated by the swarm's dial synchronization systems: dialsync and
 // dialbackoff.
 func (s *Swarm) dialPeer(ctx context.Context, p peer.ID) (*Conn, error) {
-	log.Debugw("dialing peer", "from", s.local, "to", p)
+	log.Debug(fmt.Sprintf("dialing peer", "from", s.local, "to", p))
 	err := p.Validate()
 	if err != nil {
 		return nil, err
@@ -263,7 +263,7 @@ func (s *Swarm) dialPeer(ctx context.Context, p peer.ID) (*Conn, error) {
 		return conn, nil
 	}
 
-	log.Debugf("network for %s finished dialing %s", s.local, p)
+	log.Debug(fmt.Sprintf("network for %s finished dialing %s", s.local, p))
 
 	if ctx.Err() != nil {
 		// Context error trumps any dial errors as it was likely the ultimate cause.
@@ -383,7 +383,7 @@ func (s *Swarm) dialAddr(ctx context.Context, p peer.ID, addr ma.Multiaddr) (tra
 	if s.local == p {
 		return nil, ErrDialToSelf
 	}
-	log.Debugf("%s swarm dialing %s %s", s.local, p, addr)
+	log.Debug(fmt.Sprintf("%s swarm dialing %s %s", s.local, p, addr))
 
 	tpt := s.TransportForDialing(addr)
 	if tpt == nil {
@@ -399,7 +399,7 @@ func (s *Swarm) dialAddr(ctx context.Context, p peer.ID, addr ma.Multiaddr) (tra
 	if connC.RemotePeer() != p {
 		connC.Close()
 		err = fmt.Errorf("BUG in transport %T: tried to dial %s, dialed %s", p, connC.RemotePeer(), tpt)
-		log.Error(err)
+		log.Error(fmt.Sprintln(err))
 		return nil, err
 	}
 

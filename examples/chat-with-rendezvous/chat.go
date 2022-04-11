@@ -98,8 +98,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	logger.Info("Host created. We are:", host.ID())
-	logger.Info(host.Addrs())
+	logger.Info(fmt.Sprintln("Host created. We are:", host.ID()))
+	logger.Info(fmt.Sprintln(host.Addrs()))
 
 	// Set a function as stream handler. This function is called when a peer
 	// initiates a connection and starts a stream with this peer.
@@ -131,9 +131,9 @@ func main() {
 		go func() {
 			defer wg.Done()
 			if err := host.Connect(ctx, *peerinfo); err != nil {
-				logger.Warning(err)
+				logger.Warn(fmt.Sprintln(err))
 			} else {
-				logger.Info("Connection established with bootstrap node:", *peerinfo)
+				logger.Info(fmt.Sprintln("Connection established with bootstrap node:", *peerinfo))
 			}
 		}()
 	}
@@ -164,7 +164,7 @@ func main() {
 		stream, err := host.NewStream(ctx, peer.ID, protocol.ID(config.ProtocolID))
 
 		if err != nil {
-			logger.Warning("Connection failed:", err)
+			logger.Warn(fmt.Sprintln("Connection failed:", err))
 			continue
 		} else {
 			rw := bufio.NewReadWriter(bufio.NewReader(stream), bufio.NewWriter(stream))

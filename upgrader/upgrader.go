@@ -152,7 +152,7 @@ func (u *upgrader) upgrade(ctx context.Context, t transport.Transport, maconn ma
 	// call the connection gater, if one is registered.
 	if u.connGater != nil && !u.connGater.InterceptSecured(dir, sconn.RemotePeer(), maconn) {
 		if err := maconn.Close(); err != nil {
-			log.Errorw("failed to close connection", "peer", p, "addr", maconn.RemoteMultiaddr(), "error", err)
+			log.Error(fmt.Sprintln("failed to close connection", "peer", p, "addr", maconn.RemoteMultiaddr(), "error", err))
 		}
 		return nil, fmt.Errorf("gater rejected connection with peer %s and addr %s with direction %d",
 			sconn.RemotePeer().Pretty(), maconn.RemoteMultiaddr(), dir)
@@ -161,9 +161,9 @@ func (u *upgrader) upgrade(ctx context.Context, t transport.Transport, maconn ma
 	// the peer in advance and in some bug scenarios.
 	if connScope.PeerScope() == nil {
 		if err := connScope.SetPeer(sconn.RemotePeer()); err != nil {
-			log.Debugw("resource manager blocked connection for peer", "peer", sconn.RemotePeer(), "addr", conn.RemoteAddr(), "error", err)
+			log.Debug(fmt.Sprintln("resource manager blocked connection for peer", "peer", sconn.RemotePeer(), "addr", conn.RemoteAddr(), "error", err))
 			if err := maconn.Close(); err != nil {
-				log.Errorw("failed to close connection", "peer", p, "addr", maconn.RemoteMultiaddr(), "error", err)
+				log.Error(fmt.Sprintln("failed to close connection", "peer", p, "addr", maconn.RemoteMultiaddr(), "error", err))
 			}
 			return nil, fmt.Errorf("resource manager connection with peer %s and addr %s with direction %d",
 				sconn.RemotePeer().Pretty(), maconn.RemoteMultiaddr(), dir)

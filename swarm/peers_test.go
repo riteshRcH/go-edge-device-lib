@@ -2,6 +2,7 @@ package swarm_test
 
 import (
 	"context"
+	"fmt"
 	"testing"
 	"time"
 
@@ -45,7 +46,7 @@ func TestPeers(t *testing.T) {
 	}
 
 	for _, s := range swarms {
-		log.Infof("%s swarm routing table: %s", s.LocalPeer(), s.Peers())
+		log.Info(fmt.Sprintf("%s swarm routing table: %s", s.LocalPeer(), s.Peers()))
 	}
 
 	test := func(s *Swarm) {
