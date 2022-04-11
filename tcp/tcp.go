@@ -3,6 +3,7 @@ package tcp
 import (
 	"context"
 	"errors"
+	"fmt"
 	"net"
 	"os"
 	"runtime"
@@ -47,16 +48,16 @@ func tryKeepAlive(conn net.Conn, keepAlive bool) {
 		// But there's nothing we can do about invalid arguments, so we'll drop this to a
 		// debug.
 		if errors.Is(err, os.ErrInvalid) || errors.Is(err, syscall.EINVAL) {
-			log.Debug("failed to enable TCP keepalive", "error", err)
+			log.Debug(fmt.Sprintln("failed to enable TCP keepalive", "error", err))
 		} else {
-			log.Error("failed to enable TCP keepalive", "error", err)
+			log.Error(fmt.Sprintln("failed to enable TCP keepalive", "error", err))
 		}
 		return
 	}
 
 	if runtime.GOOS != "openbsd" {
 		if err := keepAliveConn.SetKeepAlivePeriod(keepAlivePeriod); err != nil {
-			log.Error("failed set keepalive period", "error", err)
+			log.Error(fmt.Sprintln("failed set keepalive period", "error", err))
 		}
 	}
 }
@@ -172,11 +173,11 @@ func (t *TcpTransport) maDial(ctx context.Context, raddr ma.Multiaddr) (manet.Co
 func (t *TcpTransport) Dial(ctx context.Context, raddr ma.Multiaddr, p peer.ID) (transport.CapableConn, error) {
 	connScope, err := t.rcmgr.OpenConnection(network.DirOutbound, true)
 	if err != nil {
-		log.Debug("resource manager blocked outgoing connection", "peer", p, "addr", raddr, "error", err)
+		log.Debug(fmt.Sprintln("resource manager blocked outgoing connection", "peer", p, "addr", raddr, "error", err))
 		return nil, err
 	}
 	if err := connScope.SetPeer(p); err != nil {
-		log.Debug("resource manager blocked outgoing connection for peer", "peer", p, "addr", raddr, "error", err)
+		log.Debug(fmt.Sprintln("resource manager blocked outgoing connection for peer", "peer", p, "addr", raddr, "error", err))
 		connScope.Done()
 		return nil, err
 	}

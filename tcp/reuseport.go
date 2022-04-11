@@ -1,6 +1,7 @@
 package tcp
 
 import (
+	"fmt"
 	"os"
 	"strings"
 
@@ -18,7 +19,7 @@ func init() {
 	v := strings.ToLower(os.Getenv(envReuseport))
 	if v == "false" || v == "f" || v == "0" {
 		envReuseportVal = false
-		log.Infof("REUSEPORT disabled (LIBP2P_TCP_REUSEPORT=%s)", v)
+		log.Info(fmt.Sprintf("REUSEPORT disabled (LIBP2P_TCP_REUSEPORT=%s)", v))
 	}
 }
 

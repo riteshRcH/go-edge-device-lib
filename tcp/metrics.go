@@ -4,6 +4,7 @@
 package tcp
 
 import (
+	"fmt"
 	"strings"
 	"sync"
 	"time"
@@ -135,7 +136,7 @@ func (c *aggregatingCollector) gatherMetrics(now time.Time) {
 			if strings.Contains(err.Error(), "use of closed network connection") {
 				continue
 			}
-			log.Errorf("Failed to get TCP info: %s", err)
+			log.Error(fmt.Sprintf("Failed to get TCP info: %s", err))
 			continue
 		}
 		if hasSegmentCounter {
@@ -166,12 +167,12 @@ func (c *aggregatingCollector) Collect(metrics chan<- prometheus.Metric) {
 	if hasSegmentCounter {
 		segsSentMetric, err := prometheus.NewConstMetric(segsSentDesc, prometheus.CounterValue, float64(c.segsSent))
 		if err != nil {
-			log.Errorf("creating tcp_sent_segments_total metric failed: %v", err)
+			log.Error(fmt.Sprintf("creating tcp_sent_segments_total metric failed: %v", err))
 			return
 		}
 		segsRcvdMetric, err := prometheus.NewConstMetric(segsRcvdDesc, prometheus.CounterValue, float64(c.segsRcvd))
 		if err != nil {
-			log.Errorf("creating tcp_rcvd_segments_total metric failed: %v", err)
+			log.Error(fmt.Sprintf("creating tcp_rcvd_segments_total metric failed: %v", err))
 			return
 		}
 		metrics <- segsSentMetric
@@ -180,12 +181,12 @@ func (c *aggregatingCollector) Collect(metrics chan<- prometheus.Metric) {
 	if hasByteCounter {
 		bytesSentMetric, err := prometheus.NewConstMetric(bytesSentDesc, prometheus.CounterValue, float64(c.bytesSent))
 		if err != nil {
-			log.Errorf("creating tcp_sent_bytes metric failed: %v", err)
+			log.Error(fmt.Sprintf("creating tcp_sent_bytes metric failed: %v", err))
 			return
 		}
 		bytesRcvdMetric, err := prometheus.NewConstMetric(bytesRcvdDesc, prometheus.CounterValue, float64(c.bytesRcvd))
 		if err != nil {
-			log.Errorf("creating tcp_rcvd_bytes metric failed: %v", err)
+			log.Error(fmt.Sprintf("creating tcp_rcvd_bytes metric failed: %v", err))
 			return
 		}
 		metrics <- bytesSentMetric
