@@ -2,6 +2,7 @@ package basichost
 
 import (
 	"context"
+	"fmt"
 	"io"
 	"net"
 	"strconv"
@@ -81,7 +82,7 @@ func (nmgr *natManager) background(ctx context.Context) {
 	defer cancel()
 	natInstance, err := inat.DiscoverNAT(discoverCtx)
 	if err != nil {
-		log.Info("DiscoverNAT error:", err)
+		log.Info(fmt.Sprintln("DiscoverNAT error:", err))
 		close(nmgr.ready)
 		return
 	}
@@ -196,7 +197,7 @@ func (nmgr *natManager) doSync() {
 				defer wg.Done()
 				_, err := nmgr.nat.NewMapping(proto, port)
 				if err != nil {
-					log.Errorf("failed to port-map %s port %d: %s", proto, port, err)
+					log.Error(fmt.Sprintf("failed to port-map %s port %d: %s", proto, port, err))
 				}
 			}(proto, port)
 		}
