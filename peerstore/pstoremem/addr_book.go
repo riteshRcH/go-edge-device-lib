@@ -10,12 +10,12 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	pstore "github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 	"github.com/riteshRcH/go-edge-device-lib/core/record"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
-var log = logging.Logger("peerstore")
+var log, _ = zap.NewProduction()
 
 type expiringAddr struct {
 	Addr    ma.Multiaddr
@@ -211,7 +211,7 @@ func (mab *memoryAddrBook) addAddrsUnlocked(s *addrSegment, p peer.ID, addrs []m
 	exp := time.Now().Add(ttl)
 	for _, addr := range addrs {
 		if addr == nil {
-			log.Warnw("was passed nil multiaddr", "peer", p)
+			log.Warn(fmt.Sprintf("was passed nil multiaddr", "peer", p))
 			continue
 		}
 
@@ -256,7 +256,7 @@ func (mab *memoryAddrBook) SetAddrs(p peer.ID, addrs []ma.Multiaddr, ttl time.Du
 	exp := time.Now().Add(ttl)
 	for _, addr := range addrs {
 		if addr == nil {
-			log.Warnw("was passed nil multiaddr", "peer", p)
+			log.Warn(fmt.Sprintf("was passed nil multiaddr", "peer", p))
 			continue
 		}
 		aBytes := addr.Bytes()

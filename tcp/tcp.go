@@ -12,10 +12,10 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
+	"go.uber.org/zap"
 
 	rtpt "github.com/riteshRcH/go-edge-device-lib/tcpreuse"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	mafmt "github.com/riteshRcH/go-edge-device-lib/multiaddr-fmt"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
@@ -23,7 +23,7 @@ import (
 
 const defaultConnectTimeout = 5 * time.Second
 
-var log = logging.Logger("tcp-tpt")
+var log, _ = zap.NewProduction()
 
 const keepAlivePeriod = 30 * time.Second
 
@@ -37,7 +37,7 @@ var _ canKeepAlive = &net.TCPConn{}
 func tryKeepAlive(conn net.Conn, keepAlive bool) {
 	keepAliveConn, ok := conn.(canKeepAlive)
 	if !ok {
-		log.Errorf("Can't set TCP keepalives.")
+		log.Error("Can't set TCP keepalives.")
 		return
 	}
 	if err := keepAliveConn.SetKeepAlive(keepAlive); err != nil {
@@ -47,16 +47,16 @@ func tryKeepAlive(conn net.Conn, keepAlive bool) {
 		// But there's nothing we can do about invalid arguments, so we'll drop this to a
 		// debug.
 		if errors.Is(err, os.ErrInvalid) || errors.Is(err, syscall.EINVAL) {
-			log.Debugw("failed to enable TCP keepalive", "error", err)
+			log.Debug("failed to enable TCP keepalive", "error", err)
 		} else {
-			log.Errorw("failed to enable TCP keepalive", "error", err)
+			log.Error("failed to enable TCP keepalive", "error", err)
 		}
 		return
 	}
 
 	if runtime.GOOS != "openbsd" {
 		if err := keepAliveConn.SetKeepAlivePeriod(keepAlivePeriod); err != nil {
-			log.Errorw("failed set keepalive period", "error", err)
+			log.Error("failed set keepalive period", "error", err)
 		}
 	}
 }
@@ -172,11 +172,11 @@ func (t *TcpTransport) maDial(ctx context.Context, raddr ma.Multiaddr) (manet.Co
 func (t *TcpTransport) Dial(ctx context.Context, raddr ma.Multiaddr, p peer.ID) (transport.CapableConn, error) {
 	connScope, err := t.rcmgr.OpenConnection(network.DirOutbound, true)
 	if err != nil {
-		log.Debugw("resource manager blocked outgoing connection", "peer", p, "addr", raddr, "error", err)
+		log.Debug("resource manager blocked outgoing connection", "peer", p, "addr", raddr, "error", err)
 		return nil, err
 	}
 	if err := connScope.SetPeer(p); err != nil {
-		log.Debugw("resource manager blocked outgoing connection for peer", "peer", p, "addr", raddr, "error", err)
+		log.Debug("resource manager blocked outgoing connection for peer", "peer", p, "addr", raddr, "error", err)
 		connScope.Done()
 		return nil, err
 	}

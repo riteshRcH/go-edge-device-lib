@@ -16,8 +16,8 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 
@@ -31,7 +31,7 @@ const (
 	defaultDialTimeoutLocal = 5 * time.Second
 )
 
-var log = logging.Logger("swarm2")
+var log, _ = zap.NewProduction()
 
 // ErrSwarmClosed is returned when one attempts to operate on a closed swarm.
 var ErrSwarmClosed = errors.New("swarm closed")
@@ -200,7 +200,7 @@ func (s *Swarm) close() {
 	for l := range listeners {
 		go func(l transport.Listener) {
 			if err := l.Close(); err != nil {
-				log.Errorf("error when shutting down listener: %s", err)
+				log.Error(fmt.Sprintf("error when shutting down listener: %s", err))
 			}
 		}(l)
 	}
@@ -209,7 +209,7 @@ func (s *Swarm) close() {
 		for _, c := range cs {
 			go func(c *Conn) {
 				if err := c.Close(); err != nil {
-					log.Errorf("error when shutting down connection: %s", err)
+					log.Error(fmt.Sprintf("error when shutting down connection: %s", err))
 				}
 			}(c)
 		}
@@ -232,7 +232,7 @@ func (s *Swarm) close() {
 			go func(c io.Closer) {
 				defer wg.Done()
 				if err := closer.Close(); err != nil {
-					log.Errorf("error when closing down transport %T: %s", c, err)
+					log.Error(fmt.Sprintf("error when closing down transport %T: %s", c, err))
 				}
 			}(closer)
 		}
@@ -269,7 +269,7 @@ func (s *Swarm) addConn(tc transport.CapableConn, dir network.Direction) (*Conn,
 			// TODO Send disconnect with reason here
 			err := tc.Close()
 			if err != nil {
-				log.Warnf("failed to close connection with peer %s and addr %s; err: %s", p.Pretty(), addr, err)
+				log.Warn(fmt.Sprintf("failed to close connection with peer %s and addr %s; err: %s", p.Pretty(), addr, err))
 			}
 			return nil, ErrGaterDisallowedConnection
 		}
@@ -333,7 +333,7 @@ func (s *Swarm) StreamHandler() network.StreamHandler {
 // NewStream creates a new stream on any available connection to peer, dialing
 // if necessary.
 func (s *Swarm) NewStream(ctx context.Context, p peer.ID) (network.Stream, error) {
-	log.Debugf("[%s] opening stream to peer [%s]", s.local, p)
+	log.Debug(fmt.Sprintf("[%s] opening stream to peer [%s]", s.local, p))
 
 	// Algorithm:
 	// 1. Find the best connection, otherwise, dial.

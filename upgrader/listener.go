@@ -7,13 +7,13 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 	tec "github.com/riteshRcH/go-edge-device-lib/temperrcatcher"
 )
 
-var log = logging.Logger("upgrader")
+var log, _ = zap.NewProduction()
 
 type listener struct {
 	manet.Listener
@@ -75,7 +75,7 @@ func (l *listener) handleIncoming() {
 		if err != nil {
 			// Note: function may pause the accept loop.
 			if catcher.IsTemporary(err) {
-				log.Infof("temporary accept error: %s", err)
+				log.Info(fmt.Sprintf("temporary accept error: %s", err))
 				continue
 			}
 			l.err = err
@@ -85,19 +85,19 @@ func (l *listener) handleIncoming() {
 
 		// gate the connection if applicable
 		if l.upgrader.connGater != nil && !l.upgrader.connGater.InterceptAccept(maconn) {
-			log.Debugf("gater blocked incoming connection on local addr %s from %s",
-				maconn.LocalMultiaddr(), maconn.RemoteMultiaddr())
+			log.Debug(fmt.Sprintf("gater blocked incoming connection on local addr %s from %s",
+				maconn.LocalMultiaddr(), maconn.RemoteMultiaddr()))
 			if err := maconn.Close(); err != nil {
-				log.Warnf("failed to close incoming connection rejected by gater: %s", err)
+				log.Warn(fmt.Sprintf("failed to close incoming connection rejected by gater: %s", err))
 			}
 			continue
 		}
 
 		connScope, err := l.rcmgr.OpenConnection(network.DirInbound, true)
 		if err != nil {
-			log.Debugw("resource manager blocked accept of new connection", "error", err)
+			log.Debug(fmt.Sprintf("resource manager blocked accept of new connection", "error", err))
 			if err := maconn.Close(); err != nil {
-				log.Warnf("failed to incoming connection rejected by resource manager: %s", err)
+				log.Warn(fmt.Sprintf("failed to incoming connection rejected by resource manager: %s", err))
 			}
 			continue
 		}
@@ -106,10 +106,10 @@ func (l *listener) handleIncoming() {
 		// canceled so there's no need to wait on it here.
 		l.threshold.Wait()
 
-		log.Debugf("listener %s got connection: %s <---> %s",
+		log.Debug(fmt.Sprintf("listener %s got connection: %s <---> %s",
 			l,
 			maconn.LocalMultiaddr(),
-			maconn.RemoteMultiaddr())
+			maconn.RemoteMultiaddr()))
 
 		wg.Add(1)
 		go func() {
@@ -122,15 +122,15 @@ func (l *listener) handleIncoming() {
 			if err != nil {
 				// Don't bother bubbling this up. We just failed
 				// to completely negotiate the connection.
-				log.Debugf("accept upgrade error: %s (%s <--> %s)",
+				log.Debug(fmt.Sprintf("accept upgrade error: %s (%s <--> %s)",
 					err,
 					maconn.LocalMultiaddr(),
-					maconn.RemoteMultiaddr())
+					maconn.RemoteMultiaddr()))
 				connScope.Done()
 				return
 			}
 
-			log.Debugf("listener %s accepted connection: %s", l, conn)
+			log.Debug(fmt.Sprintf("listener %s accepted connection: %s", l, conn))
 
 			// This records the fact that the connection has been
 			// setup and is waiting to be accepted. This call

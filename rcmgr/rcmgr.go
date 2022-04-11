@@ -9,11 +9,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
-
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 )
-
-var log = logging.Logger("rcmgr")
 
 type resourceManager struct {
 	limits Limiter

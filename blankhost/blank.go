@@ -14,16 +14,15 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 	"github.com/riteshRcH/go-edge-device-lib/core/record"
+	"go.uber.org/zap"
 
 	"github.com/riteshRcH/go-edge-device-lib/eventbus"
-
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	mstream "github.com/riteshRcH/go-edge-device-lib/multistream"
 )
 
-var log = logging.Logger("blankhost")
+var log, _ = zap.NewProduction()
 
 // BlankHost is the thinnest implementation of the host.Host interface
 type BlankHost struct {
@@ -89,7 +88,7 @@ func NewBlankHost(n network.Network, options ...Option) *BlankHost {
 
 	// persist a signed peer record for self to the peerstore.
 	if err := bh.initSignedRecord(); err != nil {
-		log.Errorf("error creating blank host, err=%s", err)
+		log.Error(fmt.Sprintf("error creating blank host, err=%s", err))
 		return nil
 	}
 
@@ -105,12 +104,12 @@ func (bh *BlankHost) initSignedRecord() error {
 	rec := peer.PeerRecordFromAddrInfo(peer.AddrInfo{ID: bh.ID(), Addrs: bh.Addrs()})
 	ev, err := record.Seal(rec, bh.Peerstore().PrivKey(bh.ID()))
 	if err != nil {
-		log.Errorf("failed to create signed record for self, err=%s", err)
+		log.Error(fmt.Sprintf("failed to create signed record for self, err=%s", err))
 		return fmt.Errorf("failed to create signed record for self, err=%s", err)
 	}
 	_, err = cab.ConsumePeerRecord(ev, peerstore.PermanentAddrTTL)
 	if err != nil {
-		log.Errorf("failed to persist signed record to peerstore,err=%s", err)
+		log.Error(fmt.Sprintf("failed to persist signed record to peerstore,err=%s", err))
 		return fmt.Errorf("failed to persist signed record for self, err=%s", err)
 	}
 	return err
@@ -121,7 +120,7 @@ var _ host.Host = (*BlankHost)(nil)
 func (bh *BlankHost) Addrs() []ma.Multiaddr {
 	addrs, err := bh.n.InterfaceListenAddresses()
 	if err != nil {
-		log.Debug("error retrieving network interface addrs: ", err)
+		log.Debug(fmt.Sprintf("error retrieving network interface addrs: ", err))
 		return nil
 	}
 
@@ -212,7 +211,7 @@ func (bh *BlankHost) SetStreamHandlerMatch(pid protocol.ID, m func(string) bool,
 func (bh *BlankHost) newStreamHandler(s network.Stream) {
 	protoID, handle, err := bh.Mux().Negotiate(s)
 	if err != nil {
-		log.Infow("protocol negotiation failed", "error", err)
+		log.Info(fmt.Sprintf("protocol negotiation failed", "error", err))
 		s.Reset()
 		return
 	}

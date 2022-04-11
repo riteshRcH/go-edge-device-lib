@@ -8,7 +8,8 @@ require (
 	github.com/libp2p/go-libp2p-connmgr v0.3.1
 	github.com/libp2p/go-libp2p-discovery v0.6.0
 	github.com/libp2p/go-libp2p-kad-dht v0.15.0
-	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220410183020-92022a3110d4
+	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220410232352-83ef10f85b22
+
 )
 
 require (
@@ -58,7 +59,6 @@ require (
 	github.com/libp2p/go-ws-transport v0.6.0 // indirect
 	github.com/marten-seemann/tcp v0.0.0-20210406111302-dfbc87cc63fd // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
-	github.com/mattn/go-pointer v0.0.1 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/miekg/dns v1.1.48 // indirect
 	github.com/mikioh/tcpinfo v0.0.0-20190314235526-30a79bb1804b // indirect

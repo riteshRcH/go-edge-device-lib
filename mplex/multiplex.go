@@ -12,12 +12,12 @@ import (
 	"time"
 
 	pool "github.com/riteshRcH/go-edge-device-lib/buffer-pool"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/riteshRcH/go-edge-device-lib/varint"
 )
 
-var log = logging.Logger("mplex")
+var log, _ = zap.NewProduction()
 
 const (
 	MaxMessageSize = 1 << 20
@@ -260,7 +260,7 @@ func (mp *Multiplex) handleOutgoing() {
 			mp.putBufferOutbound(data)
 			if err != nil {
 				// the connection is closed by this time
-				log.Warnf("error writing data: %s", err.Error())
+				log.Warn(fmt.Sprintf("error writing data: %s", err.Error()))
 				return
 			}
 		}
@@ -390,7 +390,7 @@ loop:
 		switch tag {
 		case newStreamTag:
 			if ok {
-				log.Debugf("received NewStream message for existing stream: %d", ch)
+				log.Debug(fmt.Sprintf("received NewStream message for existing stream: %d", ch))
 				mp.shutdownErr = ErrInvalidState
 				return
 			}
@@ -497,7 +497,7 @@ loop:
 				case <-recvTimeout.C:
 					recvTimeoutFired = true
 					mp.putBufferInbound(b)
-					log.Warnf("timed out receiving message into stream queue.")
+					log.Warn(fmt.Sprintf("timed out receiving message into stream queue."))
 					// Do not do this asynchronously. Otherwise, we
 					// could drop a message, then receive a message,
 					// then reset.
@@ -515,7 +515,7 @@ loop:
 			}
 
 		default:
-			log.Debugf("message with unknown header on stream %s", ch)
+			log.Debug(fmt.Sprintf("message with unknown header on stream %s", ch))
 			mp.skipNextMsg(mlen)
 			if ok {
 				msch.Reset()
@@ -540,10 +540,10 @@ func (mp *Multiplex) sendResetMsg(header uint64, hard bool) {
 	err := mp.sendMsg(ctx.Done(), nil, header, nil)
 	if err != nil && !mp.isShutdown() {
 		if hard {
-			log.Warnf("error sending reset message: %s; killing connection", err.Error())
+			log.Warn(fmt.Sprintf("error sending reset message: %s; killing connection", err.Error()))
 			mp.Close()
 		} else {
-			log.Debugf("error sending reset message: %s", err.Error())
+			log.Debug(fmt.Sprintf("error sending reset message: %s", err.Error()))
 		}
 	}
 }

@@ -13,14 +13,13 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
+	"go.uber.org/zap"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
-
-	log "github.com/riteshRcH/go-edge-device-lib/golog"
 )
 
-var logger = log.Logger("rendezvous")
+var logger, _ = zap.NewProduction()
 
 func handleStream(stream network.Stream) {
 	logger.Info("Got a new stream!")
@@ -79,8 +78,6 @@ func writeData(rw *bufio.ReadWriter) {
 }
 
 func main() {
-	log.SetAllLoggers(log.LevelWarn)
-	log.SetLogLevel("rendezvous", "info")
 	help := flag.Bool("h", false, "Display Help")
 	config, err := ParseFlags()
 	if err != nil {

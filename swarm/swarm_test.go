@@ -6,12 +6,12 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"strings"
 	"sync"
 	"testing"
 	"time"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
+	"go.uber.org/zap"
 
 	swarm "github.com/riteshRcH/go-edge-device-lib/swarm"
 	. "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
@@ -21,16 +21,14 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
-	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 	mocknetwork "github.com/riteshRcH/go-edge-device-lib/testing/mocks/network"
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 )
 
-var log = logging.Logger("swarm_test")
+var log, _ = zap.NewProduction()
 
 func EchoStreamHandler(stream network.Stream) {
 	go func() {
@@ -38,25 +36,25 @@ func EchoStreamHandler(stream network.Stream) {
 
 		// pull out the ipfs conn
 		c := stream.Conn()
-		log.Infof("%s ponging to %s", c.LocalPeer(), c.RemotePeer())
+		log.Info(fmt.Sprintf("%s ponging to %s", c.LocalPeer(), c.RemotePeer()))
 
 		buf := make([]byte, 4)
 
 		for {
 			if _, err := stream.Read(buf); err != nil {
 				if err != io.EOF {
-					log.Error("ping receive error:", err)
+					log.Error(fmt.Sprintf("ping receive error:", err))
 				}
 				return
 			}
 
 			if !bytes.Equal(buf, []byte("ping")) {
-				log.Errorf("ping receive error: ping != %s %v", buf, buf)
+				log.Error(fmt.Sprintf("ping receive error: ping != %s %v", buf, buf))
 				return
 			}
 
 			if _, err := stream.Write([]byte("pong")); err != nil {
-				log.Error("pond send error:", err)
+				log.Error(fmt.Sprintf("pond send error:", err))
 				return
 			}
 		}
@@ -100,7 +98,7 @@ func connectSwarms(t *testing.T, ctx context.Context, swarms []*swarm.Swarm) {
 	wg.Wait()
 
 	for _, s := range swarms {
-		log.Infof("%s swarm routing table: %s", s.LocalPeer(), s.Peers())
+		log.Info(fmt.Sprintf("%s swarm routing table: %s", s.LocalPeer(), s.Peers()))
 	}
 }
 
@@ -112,9 +110,9 @@ func subtestSwarm(t *testing.T, SwarmNum int, MsgNum int) {
 
 	// ping/pong
 	for _, s1 := range swarms {
-		log.Debugf("-------------------------------------------------------")
-		log.Debugf("%s ping pong round", s1.LocalPeer())
-		log.Debugf("-------------------------------------------------------")
+		log.Debug("-------------------------------------------------------")
+		log.Debug(fmt.Sprintf("%s ping pong round", s1.LocalPeer()))
+		log.Debug("-------------------------------------------------------")
 
 		_, cancel := context.WithCancel(context.Background())
 		got := map[peer.ID]int{}
@@ -139,7 +137,7 @@ func subtestSwarm(t *testing.T, SwarmNum int, MsgNum int) {
 				// send out ping!
 				for k := 0; k < MsgNum; k++ { // with k messages
 					msg := "ping"
-					log.Debugf("%s %s %s (%d)", s1.LocalPeer(), msg, p, k)
+					log.Debug(fmt.Sprintf("%s %s %s (%d)", s1.LocalPeer(), msg, p, k))
 					if _, err := stream.Write([]byte(msg)); err != nil {
 						errChan <- err
 						continue
@@ -186,7 +184,7 @@ func subtestSwarm(t *testing.T, SwarmNum int, MsgNum int) {
 						continue
 					}
 
-					log.Debugf("%s %s %s (%d)", s1.LocalPeer(), msg, p, k)
+					log.Debug(fmt.Sprintf("%s %s %s (%d)", s1.LocalPeer(), msg, p, k))
 					msgCount++
 				}
 
@@ -207,7 +205,7 @@ func subtestSwarm(t *testing.T, SwarmNum int, MsgNum int) {
 			}
 		}
 
-		log.Debugf("%s got pongs", s1.LocalPeer())
+		log.Debug(fmt.Sprintf("%s got pongs", s1.LocalPeer()))
 		if (len(swarms) - 1) != len(got) {
 			t.Errorf("got (%d) less messages than sent (%d).", len(got), len(swarms))
 		}

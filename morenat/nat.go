@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	"go.uber.org/zap"
 
 	"github.com/riteshRcH/go-edge-device-lib/nat"
 )
@@ -15,7 +15,7 @@ import (
 // ErrNoMapping signals no mapping exists for an address
 var ErrNoMapping = errors.New("mapping not established")
 
-var log = logging.Logger("nat")
+var log, _ = zap.NewProduction()
 
 // MappingDuration is a default port mapping duration.
 // Port mappings are renewed every (MappingDuration / 3)
@@ -35,9 +35,9 @@ func DiscoverNAT(ctx context.Context) (*NAT, error) {
 	// Log the device addr.
 	addr, err := natInstance.GetDeviceAddress()
 	if err != nil {
-		log.Debug("DiscoverGateway address error:", err)
+		log.Debug(fmt.Sprintf("DiscoverGateway address error:", err))
 	} else {
-		log.Debug("DiscoverGateway address:", addr)
+		log.Debug(fmt.Sprintf("DiscoverGateway address:", addr))
 	}
 
 	return newNAT(natInstance), nil
@@ -161,7 +161,7 @@ func (nat *NAT) refreshMappings(m *mapping) {
 func (nat *NAT) establishMapping(m *mapping) {
 	oldport := m.ExternalPort()
 
-	log.Debugf("Attempting port map: %s/%d", m.Protocol(), m.InternalPort())
+	log.Debug(fmt.Sprintf("Attempting port map: %s/%d", m.Protocol(), m.InternalPort()))
 	const comment = "libp2p"
 
 	nat.natmu.Lock()
@@ -176,9 +176,9 @@ func (nat *NAT) establishMapping(m *mapping) {
 		m.setExternalPort(0) // clear mapping
 		// TODO: log.Event
 		if err != nil {
-			log.Warnf("failed to establish port mapping: %s", err)
+			log.Warn(fmt.Sprintf("failed to establish port mapping: %s", err))
 		} else {
-			log.Warnf("failed to establish port mapping: newport = 0")
+			log.Warn(fmt.Sprintf("failed to establish port mapping: newport = 0"))
 		}
 		// we do not close if the mapping failed,
 		// because it may work again next time.
@@ -186,8 +186,8 @@ func (nat *NAT) establishMapping(m *mapping) {
 	}
 
 	m.setExternalPort(newport)
-	log.Debugf("NAT Mapping: %d --> %d (%s)", m.ExternalPort(), m.InternalPort(), m.Protocol())
+	log.Debug(fmt.Sprintf("NAT Mapping: %d --> %d (%s)", m.ExternalPort(), m.InternalPort(), m.Protocol()))
 	if oldport != 0 && newport != oldport {
-		log.Debugf("failed to renew same port mapping: ch %d -> %d", oldport, newport)
+		log.Debug(fmt.Sprintf("failed to renew same port mapping: ch %d -> %d", oldport, newport))
 	}
 }
