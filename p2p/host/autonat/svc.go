@@ -3,6 +3,7 @@ package autonat
 import (
 	"context"
 	"errors"
+	"fmt"
 	"math/rand"
 	"sync"
 	"time"
@@ -52,13 +53,13 @@ func newAutoNATService(c *config) (*autoNATService, error) {
 
 func (as *autoNATService) handleStream(s network.Stream) {
 	if err := s.Scope().SetService(ServiceName); err != nil {
-		log.Debugf("error attaching stream to autonat service: %s", err)
+		log.Debug(fmt.Sprintf("error attaching stream to autonat service: %s", err))
 		s.Reset()
 		return
 	}
 
 	if err := s.Scope().ReserveMemory(maxMsgSize, network.ReservationPriorityAlways); err != nil {
-		log.Debugf("error reserving memory for autonat stream: %s", err)
+		log.Debug(fmt.Sprintf("error reserving memory for autonat stream: %s", err))
 		s.Reset()
 		return
 	}
@@ -68,7 +69,7 @@ func (as *autoNATService) handleStream(s network.Stream) {
 	defer s.Close()
 
 	pid := s.Conn().RemotePeer()
-	log.Debugf("New stream from %s", pid.Pretty())
+	log.Debug(fmt.Sprintf("New stream from %s", pid.Pretty()))
 
 	r := protoio.NewDelimitedReader(s, maxMsgSize)
 	w := protoio.NewDelimitedWriter(s)
@@ -78,14 +79,14 @@ func (as *autoNATService) handleStream(s network.Stream) {
 
 	err := r.ReadMsg(&req)
 	if err != nil {
-		log.Debugf("Error reading message from %s: %s", pid.Pretty(), err.Error())
+		log.Debug(fmt.Sprintf("Error reading message from %s: %s", pid.Pretty(), err.Error()))
 		s.Reset()
 		return
 	}
 
 	t := req.GetType()
 	if t != pb.Message_DIAL {
-		log.Debugf("Unexpected message from %s: %s (%d)", pid.Pretty(), t.String(), t)
+		log.Debug(fmt.Sprintf("Unexpected message from %s: %s (%d)", pid.Pretty(), t.String(), t))
 		s.Reset()
 		return
 	}
@@ -96,7 +97,7 @@ func (as *autoNATService) handleStream(s network.Stream) {
 
 	err = w.WriteMsg(&res)
 	if err != nil {
-		log.Debugf("Error writing response to %s: %s", pid.Pretty(), err.Error())
+		log.Debug(fmt.Sprintf("Error writing response to %s: %s", pid.Pretty(), err.Error()))
 		s.Reset()
 		return
 	}
@@ -146,7 +147,7 @@ func (as *autoNATService) handleDial(p peer.ID, obsaddr ma.Multiaddr, mpi *pb.Me
 	for _, maddr := range mpi.GetAddrs() {
 		addr, err := ma.NewMultiaddrBytes(maddr)
 		if err != nil {
-			log.Debugf("Error parsing multiaddr: %s", err.Error())
+			log.Debug(fmt.Sprintf("Error parsing multiaddr: %s", err.Error()))
 			continue
 		}
 
@@ -220,7 +221,7 @@ func (as *autoNATService) doDial(pi peer.AddrInfo) *pb.Message_DialResponse {
 
 	conn, err := as.config.dialer.DialPeer(ctx, pi.ID)
 	if err != nil {
-		log.Debugf("error dialing %s: %s", pi.ID.Pretty(), err.Error())
+		log.Debug(fmt.Sprintf("error dialing %s: %s", pi.ID.Pretty(), err.Error()))
 		// wait for the context to timeout to avoid leaking timing information
 		// this renders the service ineffective as a port scanner
 		<-ctx.Done()

@@ -106,14 +106,14 @@ func (d *decayer) RegisterDecayingTag(name string, interval time.Duration, decay
 	}
 
 	if interval < d.cfg.Resolution {
-		log.Warnf("decay interval for %s (%s) was lower than tracker's resolution (%s); overridden to resolution",
-			name, interval, d.cfg.Resolution)
+		log.Warn(fmt.Sprintf("decay interval for %s (%s) was lower than tracker's resolution (%s); overridden to resolution",
+			name, interval, d.cfg.Resolution))
 		interval = d.cfg.Resolution
 	}
 
 	if interval%d.cfg.Resolution != 0 {
-		log.Warnf("decay interval for tag %s (%s) is not a multiple of tracker's resolution (%s); "+
-			"some precision may be lost", name, interval, d.cfg.Resolution)
+		log.Warn(fmt.Sprintf("decay interval for tag %s (%s) is not a multiple of tracker's resolution (%s); "+
+			"some precision may be lost", name, interval, d.cfg.Resolution))
 	}
 
 	lastTick := d.lastTick.Load().(time.Time)
@@ -342,7 +342,7 @@ func (t *decayingTag) Remove(p peer.ID) error {
 
 func (t *decayingTag) Close() error {
 	if !atomic.CompareAndSwapInt32(&t.closed, 0, 1) {
-		log.Warnf("duplicate decaying tag closure: %s; skipping", t.name)
+		log.Warn(fmt.Sprintf("duplicate decaying tag closure: %s; skipping", t.name))
 		return nil
 	}
 
