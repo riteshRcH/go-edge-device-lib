@@ -5,9 +5,9 @@ import (
 	"log"
 	"time"
 
-	connmgr "github.com/libp2p/go-libp2p-connmgr"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
+	connmgr "github.com/riteshRcH/go-edge-device-lib/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
@@ -54,7 +54,7 @@ func run() {
 		libp2p.Identity(priv),
 		// Multiple listen addresses
 		libp2p.ListenAddrStrings(
-			"/ip4/0.0.0.0/tcp/9000",      // regular tcp connections
+			"/ip4/0.0.0.0/tcp/9000", // regular tcp connections
 		),
 		// support TLS connections
 		libp2p.Security(libp2ptls.ID, libp2ptls.New),
