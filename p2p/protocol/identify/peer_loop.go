@@ -91,12 +91,12 @@ func (ph *peerHandler) loop(ctx context.Context, onExit func()) {
 		// our listen addresses have changed, send an IDPush.
 		case <-ph.pushCh:
 			if err := ph.sendPush(ctx); err != nil {
-				log.Warnw("failed to send Identify Push", "peer", ph.pid, "error", err)
+				log.Warn(fmt.Sprintln("failed to send Identify Push", "peer", ph.pid, "error", err))
 			}
 
 		case <-ph.deltaCh:
 			if err := ph.sendDelta(ctx); err != nil {
-				log.Warnw("failed to send Identify Delta", "peer", ph.pid, "error", err)
+				log.Warn(fmt.Sprintln("failed to send Identify Delta", "peer", ph.pid, "error", err))
 			}
 
 		case <-ctx.Done():
@@ -108,7 +108,7 @@ func (ph *peerHandler) loop(ctx context.Context, onExit func()) {
 func (ph *peerHandler) sendDelta(ctx context.Context) error {
 	// send a push if the peer does not support the Delta protocol.
 	if !ph.peerSupportsProtos(ctx, []string{IDDelta}) {
-		log.Debugw("will send push as peer does not support delta", "peer", ph.pid)
+		log.Debug(fmt.Sprintln("will send push as peer does not support delta", "peer", ph.pid))
 		if err := ph.sendPush(ctx); err != nil {
 			return fmt.Errorf("failed to send push on delta message: %w", err)
 		}
@@ -133,8 +133,8 @@ func (ph *peerHandler) sendDelta(ctx context.Context) error {
 		_ = ds.Reset()
 		return fmt.Errorf("failed to send delta message, %w", err)
 	}
-	log.Debugw("sent identify update", "protocol", ds.Protocol(), "peer", c.RemotePeer(),
-		"peer address", c.RemoteMultiaddr())
+	log.Debug(fmt.Sprintln("sent identify update", "protocol", ds.Protocol(), "peer", c.RemotePeer(),
+		"peer address", c.RemoteMultiaddr()))
 
 	return nil
 }
@@ -142,7 +142,7 @@ func (ph *peerHandler) sendDelta(ctx context.Context) error {
 func (ph *peerHandler) sendPush(ctx context.Context) error {
 	dp, err := ph.openStream(ctx, []string{IDPush})
 	if err == errProtocolNotSupported {
-		log.Debugw("not sending push as peer does not support protocol", "peer", ph.pid)
+		log.Debug(fmt.Sprintln("not sending push as peer does not support protocol", "peer", ph.pid))
 		return nil
 	}
 	if err != nil {

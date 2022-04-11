@@ -1,6 +1,7 @@
 package identify
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/event"
@@ -20,13 +21,13 @@ const deltaMsgSize = 2048
 // deltaHandler handles incoming delta updates from peers.
 func (ids *idService) deltaHandler(s network.Stream) {
 	if err := s.Scope().SetService(ServiceName); err != nil {
-		log.Warnf("error attaching stream to identify service: %s", err)
+		log.Warn(fmt.Sprintf("error attaching stream to identify service: %s", err))
 		s.Reset()
 		return
 	}
 
 	if err := s.Scope().ReserveMemory(deltaMsgSize, network.ReservationPriorityAlways); err != nil {
-		log.Warnf("error reserving memory for identify stream: %s", err)
+		log.Warn(fmt.Sprintf("error reserving memory for identify stream: %s", err))
 		s.Reset()
 		return
 	}
@@ -39,14 +40,14 @@ func (ids *idService) deltaHandler(s network.Stream) {
 	r := protoio.NewDelimitedReader(s, deltaMsgSize)
 	mes := pb.Identify{}
 	if err := r.ReadMsg(&mes); err != nil {
-		log.Warn("error reading identify message: ", err)
+		log.Warn(fmt.Sprintln("error reading identify message: ", err))
 		_ = s.Reset()
 		return
 	}
 
 	defer s.Close()
 
-	log.Debugf("%s received message from %s %s", s.Protocol(), c.RemotePeer(), c.RemoteMultiaddr())
+	log.Debug(fmt.Sprintf("%s received message from %s %s", s.Protocol(), c.RemotePeer(), c.RemoteMultiaddr()))
 
 	delta := mes.GetDelta()
 	if delta == nil {
@@ -56,7 +57,7 @@ func (ids *idService) deltaHandler(s network.Stream) {
 	p := s.Conn().RemotePeer()
 	if err := ids.consumeDelta(p, delta); err != nil {
 		_ = s.Reset()
-		log.Warnf("delta update from peer %s failed: %s", p, err)
+		log.Warn(fmt.Sprintf("delta update from peer %s failed: %s", p, err))
 	}
 }
 

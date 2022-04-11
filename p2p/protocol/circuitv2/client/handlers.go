@@ -1,6 +1,7 @@
 package client
 
 import (
+	"fmt"
 	"time"
 
 	pbv1 "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv1/pb"
@@ -16,7 +17,7 @@ var (
 )
 
 func (c *Client) handleStreamV2(s network.Stream) {
-	log.Debugf("new relay/v2 stream from: %s", s.Conn().RemotePeer())
+	log.Debug(fmt.Sprintf("new relay/v2 stream from: %s", s.Conn().RemotePeer()))
 
 	s.SetReadDeadline(time.Now().Add(StreamTimeout))
 
@@ -34,11 +35,11 @@ func (c *Client) handleStreamV2(s network.Stream) {
 	}
 
 	handleError := func(status pbv2.Status) {
-		log.Debugf("protocol error: %s (%d)", pbv2.Status_name[int32(status)], status)
+		log.Debug(fmt.Sprintf("protocol error: %s (%d)", pbv2.Status_name[int32(status)], status))
 		err := writeResponse(status)
 		if err != nil {
 			s.Reset()
-			log.Debugf("error writing circuit response: %s", err.Error())
+			log.Debug(fmt.Sprintf("error writing circuit response: %s", err.Error()))
 		} else {
 			s.Close()
 		}
@@ -75,7 +76,7 @@ func (c *Client) handleStreamV2(s network.Stream) {
 		stat.Extra[StatLimitData] = limit.GetData()
 	}
 
-	log.Debugf("incoming relay connection from: %s", src.ID)
+	log.Debug(fmt.Sprintf("incoming relay connection from: %s", src.ID))
 
 	select {
 	case c.incoming <- accept{
@@ -90,7 +91,7 @@ func (c *Client) handleStreamV2(s network.Stream) {
 }
 
 func (c *Client) handleStreamV1(s network.Stream) {
-	log.Debugf("new relay/v1 stream from: %s", s.Conn().RemotePeer())
+	log.Debug(fmt.Sprintf("new relay/v1 stream from: %s", s.Conn().RemotePeer()))
 
 	s.SetReadDeadline(time.Now().Add(StreamTimeout))
 
@@ -108,11 +109,11 @@ func (c *Client) handleStreamV1(s network.Stream) {
 	}
 
 	handleError := func(status pbv1.CircuitRelay_Status) {
-		log.Debugf("protocol error: %s (%d)", pbv1.CircuitRelay_Status_name[int32(status)], status)
+		log.Debug(fmt.Sprintf("protocol error: %s (%d)", pbv1.CircuitRelay_Status_name[int32(status)], status))
 		err := writeResponse(status)
 		if err != nil {
 			s.Reset()
-			log.Debugf("error writing circuit response: %s", err.Error())
+			log.Debug(fmt.Sprintf("error writing circuit response: %s", err.Error()))
 		} else {
 			s.Close()
 		}
@@ -140,7 +141,7 @@ func (c *Client) handleStreamV1(s network.Stream) {
 		return
 
 	default:
-		log.Debugf("unexpected relay handshake: %d", msg.GetType())
+		log.Debug(fmt.Sprintf("unexpected relay handshake: %d", msg.GetType()))
 		handleError(pbv1.CircuitRelay_MALFORMED_MESSAGE)
 		return
 	}
@@ -157,7 +158,7 @@ func (c *Client) handleStreamV1(s network.Stream) {
 		return
 	}
 
-	log.Debugf("incoming relay connection from: %s", src.ID)
+	log.Debug(fmt.Sprintf("incoming relay connection from: %s", src.ID))
 
 	select {
 	case c.incoming <- accept{

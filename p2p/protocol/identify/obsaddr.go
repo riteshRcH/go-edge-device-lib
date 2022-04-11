@@ -240,9 +240,9 @@ func (oas *ObservedAddrManager) Record(conn network.Conn, observed ma.Multiaddr)
 		observed: observed,
 	}:
 	default:
-		log.Debugw("dropping address observation due to full buffer",
+		log.Debug(fmt.Sprintln("dropping address observation due to full buffer",
 			"from", conn.RemoteMultiaddr(),
-			"observed", observed,
+			"observed", observed),
 		)
 	}
 }
@@ -371,7 +371,7 @@ func (oas *ObservedAddrManager) maybeRecordObservation(conn network.Conn, observ
 	// the same as the listen addr.
 	ifaceaddrs, err := oas.host.Network().InterfaceListenAddresses()
 	if err != nil {
-		log.Infof("failed to get interface listen addrs", err)
+		log.Info(fmt.Sprintln("failed to get interface listen addrs", err))
 		return
 	}
 
@@ -385,16 +385,16 @@ func (oas *ObservedAddrManager) maybeRecordObservation(conn network.Conn, observ
 	// transports of one of our advertised addresses.
 	if !HasConsistentTransport(observed, oas.host.Addrs()) &&
 		!HasConsistentTransport(observed, oas.host.Network().ListenAddresses()) {
-		log.Debugw(
-			"observed multiaddr doesn't match the transports of any announced addresses",
-			"from", conn.RemoteMultiaddr(),
-			"observed", observed,
+		log.Debug(
+			fmt.Sprintln("observed multiaddr doesn't match the transports of any announced addresses",
+				"from", conn.RemoteMultiaddr(),
+				"observed", observed),
 		)
 		return
 	}
 
 	// Ok, the observation is good, record it.
-	log.Debugw("added own observed listen addr", "observed", observed)
+	log.Debug(fmt.Sprintln("added own observed listen addr", "observed", observed))
 
 	defer oas.addConn(conn, observed)
 

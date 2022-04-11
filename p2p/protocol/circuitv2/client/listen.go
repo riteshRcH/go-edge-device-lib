@@ -2,6 +2,7 @@ package client
 
 import (
 	"errors"
+	"fmt"
 	"net"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
@@ -22,12 +23,12 @@ func (l *Listener) Accept() (manet.Conn, error) {
 		case evt := <-l.incoming:
 			err := evt.writeResponse()
 			if err != nil {
-				log.Debugf("error writing relay response: %s", err.Error())
+				log.Debug(fmt.Sprintf("error writing relay response: %s", err.Error()))
 				evt.conn.stream.Reset()
 				continue
 			}
 
-			log.Debugf("accepted relay connection from %s through %s", evt.conn.remote.ID, evt.conn.RemoteMultiaddr())
+			log.Debug(fmt.Sprintf("accepted relay connection from %s through %s", evt.conn.remote.ID, evt.conn.RemoteMultiaddr()))
 
 			evt.conn.tagHop()
 			return evt.conn, nil

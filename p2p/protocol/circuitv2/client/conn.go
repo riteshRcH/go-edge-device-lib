@@ -94,7 +94,7 @@ func (c *Conn) LocalMultiaddr() ma.Multiaddr {
 func (c *Conn) LocalAddr() net.Addr {
 	na, err := manet.ToNetAddr(c.stream.Conn().LocalMultiaddr())
 	if err != nil {
-		log.Error("failed to convert local multiaddr to net addr:", err)
+		log.Error(fmt.Sprintln("failed to convert local multiaddr to net addr:", err))
 		return nil
 	}
 	return na

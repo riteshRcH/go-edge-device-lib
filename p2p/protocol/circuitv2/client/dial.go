@@ -117,7 +117,7 @@ retry:
 }
 
 func (c *Client) dialPeer(ctx context.Context, relay, dest peer.AddrInfo) (*Conn, error) {
-	log.Debugf("dialing peer %s through relay %s", dest.ID, relay.ID)
+	log.Debug(fmt.Sprintf("dialing peer %s through relay %s", dest.ID, relay.ID))
 
 	if len(relay.Addrs) > 0 {
 		c.host.Peerstore().AddAddrs(relay.ID, relay.Addrs, peerstore.TempAddrTTL)
