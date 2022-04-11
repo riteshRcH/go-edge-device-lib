@@ -13,8 +13,8 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 	pb "github.com/riteshRcH/go-edge-device-lib/p2p/protocol/holepunch/pb"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/identify"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
@@ -37,7 +37,7 @@ const (
 )
 
 var (
-	log = logging.Logger("p2p-holepunch")
+	log, _ = zap.NewProduction()
 	// ErrHolePunchActive is returned from DirectConnect when another hole punching attempt is currently running
 	ErrHolePunchActive = errors.New("another hole punching attempt to this peer is active")
 	// ErrClosed is returned when the hole punching is closed
@@ -100,7 +100,7 @@ func NewService(h host.Host, ids identify.IDService, opts ...Option) (*Service, 
 func (hs *Service) watchForPublicAddr() {
 	defer hs.refCount.Done()
 
-	log.Debug("waiting until we have at least one public address", "peer", hs.host.ID())
+	log.Debug(fmt.Sprintln("waiting until we have at least one public address", "peer", hs.host.ID()))
 
 	// TODO: We should have an event here that fires when identify discovers a new
 	// address (and when autonat confirms that address).
@@ -156,13 +156,13 @@ func (hs *Service) initiateHolePunch(rp peer.ID) ([]ma.Multiaddr, time.Duration,
 	defer str.Close()
 
 	if err := str.Scope().SetService(ServiceName); err != nil {
-		log.Debugf("error attaching stream to holepunch service: %s", err)
+		log.Debug(fmt.Sprintf("error attaching stream to holepunch service: %s", err))
 		str.Reset()
 		return nil, 0, err
 	}
 
 	if err := str.Scope().ReserveMemory(maxMsgSize, network.ReservationPriorityAlways); err != nil {
-		log.Debugf("error reserving memory for stream: %s, err")
+		log.Debug(fmt.Sprintf("error reserving memory for stream: %s, err"))
 		str.Reset()
 		return nil, 0, err
 	}
@@ -270,12 +270,12 @@ func (hs *Service) directConnect(rp peer.ID) error {
 				break
 			}
 			hs.tracer.DirectDialSuccessful(rp, dt)
-			log.Debugw("direct connection to peer successful, no need for a hole punch", "peer", rp)
+			log.Debug(fmt.Sprintln("direct connection to peer successful, no need for a hole punch", "peer", rp))
 			return nil
 		}
 	}
 
-	log.Debugw("got inbound proxy conn", "peer", rp)
+	log.Debug(fmt.Sprintln("got inbound proxy conn", "peer", rp))
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	select {
@@ -291,12 +291,12 @@ func (hs *Service) directConnect(rp peer.ID) error {
 	for i := 0; i < maxRetries; i++ {
 		addrs, rtt, err := hs.initiateHolePunch(rp)
 		if err != nil {
-			log.Debugw("hole punching failed", "peer", rp, "error", err)
+			log.Debug(fmt.Sprintln("hole punching failed", "peer", rp, "error", err))
 			hs.tracer.ProtocolError(rp, err)
 			return err
 		}
 		synTime := rtt / 2
-		log.Debugf("peer RTT is %s; starting hole punch in %s", rtt, synTime)
+		log.Debug(fmt.Sprintln("peer RTT is %s; starting hole punch in %s", rtt, synTime))
 
 		// wait for sync to reach the other peer and then punch a hole for it in our NAT
 		// by attempting a connect to it.
@@ -312,7 +312,7 @@ func (hs *Service) directConnect(rp peer.ID) error {
 			dt := time.Since(start)
 			hs.tracer.EndHolePunch(rp, dt, err)
 			if err == nil {
-				log.Debugw("hole punching with successful", "peer", rp, "time", dt)
+				log.Debug(fmt.Sprintln("hole punching with successful", "peer", rp, "time", dt))
 				return nil
 			}
 		case <-hs.ctx.Done():
@@ -335,7 +335,7 @@ func (hs *Service) incomingHolePunch(s network.Stream) (rtt time.Duration, addrs
 	}
 
 	if err := s.Scope().ReserveMemory(maxMsgSize, network.ReservationPriorityAlways); err != nil {
-		log.Debugf("error reserving memory for stream: %s, err")
+		log.Debug(fmt.Sprintf("error reserving memory for stream: %s, err"))
 		return 0, nil, err
 	}
 	defer s.Scope().ReleaseMemory(maxMsgSize)
@@ -355,7 +355,7 @@ func (hs *Service) incomingHolePunch(s network.Stream) (rtt time.Duration, addrs
 		return 0, nil, fmt.Errorf("expected CONNECT message from initiator but got %d", t)
 	}
 	obsDial := removeRelayAddrs(addrsFromBytes(msg.ObsAddrs))
-	log.Debugw("received hole punch request", "peer", s.Conn().RemotePeer(), "addrs", obsDial)
+	log.Debug(fmt.Sprintln("received hole punch request", "peer", s.Conn().RemotePeer(), "addrs", obsDial))
 	if len(obsDial) == 0 {
 		return 0, nil, errors.New("expected CONNECT message to contain at least one address")
 	}
@@ -392,7 +392,7 @@ func (hs *Service) handleNewStream(s network.Stream) {
 	}
 
 	if err := s.Scope().SetService(ServiceName); err != nil {
-		log.Debugf("error attaching stream to holepunch service: %s", err)
+		log.Debug(fmt.Sprintf("error attaching stream to holepunch service: %s", err))
 		s.Reset()
 		return
 	}
@@ -401,7 +401,7 @@ func (hs *Service) handleNewStream(s network.Stream) {
 	rtt, addrs, err := hs.incomingHolePunch(s)
 	if err != nil {
 		hs.tracer.ProtocolError(rp, err)
-		log.Debugw("error handling holepunching stream from", rp, "error", err)
+		log.Debug(fmt.Sprintln("error handling holepunching stream from", rp, "error", err))
 		s.Reset()
 		return
 	}
@@ -413,7 +413,7 @@ func (hs *Service) handleNewStream(s network.Stream) {
 		Addrs: addrs,
 	}
 	hs.tracer.StartHolePunch(rp, addrs, rtt)
-	log.Debugw("starting hole punch", "peer", rp)
+	log.Debug(fmt.Sprintln("starting hole punch", "peer", rp))
 	start := time.Now()
 	err = hs.holePunchConnect(pi, false)
 	dt := time.Since(start)
@@ -428,10 +428,10 @@ func (hs *Service) holePunchConnect(pi peer.AddrInfo, isClient bool) error {
 
 	hs.tracer.HolePunchAttempt(pi.ID)
 	if err := hs.host.Connect(dialCtx, pi); err != nil {
-		log.Debugw("hole punch attempt with peer failed", "peer ID", pi.ID, "error", err)
+		log.Debug(fmt.Sprintln("hole punch attempt with peer failed", "peer ID", pi.ID, "error", err))
 		return err
 	}
-	log.Debugw("hole punch successful", "peer", pi.ID)
+	log.Debug(fmt.Sprintln("hole punch successful", "peer", pi.ID))
 	return nil
 }
 

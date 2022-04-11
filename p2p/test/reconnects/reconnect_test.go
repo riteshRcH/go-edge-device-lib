@@ -2,6 +2,7 @@ package reconnect
 
 import (
 	"context"
+	"fmt"
 	"io"
 	"math/rand"
 	"sync"
@@ -9,6 +10,7 @@ import (
 	"time"
 
 	bhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/basic"
+	"go.uber.org/zap"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
@@ -16,16 +18,15 @@ import (
 
 	swarmt "github.com/riteshRcH/go-edge-device-lib/swarm/testing"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 	"github.com/stretchr/testify/require"
 )
 
-var log = logging.Logger("reconnect")
+var log, _ = zap.NewProduction()
 
 func EchoStreamHandler(stream network.Stream) {
 	c := stream.Conn()
-	log.Debugf("%s echoing %s", c.LocalPeer(), c.RemotePeer())
+	log.Debug(fmt.Sprintf("%s echoing %s", c.LocalPeer(), c.RemotePeer()))
 	go func() {
 		_, err := io.Copy(stream, stream)
 		if err == nil {
@@ -81,22 +82,22 @@ func newSender() (chan sendChans, func(s network.Stream)) {
 			to := rand.Intn(len(buf) / 2)
 			sendbuf := buf[from : from+to]
 
-			log.Debugf("sender sending %d bytes", len(sendbuf))
+			log.Debug(fmt.Sprintf("sender sending %d bytes", len(sendbuf)))
 			n, err := s.Write(sendbuf)
 			if err != nil {
-				log.Debug("sender error. exiting:", err)
+				log.Debug(fmt.Sprintln("sender error. exiting:", err))
 				return
 			}
 
-			log.Debugf("sender wrote %d bytes", n)
+			log.Debug(fmt.Sprintf("sender wrote %d bytes", n))
 			sc.sent <- struct{}{}
 
 			if n, err = io.ReadFull(s, buf2[:len(sendbuf)]); err != nil {
-				log.Debug("sender error. failed to read:", err)
+				log.Debug(fmt.Sprintln("sender error. failed to read:", err))
 				return
 			}
 
-			log.Debugf("sender read %d bytes", n)
+			log.Debug(fmt.Sprintf("sender read %d bytes", n))
 			sc.read <- struct{}{}
 		}
 	}
@@ -120,7 +121,7 @@ func TestReconnect2(t *testing.T) {
 		rounds = 4
 	}
 	for i := 0; i < rounds; i++ {
-		log.Debugf("TestReconnect: %d/%d\n", i, rounds)
+		log.Debug(fmt.Sprintf("TestReconnect: %d/%d\n", i, rounds))
 		subtestConnSendDisc(t, hosts)
 	}
 }
@@ -143,7 +144,7 @@ func TestReconnect5(t *testing.T) {
 		rounds = 2
 	}
 	for i := 0; i < rounds; i++ {
-		log.Debugf("TestReconnect: %d/%d\n", i, rounds)
+		log.Debug(fmt.Sprintf("TestReconnect: %d/%d\n", i, rounds))
 		subtestConnSendDisc(t, hosts)
 	}
 }
@@ -167,7 +168,7 @@ func subtestConnSendDisc(t *testing.T, hosts []host.Host) {
 			}
 
 			h2pi := h2.Peerstore().PeerInfo(h2.ID())
-			log.Debugf("dialing %s", h2pi.Addrs)
+			log.Debug(fmt.Sprintf("dialing %s", h2pi.Addrs))
 			if err := h1.Connect(ctx, h2pi); err != nil {
 				t.Fatal("Failed to connect:", err)
 			}
@@ -188,26 +189,26 @@ func subtestConnSendDisc(t *testing.T, hosts []host.Host) {
 			defer wg.Done()
 
 			go sF(s)
-			log.Debugf("getting handle %d", j)
+			log.Debug(fmt.Sprintf("getting handle %d", j))
 			sc := <-ss // wait to get handle.
-			log.Debugf("spawning worker %d", j)
+			log.Debug(fmt.Sprintf("spawning worker %d", j))
 
 			for k := 0; k < numMsgs; k++ {
 				sc.send <- struct{}{}
 				<-sc.sent
-				log.Debugf("%d sent %d", j, k)
+				log.Debug(fmt.Sprintf("%d sent %d", j, k))
 				<-sc.read
-				log.Debugf("%d read %d", j, k)
+				log.Debug(fmt.Sprintf("%d read %d", j, k))
 			}
 			sc.close_ <- struct{}{}
 			<-sc.closed
-			log.Debugf("closed %d", j)
+			log.Debug(fmt.Sprintf("closed %d", j))
 		}(i)
 	}
 	wg.Wait()
 
 	for i, h1 := range hosts {
-		log.Debugf("host %d has %d conns", i, len(h1.Network().Conns()))
+		log.Debug(fmt.Sprintf("host %d has %d conns", i, len(h1.Network().Conns())))
 	}
 
 	for _, h1 := range hosts {
@@ -217,7 +218,7 @@ func subtestConnSendDisc(t *testing.T, hosts []host.Host) {
 			if c.LocalPeer() > c.RemotePeer() {
 				continue
 			}
-			log.Debugf("closing: %s", c)
+			log.Debug(fmt.Sprintf("closing: %s", c))
 			c.Close()
 		}
 	}

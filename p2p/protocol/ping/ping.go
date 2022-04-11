@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"errors"
+	"fmt"
 	"io"
 	"time"
 
@@ -11,11 +12,11 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
+	"go.uber.org/zap"
 )
 
-var log = logging.Logger("ping")
+var log, _ = zap.NewProduction()
 
 const (
 	PingSize    = 32
@@ -38,13 +39,13 @@ func NewPingService(h host.Host) *PingService {
 
 func (p *PingService) PingHandler(s network.Stream) {
 	if err := s.Scope().SetService(ServiceName); err != nil {
-		log.Debugf("error attaching stream to ping service: %s", err)
+		log.Debug(fmt.Sprintf("error attaching stream to ping service: %s", err))
 		s.Reset()
 		return
 	}
 
 	if err := s.Scope().ReserveMemory(PingSize, network.ReservationPriorityAlways); err != nil {
-		log.Debugf("error reserving memory for ping stream: %s", err)
+		log.Debug(fmt.Sprintf("error reserving memory for ping stream: %s", err))
 		s.Reset()
 		return
 	}
@@ -64,7 +65,7 @@ func (p *PingService) PingHandler(s network.Stream) {
 			log.Debug("ping timeout")
 		case err, ok := <-errCh:
 			if ok {
-				log.Debug(err)
+				log.Debug(fmt.Sprintln(err))
 			} else {
 				log.Error("ping loop failed without error")
 			}
@@ -115,7 +116,7 @@ func Ping(ctx context.Context, h host.Host, p peer.ID) <-chan Result {
 	}
 
 	if err := s.Scope().SetService(ServiceName); err != nil {
-		log.Debugf("error attaching stream to ping service: %s", err)
+		log.Debug(fmt.Sprintf("error attaching stream to ping service: %s", err))
 		s.Reset()
 		return pingError(err)
 	}
@@ -159,7 +160,7 @@ func Ping(ctx context.Context, h host.Host, p peer.ID) <-chan Result {
 
 func ping(s network.Stream) (time.Duration, error) {
 	if err := s.Scope().ReserveMemory(2*PingSize, network.ReservationPriorityAlways); err != nil {
-		log.Debugf("error reserving memory for ping stream: %s", err)
+		log.Debug(fmt.Sprintf("error reserving memory for ping stream: %s", err))
 		s.Reset()
 		return 0, err
 	}

@@ -6,15 +6,14 @@ import (
 	"sync"
 
 	"github.com/riteshRcH/go-edge-device-lib/p2p/protocol/circuitv2/proto"
+	"go.uber.org/zap"
 
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/transport"
-
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 )
 
-var log = logging.Logger("p2p-circuit")
+var log, _ = zap.NewProduction()
 
 // Client implements the client-side of the p2p-circuit/v2 protocol:
 // - it implements dialing through v2 relays

@@ -1,10 +1,10 @@
 package mocknet
 
 import (
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
+	"go.uber.org/zap"
 )
 
-var log = logging.Logger("mocknet")
+var log, _ = zap.NewProduction()
 
 // WithNPeers constructs a Mocknet with N peers.
 func WithNPeers(n int) (Mocknet, error) {

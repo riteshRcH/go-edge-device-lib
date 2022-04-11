@@ -9,13 +9,13 @@ import (
 	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	pb "github.com/riteshRcH/go-edge-device-lib/core/crypto/pb"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
+	"go.uber.org/zap"
 
-	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	tnet "github.com/riteshRcH/go-edge-device-lib/testing/net"
 )
 
-var log = logging.Logger("boguskey")
+var log, _ = zap.NewProduction()
 
 // TestBogusPrivateKey is a key used for testing (to avoid expensive keygen)
 type TestBogusPrivateKey []byte
@@ -24,7 +24,7 @@ type TestBogusPrivateKey []byte
 type TestBogusPublicKey []byte
 
 func (pk TestBogusPublicKey) Verify(data, sig []byte) (bool, error) {
-	log.Errorf("TestBogusPublicKey.Verify -- this better be a test!")
+	log.Error("TestBogusPublicKey.Verify -- this better be a test!")
 	return bytes.Equal(data, reverse(sig)), nil
 }
 
@@ -33,7 +33,7 @@ func (pk TestBogusPublicKey) Bytes() ([]byte, error) {
 }
 
 func (pk TestBogusPublicKey) Encrypt(b []byte) ([]byte, error) {
-	log.Errorf("TestBogusPublicKey.Encrypt -- this better be a test!")
+	log.Error("TestBogusPublicKey.Encrypt -- this better be a test!")
 	return reverse(b), nil
 }
 
@@ -62,7 +62,7 @@ func (sk TestBogusPrivateKey) GenSecret() []byte {
 }
 
 func (sk TestBogusPrivateKey) Sign(message []byte) ([]byte, error) {
-	log.Errorf("TestBogusPrivateKey.Sign -- this better be a test!")
+	log.Error("TestBogusPrivateKey.Sign -- this better be a test!")
 	return reverse(message), nil
 }
 
@@ -71,7 +71,7 @@ func (sk TestBogusPrivateKey) GetPublic() ic.PubKey {
 }
 
 func (sk TestBogusPrivateKey) Decrypt(b []byte) ([]byte, error) {
-	log.Errorf("TestBogusPrivateKey.Decrypt -- this better be a test!")
+	log.Error("TestBogusPrivateKey.Decrypt -- this better be a test!")
 	return reverse(b), nil
 }
 
