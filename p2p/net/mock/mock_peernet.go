@@ -116,7 +116,7 @@ func (pn *peernet) connect(p peer.ID) (*conn, error) {
 	}
 	pn.RUnlock()
 
-	log.Debugf("%s (newly) dialing %s", pn.peer, p)
+	log.Debug(fmt.Sprintf("%s (newly) dialing %s", pn.peer, p))
 
 	// ok, must create a new connection. we need a link
 	links := pn.mocknet.LinksBetweenPeers(pn.peer, p)
@@ -129,7 +129,7 @@ func (pn *peernet) connect(p peer.ID) (*conn, error) {
 	// links (network interfaces) and select properly
 	l := links[rand.Intn(len(links))]
 
-	log.Debugf("%s dialing %s openingConn", pn.peer, p)
+	log.Debug(fmt.Sprintf("%s dialing %s openingConn", pn.peer, p))
 	// create a new connection with link
 	c := pn.openConn(p, l.(*link))
 	return c, nil
@@ -137,7 +137,7 @@ func (pn *peernet) connect(p peer.ID) (*conn, error) {
 
 func (pn *peernet) openConn(r peer.ID, l *link) *conn {
 	lc, rc := l.newConnPair(pn)
-	log.Debugf("%s opening connection to %s", pn.LocalPeer(), lc.RemotePeer())
+	log.Debug(fmt.Sprintf("%s opening connection to %s", pn.LocalPeer(), lc.RemotePeer()))
 	addConnPair(pn, rc.net, lc, rc)
 
 	go rc.net.remoteOpenedConn(rc)
@@ -180,7 +180,7 @@ func addConnPair(pn1, pn2 *peernet, c1, c2 *conn) {
 }
 
 func (pn *peernet) remoteOpenedConn(c *conn) {
-	log.Debugf("%s accepting connection from %s", pn.LocalPeer(), c.RemotePeer())
+	log.Debug(fmt.Sprintf("%s accepting connection from %s", pn.LocalPeer(), c.RemotePeer()))
 	pn.addConn(c)
 }
 

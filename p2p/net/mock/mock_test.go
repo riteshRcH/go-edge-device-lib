@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"errors"
+	"fmt"
 	"io"
 	"math"
 	"math/rand"
@@ -383,13 +384,13 @@ func TestStreamsStress(t *testing.T) {
 			}
 			s, err := hosts[from].NewStream(ctx, hosts[to].ID(), protocol.TestingID)
 			if err != nil {
-				log.Debugf("%d (%s) %d (%s)", from, hosts[from], to, hosts[to])
+				log.Debug(fmt.Sprintf("%d (%s) %d (%s)", from, hosts[from], to, hosts[to]))
 				panic(err)
 			}
 
-			log.Infof("%d start pinging", i)
+			log.Info(fmt.Sprintf("%d start pinging", i))
 			errs <- performPing(t, "pingpong", rand.Intn(100), s)
-			log.Infof("%d done pinging", i)
+			log.Info(fmt.Sprintf("%d done pinging", i))
 		}(i)
 	}
 
@@ -543,7 +544,7 @@ func TestLimitedStreams(t *testing.T) {
 		b := make([]byte, messageSize)
 		for i := 0; i < messages; i++ {
 			if _, err := io.ReadFull(s, b); err != nil {
-				log.Fatal(err)
+				log.Fatal(fmt.Sprintln(err))
 			}
 			if !bytes.Equal(b[:4], []byte("ping")) {
 				log.Fatal("bytes mismatch")

@@ -3,6 +3,7 @@ package mocknet
 import (
 	"container/list"
 	"context"
+	"fmt"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -151,7 +152,7 @@ func (c *conn) openStream() *stream {
 }
 
 func (c *conn) NewStream(context.Context) (network.Stream, error) {
-	log.Debugf("Conn.NewStreamWithProtocol: %s --> %s", c.local, c.remote)
+	log.Debug(fmt.Sprintf("Conn.NewStreamWithProtocol: %s --> %s", c.local, c.remote))
 
 	s := c.openStream()
 	return s, nil
