@@ -8,11 +8,11 @@ import (
 	"os"
 	"sync"
 
-	discovery "github.com/libp2p/go-libp2p-discovery"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
+	discovery "github.com/riteshRcH/go-edge-device-lib/discovery"
 	"go.uber.org/zap"
 
 	dht "github.com/libp2p/go-libp2p-kad-dht"
