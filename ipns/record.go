@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"errors"
 
-	pb "github.com/ipfs/go-ipns/pb"
+	pb "github.com/riteshRcH/go-edge-device-lib/ipns/pb"
 
 	proto "github.com/gogo/protobuf/proto"
 	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"

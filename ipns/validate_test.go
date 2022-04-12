@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	pb "github.com/ipfs/go-ipns/pb"
+	pb "github.com/riteshRcH/go-edge-device-lib/ipns/pb"
 
 	ipldcodec "github.com/riteshRcH/go-edge-device-lib/ipld/multicodec"
 	basicnode "github.com/riteshRcH/go-edge-device-lib/ipld/node/basic"

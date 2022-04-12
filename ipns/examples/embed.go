@@ -3,10 +3,10 @@ package examples
 import (
 	"time"
 
-	pb "github.com/ipfs/go-ipns/pb"
+	pb "github.com/riteshRcH/go-edge-device-lib/ipns/pb"
 
-	ipns "github.com/ipfs/go-ipns"
 	crypto "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	ipns "github.com/riteshRcH/go-edge-device-lib/ipns"
 )
 
 // CreateEntryWithEmbed shows how you can create an IPNS entry

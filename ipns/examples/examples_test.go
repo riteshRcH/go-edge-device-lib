@@ -3,8 +3,8 @@ package examples_test
 import (
 	"testing"
 
-	"github.com/ipfs/go-ipns/examples"
 	crypto "github.com/riteshRcH/go-edge-device-lib/core/crypto"
+	"github.com/riteshRcH/go-edge-device-lib/ipns/examples"
 )
 
 var testPath = "/ipfs/Qme1knMqwt1hKZbc1BmQFmnm9f36nyQGwXxPGVpVJ9rMK5"

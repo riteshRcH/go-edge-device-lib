@@ -30,6 +30,7 @@ require (
 	github.com/onsi/ginkgo v1.16.4 // indirect
 	github.com/onsi/gomega v1.13.0 // indirect
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58
+	github.com/pkg/errors v0.9.1
 	github.com/polydawn/refmt v0.0.0-20201211092308-30ac6d18308e
 	github.com/prometheus/client_golang v1.12.1
 	github.com/prometheus/common v0.33.0 // indirect

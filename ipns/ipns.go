@@ -17,7 +17,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	pb "github.com/ipfs/go-ipns/pb"
+	pb "github.com/riteshRcH/go-edge-device-lib/ipns/pb"
 
 	ic "github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	peer "github.com/riteshRcH/go-edge-device-lib/core/peer"
