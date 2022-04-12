@@ -1,8 +1,8 @@
 package dht
 
 import (
-	internalConfig "github.com/libp2p/go-libp2p-kad-dht/internal/config"
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
+	internalConfig "github.com/riteshRcH/go-edge-device-lib/dht/internal/config"
 )
 
 // Quorum is a DHT option that tells the DHT how many peers it needs to get

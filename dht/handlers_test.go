@@ -9,10 +9,10 @@ import (
 	"time"
 
 	proto "github.com/gogo/protobuf/proto"
-	pb "github.com/libp2p/go-libp2p-kad-dht/pb"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	crypto "github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	peer "github.com/riteshRcH/go-edge-device-lib/core/peer"
+	pb "github.com/riteshRcH/go-edge-device-lib/dht/pb"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	recpb "github.com/riteshRcH/go-edge-device-lib/record/pb"
 )

@@ -14,7 +14,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
 
 	"github.com/google/uuid"
-	"github.com/libp2p/go-libp2p-kad-dht/qpeerset"
+	"github.com/riteshRcH/go-edge-device-lib/dht/qpeerset"
 	kb "github.com/riteshRcH/go-edge-device-lib/kbucket"
 )
 

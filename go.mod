@@ -42,6 +42,9 @@ require (
 	github.com/warpfork/go-testmark v0.10.0
 	github.com/warpfork/go-wish v0.0.0-20200122115046-b9ea61034e4a // indirect
 	github.com/whyrusleeping/mdns v0.0.0-20190826153040-b9b60ed33aa9
+	go.opencensus.io v0.22.4
+	go.opentelemetry.io/otel v1.6.3
+	go.opentelemetry.io/otel/trace v1.6.3
 	go.uber.org/atomic v1.9.0
 	go.uber.org/goleak v1.1.11
 	go.uber.org/multierr v1.8.0

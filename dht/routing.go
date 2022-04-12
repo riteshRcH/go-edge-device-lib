@@ -12,10 +12,10 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
 
-	"github.com/libp2p/go-libp2p-kad-dht/internal"
-	internalConfig "github.com/libp2p/go-libp2p-kad-dht/internal/config"
-	"github.com/libp2p/go-libp2p-kad-dht/qpeerset"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/dht/internal"
+	internalConfig "github.com/riteshRcH/go-edge-device-lib/dht/internal/config"
+	"github.com/riteshRcH/go-edge-device-lib/dht/qpeerset"
 	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 	kb "github.com/riteshRcH/go-edge-device-lib/kbucket"
 	"github.com/riteshRcH/go-edge-device-lib/multihash"

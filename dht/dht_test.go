@@ -26,8 +26,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	test "github.com/libp2p/go-libp2p-kad-dht/internal/testing"
-	pb "github.com/libp2p/go-libp2p-kad-dht/pb"
+	test "github.com/riteshRcH/go-edge-device-lib/dht/internal/testing"
+	pb "github.com/riteshRcH/go-edge-device-lib/dht/pb"
 
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 	detectrace "github.com/riteshRcH/go-edge-device-lib/detect-race"

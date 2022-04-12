@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"sync"
 
-	dht "github.com/libp2p/go-libp2p-kad-dht"
+	dht "github.com/riteshRcH/go-edge-device-lib/dht"
 
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 	ci "github.com/riteshRcH/go-edge-device-lib/core/crypto"

@@ -13,7 +13,7 @@ import (
 	logging "github.com/riteshRcH/go-edge-device-lib/golog"
 	"github.com/riteshRcH/go-edge-device-lib/msgio/protoio"
 
-	pb "github.com/libp2p/go-libp2p-kad-dht/pb"
+	pb "github.com/riteshRcH/go-edge-device-lib/dht/pb"
 	kbucket "github.com/riteshRcH/go-edge-device-lib/kbucket"
 )
 

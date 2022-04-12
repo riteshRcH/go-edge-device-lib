@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	dhtcfg "github.com/libp2p/go-libp2p-kad-dht/internal/config"
-	"github.com/libp2p/go-libp2p-kad-dht/providers"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
+	dhtcfg "github.com/riteshRcH/go-edge-device-lib/dht/internal/config"
+	"github.com/riteshRcH/go-edge-device-lib/dht/providers"
 
 	"github.com/riteshRcH/go-edge-device-lib/kbucket/peerdiversity"
 	record "github.com/riteshRcH/go-edge-device-lib/record"

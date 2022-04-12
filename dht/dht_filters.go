@@ -16,7 +16,7 @@ import (
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	manet "github.com/riteshRcH/go-edge-device-lib/multiaddr/net"
 
-	dhtcfg "github.com/libp2p/go-libp2p-kad-dht/internal/config"
+	dhtcfg "github.com/riteshRcH/go-edge-device-lib/dht/internal/config"
 )
 
 // QueryFilterFunc is a filter applied when considering peers to dial when querying

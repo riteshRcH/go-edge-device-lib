@@ -20,7 +20,7 @@ import (
 	ds "github.com/riteshRcH/go-edge-device-lib/datastore"
 	dsync "github.com/riteshRcH/go-edge-device-lib/datastore/sync"
 
-	dht "github.com/libp2p/go-libp2p-kad-dht"
+	dht "github.com/riteshRcH/go-edge-device-lib/dht"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	rhost "github.com/riteshRcH/go-edge-device-lib/p2p/host/routed"
 )

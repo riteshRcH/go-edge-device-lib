@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/libp2p/go-libp2p-kad-dht/providers"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/protocol"
 	ds "github.com/riteshRcH/go-edge-device-lib/datastore"
 	dssync "github.com/riteshRcH/go-edge-device-lib/datastore/sync"
+	"github.com/riteshRcH/go-edge-device-lib/dht/providers"
 	"github.com/riteshRcH/go-edge-device-lib/ipns"
 	"github.com/riteshRcH/go-edge-device-lib/kbucket/peerdiversity"
 	record "github.com/riteshRcH/go-edge-device-lib/record"

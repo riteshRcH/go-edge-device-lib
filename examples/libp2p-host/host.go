@@ -5,12 +5,12 @@ import (
 	"log"
 	"time"
 
-	dht "github.com/libp2p/go-libp2p-kad-dht"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	connmgr "github.com/riteshRcH/go-edge-device-lib/connmgr"
 	"github.com/riteshRcH/go-edge-device-lib/core/crypto"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
+	dht "github.com/riteshRcH/go-edge-device-lib/dht"
 	libp2ptls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"
 	noise "github.com/riteshRcH/go-edge-device-lib/noise"
 )

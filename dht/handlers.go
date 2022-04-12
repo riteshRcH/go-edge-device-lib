@@ -11,10 +11,10 @@ import (
 	pstore "github.com/riteshRcH/go-edge-device-lib/peerstore"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/libp2p/go-libp2p-kad-dht/internal"
-	pb "github.com/libp2p/go-libp2p-kad-dht/pb"
 	"github.com/riteshRcH/go-edge-device-lib/base32"
 	ds "github.com/riteshRcH/go-edge-device-lib/datastore"
+	"github.com/riteshRcH/go-edge-device-lib/dht/internal"
+	pb "github.com/riteshRcH/go-edge-device-lib/dht/pb"
 	u "github.com/riteshRcH/go-edge-device-lib/ipfs-util"
 	recpb "github.com/riteshRcH/go-edge-device-lib/record/pb"
 )

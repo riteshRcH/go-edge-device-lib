@@ -6,9 +6,9 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/core/network"
 
-	"github.com/libp2p/go-libp2p-kad-dht/internal/net"
-	"github.com/libp2p/go-libp2p-kad-dht/metrics"
-	pb "github.com/libp2p/go-libp2p-kad-dht/pb"
+	"github.com/riteshRcH/go-edge-device-lib/dht/internal/net"
+	"github.com/riteshRcH/go-edge-device-lib/dht/metrics"
+	pb "github.com/riteshRcH/go-edge-device-lib/dht/pb"
 
 	"github.com/riteshRcH/go-edge-device-lib/msgio"
 	"go.opencensus.io/stats"

@@ -15,7 +15,7 @@ import (
 	discovery "github.com/riteshRcH/go-edge-device-lib/discovery"
 	"go.uber.org/zap"
 
-	dht "github.com/libp2p/go-libp2p-kad-dht"
+	dht "github.com/riteshRcH/go-edge-device-lib/dht"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 )
 

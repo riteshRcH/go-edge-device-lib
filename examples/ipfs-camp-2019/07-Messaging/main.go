@@ -7,12 +7,12 @@ import (
 	"os/signal"
 	"syscall"
 
-	kaddht "github.com/libp2p/go-libp2p-kad-dht"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	libp2p "github.com/riteshRcH/go-edge-device-lib"
 	"github.com/riteshRcH/go-edge-device-lib/core/host"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/routing"
+	kaddht "github.com/riteshRcH/go-edge-device-lib/dht"
 	tls "github.com/riteshRcH/go-edge-device-lib/libp2ptls"
 	"github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/p2p/discovery/mdns"

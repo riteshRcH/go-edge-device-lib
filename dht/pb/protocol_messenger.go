@@ -12,7 +12,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/multihash"
 	recpb "github.com/riteshRcH/go-edge-device-lib/record/pb"
 
-	"github.com/libp2p/go-libp2p-kad-dht/internal"
+	"github.com/riteshRcH/go-edge-device-lib/dht/internal"
 )
 
 var logger = logging.Logger("dht")

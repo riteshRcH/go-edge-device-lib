@@ -5,8 +5,8 @@ package dhtopts
 import (
 	"time"
 
-	dht "github.com/libp2p/go-libp2p-kad-dht"
 	ds "github.com/riteshRcH/go-edge-device-lib/datastore"
+	dht "github.com/riteshRcH/go-edge-device-lib/dht"
 	record "github.com/riteshRcH/go-edge-device-lib/record"
 )
 
