@@ -18,11 +18,11 @@ import (
 	csms "github.com/riteshRcH/go-edge-device-lib/conn-security-multistream"
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"
 	"github.com/riteshRcH/go-edge-device-lib/peerstore/pstoremem"
+	yamux "github.com/riteshRcH/go-edge-device-lib/sm_yamux"
 	msmux "github.com/riteshRcH/go-edge-device-lib/stream-muxer-multistream"
 	swarm "github.com/riteshRcH/go-edge-device-lib/swarm"
 	tnet "github.com/riteshRcH/go-edge-device-lib/testing/net"
 	tptu "github.com/riteshRcH/go-edge-device-lib/upgrader"
-	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
 	"github.com/stretchr/testify/require"
 )
 
