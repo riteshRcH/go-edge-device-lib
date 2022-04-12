@@ -12,7 +12,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peerstore"
 	"go.uber.org/zap"
 
-	"github.com/libp2p/go-libp2p-kbucket/peerdiversity"
+	"github.com/riteshRcH/go-edge-device-lib/kbucket/peerdiversity"
 )
 
 var log, _ = zap.NewProduction()

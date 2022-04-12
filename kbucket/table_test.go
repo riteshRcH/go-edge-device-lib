@@ -8,7 +8,7 @@ import (
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 	"github.com/riteshRcH/go-edge-device-lib/core/test"
 
-	"github.com/libp2p/go-libp2p-kbucket/peerdiversity"
+	"github.com/riteshRcH/go-edge-device-lib/kbucket/peerdiversity"
 	pstore "github.com/riteshRcH/go-edge-device-lib/peerstore"
 
 	ma "github.com/riteshRcH/go-edge-device-lib/multiaddr"

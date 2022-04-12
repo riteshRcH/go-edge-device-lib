@@ -3,7 +3,7 @@ package kbucket
 import (
 	"errors"
 
-	ks "github.com/libp2p/go-libp2p-kbucket/keyspace"
+	ks "github.com/riteshRcH/go-edge-device-lib/kbucket/keyspace"
 	"github.com/riteshRcH/go-edge-device-lib/core/peer"
 
 	"github.com/minio/sha256-simd"
