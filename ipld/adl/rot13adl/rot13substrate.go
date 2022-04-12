@@ -1,9 +1,9 @@
 package rot13adl
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/node/mixins"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/mixins"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 // Substrate returns the root node of the raw internal data form of the ADL's content.

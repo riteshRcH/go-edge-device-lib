@@ -9,9 +9,9 @@ import (
 	"github.com/polydawn/refmt/shared"
 	"github.com/polydawn/refmt/tok"
 
-	"github.com/ipld/go-ipld-prime/codec"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
 )
 
 // This file should be identical to the general feature in the parent package,

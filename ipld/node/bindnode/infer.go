@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/schema"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 var (

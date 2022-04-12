@@ -6,15 +6,15 @@ import (
 
 	qt "github.com/frankban/quicktest"
 
-	_ "github.com/ipld/go-ipld-prime/codec/dagjson"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/fluent"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	nodetests "github.com/ipld/go-ipld-prime/node/tests"
-	"github.com/ipld/go-ipld-prime/traversal"
-	"github.com/ipld/go-ipld-prime/traversal/selector"
-	"github.com/ipld/go-ipld-prime/traversal/selector/builder"
+	_ "github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	nodetests "github.com/riteshRcH/go-edge-device-lib/ipld/node/tests"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal/selector"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal/selector/builder"
 )
 
 /* Remember, we've got the following fixtures in scope:

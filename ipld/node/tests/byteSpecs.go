@@ -6,7 +6,7 @@ import (
 
 	qt "github.com/frankban/quicktest"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 func SpecTestBytes(t *testing.T, np datamodel.NodePrototype) {

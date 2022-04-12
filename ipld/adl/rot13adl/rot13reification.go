@@ -3,7 +3,7 @@ package rot13adl
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // Reify examines data in a Node to see if it matches the shape for valid substrate data for this ADL,

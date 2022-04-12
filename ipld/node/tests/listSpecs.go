@@ -5,9 +5,9 @@ import (
 
 	qt "github.com/frankban/quicktest"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/fluent"
-	"github.com/ipld/go-ipld-prime/must"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/must"
 )
 
 func SpecTestListString(t *testing.T, np datamodel.NodePrototype) {

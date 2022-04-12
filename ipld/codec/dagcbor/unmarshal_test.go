@@ -4,11 +4,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 
 	qt "github.com/frankban/quicktest"
 
-	"github.com/ipld/go-ipld-prime/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
 )
 
 func TestFunBlocks(t *testing.T) {

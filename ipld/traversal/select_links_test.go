@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	qt "github.com/frankban/quicktest"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/traversal"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal"
 )
 
 func TestSelectLinks(t *testing.T) {

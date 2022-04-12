@@ -3,10 +3,10 @@ package ipld_test
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime"
-	"github.com/ipld/go-ipld-prime/codec/json"
-	"github.com/ipld/go-ipld-prime/must"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/json"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/must"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 func Example_Marshal() {

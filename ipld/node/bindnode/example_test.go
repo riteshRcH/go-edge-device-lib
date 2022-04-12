@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ipld/go-ipld-prime"
-	"github.com/ipld/go-ipld-prime/codec/dagjson"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/fluent/qp"
-	"github.com/ipld/go-ipld-prime/node/bindnode"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent/qp"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/bindnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 func ExampleWrap_withSchema() {

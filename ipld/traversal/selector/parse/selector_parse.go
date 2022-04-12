@@ -9,10 +9,10 @@ package selectorparse
 import (
 	"strings"
 
-	"github.com/ipld/go-ipld-prime/codec/dagjson"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	"github.com/ipld/go-ipld-prime/traversal/selector"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal/selector"
 )
 
 // ParseJSONSelector accepts a string of json which will be parsed as a selector,

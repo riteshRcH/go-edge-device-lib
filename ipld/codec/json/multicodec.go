@@ -5,10 +5,10 @@ import (
 
 	rfmtjson "github.com/polydawn/refmt/json"
 
-	"github.com/ipld/go-ipld-prime/codec"
-	"github.com/ipld/go-ipld-prime/codec/dagjson"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/multicodec"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/multicodec"
 )
 
 var (

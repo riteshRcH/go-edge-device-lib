@@ -11,11 +11,11 @@ import (
 	"github.com/polydawn/refmt/json"
 	"github.com/polydawn/refmt/shared"
 
-	"github.com/ipld/go-ipld-prime/codec"
-	"github.com/ipld/go-ipld-prime/codec/dagjson"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/schema"
-	"github.com/ipld/go-ipld-prime/traversal"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal"
 )
 
 // This file introduces a testcase struct and a bunch of functions around it.

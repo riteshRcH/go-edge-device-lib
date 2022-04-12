@@ -6,11 +6,11 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	"github.com/ipld/go-ipld-prime/schema"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 // Assert that we implement all the interfaces as expected.

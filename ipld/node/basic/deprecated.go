@@ -8,9 +8,9 @@
 package basicnode
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/linking"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/linking"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
 )
 
 var Prototype = basicnode.Prototype

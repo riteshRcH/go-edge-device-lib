@@ -3,7 +3,7 @@ package linking
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // ErrLinkingSetup is returned by methods on LinkSystem when some part of the system is not set up correctly,

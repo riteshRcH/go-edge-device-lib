@@ -7,7 +7,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 // TODO(mvdan): deduplicate with inferGoType once reflect supports creating named types

@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/node/tests"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/tests"
 )
 
 func TestStructReprTuple(t *testing.T) {

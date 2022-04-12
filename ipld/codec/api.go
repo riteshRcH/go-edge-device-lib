@@ -3,7 +3,7 @@ package codec
 import (
 	"io"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // The following two types define the two directions of transform that a codec can be expected to perform:

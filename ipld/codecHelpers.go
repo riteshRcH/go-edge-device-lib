@@ -5,9 +5,9 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	"github.com/ipld/go-ipld-prime/node/bindnode"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/bindnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 // Encode serializes the given Node using the given Encoder function,

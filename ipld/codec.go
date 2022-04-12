@@ -1,7 +1,7 @@
 package ipld
 
 import (
-	"github.com/ipld/go-ipld-prime/codec"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec"
 )
 
 type (

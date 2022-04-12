@@ -3,8 +3,8 @@ package tests
 import (
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 // TestStructsContainingMaybe checks all the variations of "nullable" and "optional" on struct fields.

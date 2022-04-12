@@ -4,8 +4,8 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/ipld/go-ipld-prime/schema"
-	"github.com/ipld/go-ipld-prime/schema/gen/go/mixins"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema/gen/go/mixins"
 )
 
 var _ TypeGenerator = &structReprTupleGenerator{}

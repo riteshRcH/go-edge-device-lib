@@ -3,8 +3,8 @@ package tests
 import (
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/must"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/must"
 )
 
 func SpecBenchmarkMapStrInt_3n_AssembleStandard(b *testing.B, np datamodel.NodePrototype) {

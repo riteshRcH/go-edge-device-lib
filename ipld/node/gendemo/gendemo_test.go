@@ -3,7 +3,7 @@ package gendemo
 import (
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/node/tests"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/tests"
 )
 
 func BenchmarkMapStrInt_3n_AssembleStandard(b *testing.B) {

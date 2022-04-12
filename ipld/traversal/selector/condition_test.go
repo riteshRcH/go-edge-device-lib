@@ -8,9 +8,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 
-	"github.com/ipld/go-ipld-prime/fluent"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
 )
 
 var deepEqualsAllowAllUnexported = qt.CmpEquals(cmp.Exporter(func(reflect.Type) bool { return true }))

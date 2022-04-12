@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ipld/go-ipld-prime/testutil"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/testutil"
 )
 
 // EmitInternalEnums creates a file with enum types used internally.
@@ -23,8 +23,8 @@ func EmitInternalEnums(packageName string, w io.Writer) {
 		import (
 			"fmt"
 
-			"github.com/ipld/go-ipld-prime/datamodel"
-			"github.com/ipld/go-ipld-prime/schema"
+			"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+			"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 		)
 
 	`))

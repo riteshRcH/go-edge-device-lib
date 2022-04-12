@@ -5,7 +5,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // This file contains all the functions on LinkSystem.

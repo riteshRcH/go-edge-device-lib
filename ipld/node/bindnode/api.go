@@ -7,8 +7,8 @@ package bindnode
 import (
 	"reflect"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 // Prototype implements a schema.TypedPrototype given a Go pointer type and an

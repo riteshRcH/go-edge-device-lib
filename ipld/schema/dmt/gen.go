@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ipld/go-ipld-prime/node/bindnode"
-	schemadmt "github.com/ipld/go-ipld-prime/schema/dmt"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/bindnode"
+	schemadmt "github.com/riteshRcH/go-edge-device-lib/ipld/schema/dmt"
 )
 
 func main() {

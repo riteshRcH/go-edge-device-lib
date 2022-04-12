@@ -1,7 +1,7 @@
 package ipld
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // DeepEqual reports whether x and y are "deeply equal" as IPLD nodes.

@@ -1,7 +1,7 @@
 Why does this package exist?
 ----------------------------
 
-The `linking/cid` package bends the `github.com/ipfs/go-cid` package into conforming to the `ipld.Link` interface.
+The `linking/cid` package bends the `"github.com/riteshRcH/go-edge-device-lib/cid"` package into conforming to the `ipld.Link` interface.
 
 The `linking/cid` package also contains factory functions for `ipld.LinkSystem`.
 These LinkSystem will be constructed with `EncoderChooser`, `DecoderChooser`, and `HasherChooser` funcs

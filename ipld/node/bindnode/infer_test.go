@@ -16,13 +16,13 @@ import (
 	qt "github.com/frankban/quicktest"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 
-	"github.com/ipld/go-ipld-prime"
-	"github.com/ipld/go-ipld-prime/codec/dagjson"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	"github.com/ipld/go-ipld-prime/node/bindnode"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/bindnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 type anyScalar struct {
@@ -988,7 +988,7 @@ func TestProduceGoTypes(t *testing.T) {
 			// Include a package line and the datamodel import.
 			buf := new(bytes.Buffer)
 			fmt.Fprintln(buf, `package p`)
-			fmt.Fprintln(buf, `import "github.com/ipld/go-ipld-prime/datamodel"`)
+			fmt.Fprintln(buf, `import "github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"`)
 			fmt.Fprintln(buf, `var _ datamodel.Link // always used`)
 			err = bindnode.ProduceGoTypes(buf, ts)
 			qt.Assert(t, err, qt.IsNil)

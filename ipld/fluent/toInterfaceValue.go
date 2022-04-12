@@ -3,7 +3,7 @@ package fluent
 import (
 	"errors"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 var errInvalidKind = errors.New("invalid kind")

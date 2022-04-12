@@ -7,10 +7,10 @@ import (
 	"time"
 
 	qt "github.com/frankban/quicktest"
-	"github.com/ipld/go-ipld-prime"
-	"github.com/ipld/go-ipld-prime/codec/dagcbor"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagcbor"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
 )
 
 func TestGarbageProducesAllKinds(t *testing.T) {

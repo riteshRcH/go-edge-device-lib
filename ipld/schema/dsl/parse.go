@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	dmt "github.com/ipld/go-ipld-prime/schema/dmt"
+	dmt "github.com/riteshRcH/go-edge-device-lib/ipld/schema/dmt"
 )
 
 var globalTrue = true

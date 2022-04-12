@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/node/mixins"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/mixins"
 )
 
 var (

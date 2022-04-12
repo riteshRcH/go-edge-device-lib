@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/node/tests"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/tests"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 var _ tests.Engine = (*genAndCompileEngine)(nil)
@@ -49,7 +49,7 @@ func (e *genAndCompileEngine) Init(t *testing.T, ts schema.TypeSystem) {
 		doTemplate(`
 			package `+pkgName+`
 
-			import "github.com/ipld/go-ipld-prime/datamodel"
+			import "github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 
 			func GetPrototypeByName(name string) datamodel.NodePrototype {
 				switch name {

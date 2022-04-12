@@ -7,12 +7,12 @@ import (
 	"testing"
 
 	qt "github.com/frankban/quicktest"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/linking"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	nodetests "github.com/ipld/go-ipld-prime/node/tests"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/linking"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	nodetests "github.com/riteshRcH/go-edge-device-lib/ipld/node/tests"
 )
 
 var tests = []struct {

@@ -5,8 +5,8 @@ import (
 	"hash"
 	"io"
 
-	"github.com/ipld/go-ipld-prime/codec"
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // LinkSystem is a struct that composes all the individual functions

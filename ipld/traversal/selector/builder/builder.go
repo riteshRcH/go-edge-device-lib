@@ -1,9 +1,9 @@
 package builder
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/fluent"
-	"github.com/ipld/go-ipld-prime/traversal/selector"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal/selector"
 )
 
 // SelectorSpec is a specification for a selector that can build

@@ -3,7 +3,7 @@ package schema
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // Everything in this file is __a temporary hack__ and will be __removed__.

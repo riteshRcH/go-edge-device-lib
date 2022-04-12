@@ -3,8 +3,8 @@ package selector
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
 )
 
 // Condition provides a mechanism for matching and limiting matching and

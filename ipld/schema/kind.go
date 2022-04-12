@@ -1,7 +1,7 @@
 package schema
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // TypeKind is an enum of kind in the IPLD Schema system.

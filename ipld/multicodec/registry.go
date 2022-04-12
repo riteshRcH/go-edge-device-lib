@@ -3,7 +3,7 @@ package multicodec
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/codec"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec"
 )
 
 // Registry is a structure for storing mappings of multicodec indicator numbers to codec.Encoder and codec.Decoder functions.

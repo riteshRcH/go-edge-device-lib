@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/codec/json"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/node/tests/corpus"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/json"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/tests/corpus"
 )
 
 // All of the marshalling and unmarshalling benchmark specs use JSON.

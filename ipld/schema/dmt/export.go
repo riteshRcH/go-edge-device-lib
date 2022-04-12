@@ -3,7 +3,7 @@
 
 package schemadmt
 
-import "github.com/ipld/go-ipld-prime/schema"
+import "github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 
 func InternalTypeSystem() *schema.TypeSystem {
 	return &schemaTypeSystem

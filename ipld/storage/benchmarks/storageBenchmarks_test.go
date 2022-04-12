@@ -7,11 +7,11 @@ import (
 	"testing"
 
 	flatfs "github.com/ipfs/go-ds-flatfs"
-	"github.com/ipld/go-ipld-prime/storage"
-	"github.com/ipld/go-ipld-prime/storage/dsadapter"
-	"github.com/ipld/go-ipld-prime/storage/fsstore"
-	"github.com/ipld/go-ipld-prime/storage/memstore"
-	"github.com/ipld/go-ipld-prime/storage/tests"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage/dsadapter"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage/fsstore"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage/memstore"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage/tests"
 )
 
 func BenchmarkPut(b *testing.B) {

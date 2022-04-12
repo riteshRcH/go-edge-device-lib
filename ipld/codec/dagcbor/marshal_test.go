@@ -7,9 +7,9 @@ import (
 	"time"
 
 	qt "github.com/frankban/quicktest"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	basicnode "github.com/ipld/go-ipld-prime/node/basic"
-	"github.com/ipld/go-ipld-prime/testutil/garbage"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	basicnode "github.com/riteshRcH/go-edge-device-lib/ipld/node/basic"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/testutil/garbage"
 )
 
 func calculateActualLength(t *testing.T, n datamodel.Node) int64 {

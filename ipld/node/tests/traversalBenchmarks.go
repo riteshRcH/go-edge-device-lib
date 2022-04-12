@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/node/tests/corpus"
-	"github.com/ipld/go-ipld-prime/traversal"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/tests/corpus"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal"
 )
 
 func BenchmarkSpec_Walk_Map3StrInt(b *testing.B, np datamodel.NodePrototype) {

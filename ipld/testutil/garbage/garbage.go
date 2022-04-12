@@ -5,11 +5,11 @@ import (
 	mathrand "math/rand"
 	"strings"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/must"
-	basicnode "github.com/ipld/go-ipld-prime/node/basic"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/must"
+	basicnode "github.com/riteshRcH/go-edge-device-lib/ipld/node/basic"
 	"github.com/riteshRcH/go-edge-device-lib/multihash"
 )
 

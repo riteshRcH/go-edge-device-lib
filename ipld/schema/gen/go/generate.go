@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"sort"
 
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 // Generate takes a typesystem and the adjunct config for codegen,
@@ -93,7 +93,7 @@ func Generate(pth string, pkgName string, ts schema.TypeSystem, adjCfg *AdjunctC
 		fmt.Fprintf(f, "package %s\n\n", pkgName)
 		fmt.Fprintf(f, doNotEditComment+"\n\n")
 		fmt.Fprintf(f, "import (\n")
-		fmt.Fprintf(f, "\t\"github.com/ipld/go-ipld-prime/datamodel\"\n") // referenced for links
+		fmt.Fprintf(f, "\t\"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel\"\n") // referenced for links
 		fmt.Fprintf(f, ")\n")
 		fmt.Fprintf(f, "var _ datamodel.Node = nil // suppress errors when this dependency is not referenced\n")
 
@@ -117,9 +117,9 @@ func Generate(pth string, pkgName string, ts schema.TypeSystem, adjCfg *AdjunctC
 		fmt.Fprintf(f, "package %s\n\n", pkgName)
 		fmt.Fprintf(f, doNotEditComment+"\n\n")
 		fmt.Fprintf(f, "import (\n")
-		fmt.Fprintf(f, "\t\"github.com/ipld/go-ipld-prime/datamodel\"\n")   // referenced everywhere.
-		fmt.Fprintf(f, "\t\"github.com/ipld/go-ipld-prime/node/mixins\"\n") // referenced by node implementation guts.
-		fmt.Fprintf(f, "\t\"github.com/ipld/go-ipld-prime/schema\"\n")      // referenced by maybes (and surprisingly little else).
+		fmt.Fprintf(f, "\t\"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel\"\n")   // referenced everywhere.
+		fmt.Fprintf(f, "\t\"github.com/riteshRcH/go-edge-device-lib/ipld/node/mixins\"\n") // referenced by node implementation guts.
+		fmt.Fprintf(f, "\t\"github.com/riteshRcH/go-edge-device-lib/ipld/schema\"\n")      // referenced by maybes (and surprisingly little else).
 		fmt.Fprintf(f, ")\n\n")
 
 		// For each type, we'll emit... everything except the native type, really.

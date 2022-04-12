@@ -3,8 +3,8 @@ package tests
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/must"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/must"
 )
 
 var tableStrInt = [25]struct {

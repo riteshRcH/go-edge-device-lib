@@ -8,11 +8,11 @@ import (
 	"strings"
 	"testing"
 
-	ipldjson "github.com/ipld/go-ipld-prime/codec/json"
-	"github.com/ipld/go-ipld-prime/node/bindnode"
-	"github.com/ipld/go-ipld-prime/schema"
-	schemadmt "github.com/ipld/go-ipld-prime/schema/dmt"
-	schemadsl "github.com/ipld/go-ipld-prime/schema/dsl"
+	ipldjson "github.com/riteshRcH/go-edge-device-lib/ipld/codec/json"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/bindnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
+	schemadmt "github.com/riteshRcH/go-edge-device-lib/ipld/schema/dmt"
+	schemadsl "github.com/riteshRcH/go-edge-device-lib/ipld/schema/dsl"
 	"gopkg.in/yaml.v2"
 
 	qt "github.com/frankban/quicktest"

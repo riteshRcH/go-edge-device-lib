@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 // TypeGenerator gathers all the info for generating all code related to one
@@ -84,9 +84,9 @@ func EmitFileHeader(packageName string, w io.Writer) {
 	fmt.Fprintf(w, "package %s\n\n", packageName)
 	fmt.Fprintf(w, doNotEditComment+"\n\n")
 	fmt.Fprintf(w, "import (\n")
-	fmt.Fprintf(w, "\t\"github.com/ipld/go-ipld-prime/datamodel\"\n")
-	fmt.Fprintf(w, "\t\"github.com/ipld/go-ipld-prime/node/mixins\"\n")
-	fmt.Fprintf(w, "\t\"github.com/ipld/go-ipld-prime/schema\"\n")
+	fmt.Fprintf(w, "\t\"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel\"\n")
+	fmt.Fprintf(w, "\t\"github.com/riteshRcH/go-edge-device-lib/ipld/node/mixins\"\n")
+	fmt.Fprintf(w, "\t\"github.com/riteshRcH/go-edge-device-lib/ipld/schema\"\n")
 	fmt.Fprintf(w, ")\n\n")
 }
 

@@ -5,7 +5,7 @@ import (
 
 	qt "github.com/frankban/quicktest"
 
-	"github.com/ipld/go-ipld-prime/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
 )
 
 func Test_nodeContentEqualsChecker_Check(t *testing.T) {

@@ -10,14 +10,14 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/codec/dagcbor"
-	"github.com/ipld/go-ipld-prime/codec/dagjson"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	"github.com/ipld/go-ipld-prime/node/bindnode"
-	"github.com/ipld/go-ipld-prime/schema"
-	schemadmt "github.com/ipld/go-ipld-prime/schema/dmt"
-	schemadsl "github.com/ipld/go-ipld-prime/schema/dsl"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagcbor"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/bindnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
+	schemadmt "github.com/riteshRcH/go-edge-device-lib/ipld/schema/dmt"
+	schemadsl "github.com/riteshRcH/go-edge-device-lib/ipld/schema/dsl"
 )
 
 var fuzzInputs = []struct {

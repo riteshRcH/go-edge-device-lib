@@ -1,7 +1,7 @@
 package adl
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // ADL is an interface denoting an Advanced Data Layout,

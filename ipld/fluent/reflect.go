@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // Reflect creates a new Node by looking at a golang value with reflection

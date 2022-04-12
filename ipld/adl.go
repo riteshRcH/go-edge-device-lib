@@ -1,7 +1,7 @@
 package ipld
 
 import (
-	"github.com/ipld/go-ipld-prime/adl"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/adl"
 )
 
 type ADL = adl.ADL

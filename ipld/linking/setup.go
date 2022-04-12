@@ -3,8 +3,8 @@ package linking
 import (
 	"io"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/storage"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage"
 )
 
 // SetReadStorage configures how the LinkSystem will look for information to load,

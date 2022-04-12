@@ -1,7 +1,7 @@
 package mixins
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // List can be embedded in a struct to provide all the methods that

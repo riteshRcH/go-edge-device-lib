@@ -3,7 +3,7 @@ package selector
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // ExploreIndex traverses a specific index in a list, and applies a next

@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ipld/go-ipld-prime/storage/sharding"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage/sharding"
 )
 
 // Store is implements storage.ReadableStorage and storage.WritableStorage,

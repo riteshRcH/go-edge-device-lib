@@ -1,7 +1,7 @@
 package fluent
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 func Build(np datamodel.NodePrototype, fn func(NodeAssembler)) (datamodel.Node, error) {

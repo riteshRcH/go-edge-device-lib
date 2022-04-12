@@ -3,8 +3,8 @@ package gengo
 import (
 	"io"
 
-	"github.com/ipld/go-ipld-prime/schema"
-	"github.com/ipld/go-ipld-prime/schema/gen/go/mixins"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema/gen/go/mixins"
 )
 
 // The generator for unions is a bit more wild than most others:

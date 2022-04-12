@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/linking"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/linking"
 )
 
 // This file defines interfaces for things users provide,

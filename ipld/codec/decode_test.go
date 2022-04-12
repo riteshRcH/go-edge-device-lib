@@ -6,12 +6,12 @@ import (
 	"strings"
 	"testing"
 
-	_ "github.com/ipld/go-ipld-prime/codec/cbor"
-	_ "github.com/ipld/go-ipld-prime/codec/dagcbor"
-	_ "github.com/ipld/go-ipld-prime/codec/dagjson"
-	_ "github.com/ipld/go-ipld-prime/codec/json"
-	mcregistry "github.com/ipld/go-ipld-prime/multicodec"
-	basicnode "github.com/ipld/go-ipld-prime/node/basic"
+	_ "github.com/riteshRcH/go-edge-device-lib/ipld/codec/cbor"
+	_ "github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagcbor"
+	_ "github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	_ "github.com/riteshRcH/go-edge-device-lib/ipld/codec/json"
+	mcregistry "github.com/riteshRcH/go-edge-device-lib/ipld/multicodec"
+	basicnode "github.com/riteshRcH/go-edge-device-lib/ipld/node/basic"
 	"github.com/riteshRcH/go-edge-device-lib/multicodec"
 )
 

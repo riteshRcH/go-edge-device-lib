@@ -3,8 +3,8 @@ package cidlink
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
 	cid "github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 	multihash "github.com/riteshRcH/go-edge-device-lib/multihash"
 )
 
@@ -14,7 +14,7 @@ var (
 )
 
 // Link implements the datamodel.Link interface using a CID.
-// See https://github.com/ipfs/go-cid for more information about CIDs.
+// See "github.com/riteshRcH/go-edge-device-lib/cid" for more information about CIDs.
 //
 // When using this value, typically you'll use it as `Link`, and not `*Link`.
 // This includes when handling the value as an `datamodel.Link` interface -- the non-pointer form is typically preferable.

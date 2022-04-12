@@ -11,8 +11,8 @@ import (
 	"github.com/polydawn/refmt/tok"
 	cid "github.com/riteshRcH/go-edge-device-lib/cid"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
 )
 
 var (

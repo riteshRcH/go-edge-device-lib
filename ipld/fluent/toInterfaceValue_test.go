@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	qt "github.com/frankban/quicktest"
-	"github.com/ipld/go-ipld-prime/fluent"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
 )
 
 var roundTripTestCases = []struct {

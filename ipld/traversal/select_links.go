@@ -1,7 +1,7 @@
 package traversal
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // SelectLinks walks a Node tree and returns a slice of all Links encountered.

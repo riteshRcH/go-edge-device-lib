@@ -4,8 +4,8 @@
 package main
 
 import (
-	"github.com/ipld/go-ipld-prime/schema"
-	gengo "github.com/ipld/go-ipld-prime/schema/gen/go"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
+	gengo "github.com/riteshRcH/go-edge-device-lib/ipld/schema/gen/go"
 )
 
 func main() {

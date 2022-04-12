@@ -8,13 +8,13 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 
-	"github.com/ipld/go-ipld-prime/adl/rot13adl"
-	"github.com/ipld/go-ipld-prime/codec/dagjson"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/linking"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/must"
-	"github.com/ipld/go-ipld-prime/storage/memstore"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/adl/rot13adl"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagjson"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/linking"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/must"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage/memstore"
 )
 
 func ExampleReify_unmarshallingToADL() {

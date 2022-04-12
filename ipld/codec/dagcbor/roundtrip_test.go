@@ -9,10 +9,10 @@ import (
 	qt "github.com/frankban/quicktest"
 	cid "github.com/riteshRcH/go-edge-device-lib/cid"
 
-	"github.com/ipld/go-ipld-prime/fluent"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	nodetests "github.com/ipld/go-ipld-prime/node/tests"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	nodetests "github.com/riteshRcH/go-edge-device-lib/ipld/node/tests"
 )
 
 var n = fluent.MustBuildMap(basicnode.Prototype.Map, 4, func(na fluent.MapAssembler) {

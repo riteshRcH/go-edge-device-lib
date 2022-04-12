@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/storage"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage"
 )
 
 /*

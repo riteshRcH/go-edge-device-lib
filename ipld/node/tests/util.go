@@ -3,10 +3,10 @@ package tests
 import (
 	"strings"
 
-	"github.com/ipld/go-ipld-prime/codec/json"
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/must"
-	"github.com/ipld/go-ipld-prime/traversal/selector"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec/json"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/must"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal/selector"
 )
 
 // various benchmarks assign their final result here,

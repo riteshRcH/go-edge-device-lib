@@ -3,7 +3,7 @@ package selector
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 // ExploreAll is similar to a `*` -- it traverses all elements of an array,

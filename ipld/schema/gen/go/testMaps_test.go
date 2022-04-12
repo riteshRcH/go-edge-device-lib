@@ -4,8 +4,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/node/tests"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/tests"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 func TestMapsContainingMaybe(t *testing.T) {

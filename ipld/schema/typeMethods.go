@@ -1,7 +1,7 @@
 package schema
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 /* cookie-cutter standard interface stuff */

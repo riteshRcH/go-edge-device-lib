@@ -3,9 +3,9 @@ package traversal
 import (
 	"fmt"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/linking"
-	"github.com/ipld/go-ipld-prime/traversal/selector"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/linking"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/traversal/selector"
 )
 
 // WalkLocal walks a tree of Nodes, visiting each of them,

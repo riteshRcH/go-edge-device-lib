@@ -3,11 +3,11 @@ package datamodel_test
 import (
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/fluent/qp"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	basic "github.com/ipld/go-ipld-prime/node/basicnode" // shorter name for the tests
 	"github.com/riteshRcH/go-edge-device-lib/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent/qp"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	basic "github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode" // shorter name for the tests
 )
 
 var (

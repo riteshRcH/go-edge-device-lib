@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/must"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/must"
 )
 
 /*

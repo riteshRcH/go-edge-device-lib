@@ -5,12 +5,12 @@ import (
 
 	"github.com/riteshRcH/go-edge-device-lib/cid"
 
-	_ "github.com/ipld/go-ipld-prime/codec/dagcbor"
-	"github.com/ipld/go-ipld-prime/fluent"
-	"github.com/ipld/go-ipld-prime/linking"
-	cidlink "github.com/ipld/go-ipld-prime/linking/cid"
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	"github.com/ipld/go-ipld-prime/storage/memstore"
+	_ "github.com/riteshRcH/go-edge-device-lib/ipld/codec/dagcbor"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/fluent"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/linking"
+	cidlink "github.com/riteshRcH/go-edge-device-lib/ipld/linking/cid"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/storage/memstore"
 )
 
 // storage is a map where we'll store serialized IPLD data.

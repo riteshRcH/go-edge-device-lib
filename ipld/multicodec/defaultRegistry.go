@@ -1,7 +1,7 @@
 package multicodec
 
 import (
-	"github.com/ipld/go-ipld-prime/codec"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/codec"
 )
 
 // DefaultRegistry is a multicodec.Registry instance which is global to the program,

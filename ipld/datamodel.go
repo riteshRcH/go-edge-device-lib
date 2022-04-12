@@ -1,9 +1,9 @@
 package ipld
 
 import (
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/linking"
-	"github.com/ipld/go-ipld-prime/schema"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/linking"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/schema"
 )
 
 type (

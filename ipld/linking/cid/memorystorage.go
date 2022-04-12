@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/linking"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/linking"
 )
 
 // Memory is a simple in-memory storage for cidlinks. It's the same as `storage.Memory`

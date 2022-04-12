@@ -5,8 +5,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
-	"github.com/ipld/go-ipld-prime/testutil"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/testutil"
 )
 
 func doTemplate(tmplstr string, w io.Writer, adjCfg *AdjunctCfg, data interface{}) {

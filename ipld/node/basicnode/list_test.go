@@ -3,8 +3,8 @@ package basicnode_test
 import (
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/node/basicnode"
-	"github.com/ipld/go-ipld-prime/node/tests"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/basicnode"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/node/tests"
 )
 
 func TestList(t *testing.T) {

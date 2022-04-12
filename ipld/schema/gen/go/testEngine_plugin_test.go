@@ -10,7 +10,7 @@ import (
 	"plugin"
 	"testing"
 
-	"github.com/ipld/go-ipld-prime/datamodel"
+	"github.com/riteshRcH/go-edge-device-lib/ipld/datamodel"
 )
 
 func objPath(prefix string) string {
