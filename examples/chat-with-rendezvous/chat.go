@@ -158,9 +158,9 @@ func main() {
 		if peer.ID == host.ID() {
 			continue
 		}
-		logger.Debug("Found peer:", peer)
+		logger.Debug(fmt.Sprintln("Found peer:", peer))
 
-		logger.Debug("Connecting to:", peer)
+		logger.Debug(fmt.Sprintln("Connecting to:", peer))
 		stream, err := host.NewStream(ctx, peer.ID, protocol.ID(config.ProtocolID))
 
 		if err != nil {
@@ -173,7 +173,7 @@ func main() {
 			go readData(rw)
 		}
 
-		logger.Info("Connected to:", peer)
+		logger.Info(fmt.Sprintln("Connected to:", peer))
 	}
 
 	select {}

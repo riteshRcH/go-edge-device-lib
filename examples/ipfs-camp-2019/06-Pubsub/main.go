@@ -20,7 +20,6 @@ import (
 	mplex "github.com/riteshRcH/go-edge-device-lib/peerstream_multiplex"
 	"github.com/riteshRcH/go-edge-device-lib/tcp"
 	ws "github.com/riteshRcH/go-edge-device-lib/websocket"
-	yamux "github.com/riteshRcH/go-edge-device-lib/yamux"
 )
 
 type discoveryNotifee struct {
@@ -45,7 +44,6 @@ func main() {
 	)
 
 	muxers := libp2p.ChainOptions(
-		libp2p.Muxer("/yamux/1.0.0", yamux.DefaultTransport),
 		libp2p.Muxer("/mplex/6.7.0", mplex.DefaultTransport),
 	)
 

@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/google/uuid v1.3.0
-	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220412195946-0d9704128de4
+	github.com/riteshRcH/go-edge-device-lib v0.0.0-20220412201703-7eb0095f2210
 	go.uber.org/zap v1.21.0
 )
 
