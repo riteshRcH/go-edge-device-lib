@@ -1,7 +1,7 @@
 package record
 
 import (
-	pb "github.com/libp2p/go-libp2p-record/pb"
+	pb "github.com/riteshRcH/go-edge-device-lib/record/pb"
 )
 
 // MakePutRecord creates a dht record for the given key/value pair
